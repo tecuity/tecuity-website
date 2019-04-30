@@ -2,13 +2,16 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import './all.sass'
+import './all.scss'
 import useSiteMetadata from './SiteMetadata'
+import { ThemeProvider } from 'emotion-theming'
+import theme from '../theme'
+import styled from '@emotion/styled'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <PageWrapper>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -44,11 +47,33 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-      <Navbar />
-      <div>{children}</div>
-      <Footer />
-    </div>
+      <ThemeProvider theme={theme}>
+        <Navbar />
+        <CenterWrapper>
+          <ContentWrapper>{children}</ContentWrapper>
+        </CenterWrapper>
+        <Footer />
+      </ThemeProvider>
+    </PageWrapper>
   )
 }
 
 export default TemplateWrapper
+
+const PageWrapper = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+  minHeight: '100vh'
+})
+
+const CenterWrapper = styled('div')({
+  flex: '1 0 0',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center'
+})
+
+const ContentWrapper = styled('main')({
+  width: '100%',
+  maxWidth: 1200
+})
