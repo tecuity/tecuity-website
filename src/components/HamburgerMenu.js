@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
-import useToggle from '../hooks/usetoggle'
+import useToggle from '../hooks/useToggle'
 import logo from '../img/logo_white.svg'
 import HamburgerIcon from '../img/icons/menu'
 import CloseIcon from '../img/icons/close'
