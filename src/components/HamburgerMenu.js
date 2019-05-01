@@ -93,12 +93,13 @@ const MenuHeader = styled('div')({
   width: '100%',
   display: 'flex',
   alignItems: 'center',
-  padding: 20,
+  padding: '15px 20px',
   borderBottom: `2px solid rgba(255, 255, 255, 0.46)`
 })
 
 const Logo = styled('img')({
-  width: 140
+  width: 140,
+  marginBottom: -4
 })
 
 const CloseButton = styled('button')({
@@ -107,6 +108,7 @@ const CloseButton = styled('button')({
   border: 'none',
   color: 'inherit',
   marginLeft: 'auto',
+  marginBottom: -4,
   '& svg': {
     width: 30,
     fill: 'currentColor'
