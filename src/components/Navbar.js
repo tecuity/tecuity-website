@@ -3,19 +3,28 @@ import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
 import styled from '@emotion/styled'
+import { useMedia } from 'the-platform';
+import HamburgerMenu from './HamburgerMenu'
 
 const Navbar = () => {
-
+  const isMobile = useMedia({maxWidth: 800})
   return (
     <Header>
       <InnerWrapper>
         <Logo src={logo} />
-        <Nav>
-          <Link to='/'>SOS Enterprise</Link>
-          <Link to='/news'>News</Link>
-          <Link to='/careers'>Careers</Link>
-          <Link to='/request-demo' className='cta'>Request a Demo</Link>
-        </Nav>
+        {
+          isMobile ?
+          <AlignRight>
+            <HamburgerMenu />
+          </AlignRight>
+          :
+          <Nav>
+            <Link to='/'>SOS Enterprise</Link>
+            <Link to='/news'>News</Link>
+            <Link to='/careers'>Careers</Link>
+            <Link to='/request-demo' className='cta'>Request a Demo</Link>
+          </Nav>
+        }
       </InnerWrapper>
     </Header>
   )
@@ -64,4 +73,11 @@ const InnerWrapper = styled('div')({
   flexDirection: 'row',
   width: '100%',
   maxWidth: 1200
+})
+
+const AlignRight = styled('div')({
+  marginLeft: 'auto',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
 })
