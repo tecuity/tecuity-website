@@ -60,7 +60,8 @@ const CTAButton = styled('button')({
   fontWeight: 500,
   padding: '10px 20px',
   paddingBottom: '6px',
-  marginTop: 15
+  marginTop: 15,
+  border: 'none'
 }, ({theme}) => ({
   background: theme.primary.color,
   color: theme.primary.textOn
