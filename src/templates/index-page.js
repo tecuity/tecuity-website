@@ -1,15 +1,16 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import AboveFoldBlock from '../components/home/AboveFoldBlock'
-import FeaturesBlock from '../components/home/FeaturesBlock'
+import SmartFormsBlock from '../components/home/SmartFormsBlock'
+// import FeaturesBlock from '../components/home/FeaturesBlock'
 
-export const IndexPageTemplate = ({ }) => (
+export const IndexPageTemplate = () => (
   <PageWrapper>
     <AboveFoldBlock />
-    <FeaturesBlock />
+    {/* <FeaturesBlock /> */}
+    <SmartFormsBlock />
   </PageWrapper>
 )
 
