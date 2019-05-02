@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import pageDivider from '../../img/page-divider.svg'
-import features from './features'
+// import features from './features'
 
 export default () => {
 
