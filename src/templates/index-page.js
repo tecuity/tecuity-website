@@ -1,15 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from '@emotion/styled'
 import { Link, graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+import AboveFoldBlock from '../components/home/AboveFoldBlock'
+import FeaturesBlock from '../components/home/Featuresblock'
 
 export const IndexPageTemplate = ({ }) => (
-  <div>
-    Home page
-  </div>
+  <PageWrapper>
+    <AboveFoldBlock />
+    <FeaturesBlock />
+  </PageWrapper>
 )
 
 const IndexPage = ({ data }) => {
@@ -35,3 +36,9 @@ export const pageQuery = graphql`
     }
   }
 `
+
+const PageWrapper = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center'
+})

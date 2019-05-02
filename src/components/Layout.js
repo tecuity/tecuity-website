@@ -67,7 +67,7 @@ const PageWrapper = styled('div')({
 })
 
 const CenterWrapper = styled('div')({
-  flex: '1 0 0',
+  flex: '1 0 auto',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center'
@@ -75,5 +75,5 @@ const CenterWrapper = styled('div')({
 
 const ContentWrapper = styled('main')({
   width: '100%',
-  maxWidth: 1200
+  // maxWidth: 1200
 })

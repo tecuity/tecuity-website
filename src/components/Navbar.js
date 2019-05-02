@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
 import styled from '@emotion/styled'
 import { useMedia } from 'the-platform';
@@ -39,7 +38,7 @@ const Header = styled('header')({
   alignItems: 'center',
   justifyContent: 'center',
   padding: 20,
-  borderBottom: '1px solid rgb(218, 218, 218)'
+  // borderBottom: '1px solid rgb(218, 218, 218)'
 })
 
 const Logo = styled('img')({

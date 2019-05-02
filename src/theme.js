@@ -6,5 +6,6 @@ export default {
   dark: {
     color: '#3D4644',
     textOn: 'rgb(241, 241, 241)'
-  }
+  },
+  maxWidth: 1200
 }
