@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import AboveFoldBlock from '../components/home/AboveFoldBlock'
-import FeaturesBlock from '../components/home/Featuresblock'
+import FeaturesBlock from '../components/home/FeaturesBlock'
 
 export const IndexPageTemplate = ({ }) => (
   <PageWrapper>
