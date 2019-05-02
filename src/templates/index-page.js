@@ -4,12 +4,12 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import AboveFoldBlock from '../components/home/AboveFoldBlock'
 import SmartFormsBlock from '../components/home/SmartFormsBlock'
-// import FeaturesBlock from '../components/home/FeaturesBlock'
+import FeaturesBlock from '../components/home/FeaturesBlock'
 
 export const IndexPageTemplate = () => (
   <PageWrapper>
     <AboveFoldBlock />
-    {/* <FeaturesBlock /> */}
+    <FeaturesBlock />
     <SmartFormsBlock />
   </PageWrapper>
 )

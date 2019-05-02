@@ -7,5 +7,9 @@ export default {
     color: '#3D4644',
     textOn: 'rgb(241, 241, 241)'
   },
+  mid: {
+    color: '#767776',
+    textOn: 'rgb(241, 241, 241)'
+  },
   maxWidth: 1200
 }

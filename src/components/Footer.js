@@ -7,7 +7,7 @@ export default () => {
   return (
     <Footer>
       <InnerWrapper>
-        Footer
+        {/* Footer */}
       </InnerWrapper>
     </Footer>
   )

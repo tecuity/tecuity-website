@@ -26,7 +26,7 @@ export default () => {
     timeline.to(phoneInput.current, .3, {opacity: 0, ease: Power2.easeIn}, 3.6)
     timeline.to(pointer.current, 1, {x: -350, y: -85, ease: Power2.easeInOut}, 3.9)
     timeline.to(nameInputs.current, 1, { y: 0, ease: Elastic.easeOut.config(1, 0.5) }, 3.9)
-    timeline.repeat(-1).repeatDelay(.5)
+    timeline.timeScale(1.3).repeat(-1).repeatDelay(.5)
   }
 
   useEffect(() => {
