@@ -18,9 +18,13 @@ export default () => {
 
 const Wrapper = styled('div')({
   width: '100%',
-  marginTop: 300,
+  marginTop: '45vh',
+  marginBottom: '20vh',
   fontWeight: 200
 }, ({theme}) => ({
   maxWidth: theme.maxWidth,
-  color: theme.mid.color
+  color: theme.mid.color,
+  [theme.media.max.md]: {
+    marginTop: '15vh'
+  }
 }))

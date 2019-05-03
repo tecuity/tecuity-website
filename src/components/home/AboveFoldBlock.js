@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import sosLogo from '../../img/sos_enterprise.svg'
+import { Link } from 'gatsby'
 import CapitolAnimation from './CapitolAnimation'
 
 export default () => {
@@ -12,9 +13,9 @@ export default () => {
         <Subtitle>
           Smart Solutions for Smart Government
         </Subtitle>
-        <CTAButton>
+        <Link to='/request-demo'>
           Request a Demo
-        </CTAButton>
+        </Link>
       </CTA>
       <AnimationWrapper>
         <CapitolAnimation />
@@ -31,7 +32,12 @@ const Wrapper = styled('div')({
   // minHeight: '60vh',
   width: '100%'
 }, ({theme}) => ({
-  maxWidth: theme.maxWidth
+  maxWidth: theme.maxWidth,
+  [theme.media.max.md]: {
+    flexDirection: 'column-reverse',
+    alignItems: 'center',
+    marginTop: '1vw'
+  }
 }))
 
 const CTA = styled('div')({
@@ -40,32 +46,42 @@ const CTA = styled('div')({
   justifyContent: 'center',
   alignItems: 'center',
   flex: '1 0 auto',
-  width: '50%'
-})
+  width: '50%',
+  '& a': {
+    textTransform: 'uppercase',
+    fontSize: 24,
+    fontWeight: 500,
+    padding: '10px 20px',
+    paddingBottom: '6px',
+    marginTop: 15,
+    border: 'none',
+    textDecoration: 'none'
+  }
+}, ({theme}) => ({
+  '& a': {
+    background: theme.primary.color,
+    color: theme.primary.textOn
+  },
+  [theme.media.max.md]: {
+    width: '100%'
+  }
+}))
 
 const Logo = styled('img')({
   width: '100%',
   maxWidth: 300
-})
+}, ({theme}) => ({
+  [theme.media.max.md]: {
+    maxWidth: 240
+  }
+}))
 
 const Subtitle = styled('span')({
   fontSize: 20,
   marginTop: 15,
-  paddingLeft: 5
+  paddingLeft: 5,
+  textAlign: 'center'
 })
-
-const CTAButton = styled('button')({
-  textTransform: 'uppercase',
-  fontSize: 24,
-  fontWeight: 500,
-  padding: '10px 20px',
-  paddingBottom: '6px',
-  marginTop: 15,
-  border: 'none'
-}, ({theme}) => ({
-  background: theme.primary.color,
-  color: theme.primary.textOn
-}))
 
 const AnimationWrapper = styled('div')({
   flex: '1 0 auto',
@@ -73,4 +89,11 @@ const AnimationWrapper = styled('div')({
   display: 'flex',
   justifyContent: 'flex-start',
   alignItems: 'center'
-})
+}, ({theme}) => ({
+  [theme.media.max.md]: {
+    width: '100%',
+    padding: '10vw',
+    paddingTop: 0,
+    justifyContent: 'center'
+  }
+}))
