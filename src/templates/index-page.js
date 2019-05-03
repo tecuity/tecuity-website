@@ -3,20 +3,16 @@ import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PropTypes from 'prop-types'
-import { ThemeProvider } from 'emotion-theming'
-import theme from '../theme'
 import AboveFoldBlock from '../components/home/AboveFoldBlock'
 import SmartFormsBlock from '../components/home/SmartFormsBlock'
 import FeaturesBlock from '../components/home/FeaturesBlock'
 
 export const IndexPageTemplate = ({smartTitle, smartDescription}) => (
-  <ThemeProvider theme={theme}>
-    <PageWrapper>
-      <AboveFoldBlock />
-      <FeaturesBlock />
-      <SmartFormsBlock title={smartTitle} description={smartDescription} />
-    </PageWrapper>
-  </ThemeProvider>
+  <PageWrapper>
+    <AboveFoldBlock />
+    <FeaturesBlock />
+    <SmartFormsBlock title={smartTitle} description={smartDescription} />
+  </PageWrapper>
 )
 
 const IndexPage = ({ data }) => {
