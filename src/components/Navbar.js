@@ -6,13 +6,13 @@ import { useMedia } from 'the-platform';
 import HamburgerMenu from './HamburgerMenu'
 
 const Navbar = () => {
-  const isMobile = useMedia({maxWidth: 800})
+  const isDesktop = useMedia({minWidth: 800})
   return (
     <Header>
       <InnerWrapper>
         <Logo src={logo} />
         {
-          isMobile ?
+          !isDesktop ?
           <AlignRight>
             <HamburgerMenu />
           </AlignRight>
