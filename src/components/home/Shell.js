@@ -16,8 +16,10 @@ export const Title = styled('h2')({
 export const Description = styled('p')({
   fontSize: 24,
   textAlign: 'center',
-  marginTop: 10
+  marginTop: 10,
+  fontWeight: 300
 }, ({theme}) => ({
+  color: theme.mid.color,
   [theme.media.max.md]: {
     padding: '0px 30px'
   }

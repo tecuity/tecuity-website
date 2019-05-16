@@ -10,9 +10,9 @@ export default () => {
     <Wrapper>
       <CTA>
         <Logo src={sosLogo} />
-        <Subtitle>
+        {/* <Subtitle>
           Smart Solutions for Smart Government
-        </Subtitle>
+        </Subtitle> */}
         <Link to='/request-demo'>
           Request a Demo
         </Link>
@@ -47,13 +47,14 @@ const CTA = styled('div')({
   alignItems: 'center',
   flex: '1 0 auto',
   width: '50%',
+  marginTop: -5,
   '& a': {
+    marginTop: 20,
     textTransform: 'uppercase',
     fontSize: 24,
     fontWeight: 500,
     padding: '10px 20px',
     paddingBottom: '6px',
-    marginTop: 15,
     border: 'none',
     textDecoration: 'none'
   }
@@ -69,7 +70,7 @@ const CTA = styled('div')({
 
 const Logo = styled('img')({
   width: '100%',
-  maxWidth: 300
+  maxWidth: 370
 }, ({theme}) => ({
   [theme.media.max.md]: {
     maxWidth: 240

@@ -6,12 +6,14 @@ import PropTypes from 'prop-types'
 import AboveFoldBlock from '../components/home/AboveFoldBlock'
 import SmartFormsBlock from '../components/home/SmartFormsBlock'
 import FeaturesBlock from '../components/home/FeaturesBlock'
+import OneStopBlock from '../components/home/OneStopBlock'
 
 export const IndexPageTemplate = ({smartTitle, smartDescription}) => (
   <PageWrapper>
     <AboveFoldBlock />
     <FeaturesBlock />
     <SmartFormsBlock title={smartTitle} description={smartDescription} />
+    <OneStopBlock />
   </PageWrapper>
 )
 
