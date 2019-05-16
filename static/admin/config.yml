@@ -18,6 +18,14 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Smart Forms Title", name: "smartTitle", widget: "string"}
           - {label: "Smart Forms Description", name: "smartDescription", widget: "text"}
+          - {label: "Review 1 Quote", name: "reviewQuote1", widget: "text"}
+          - {label: "Review 1 Author", name: "reviewAuthor1", widget: "text"}
+          - {label: "Business One-Stop Title", name: "oneStopTitle", widget: "string"}
+          - {label: "Business One-Stop Description", name: "oneStopDescription", widget: "text"}
+          - {label: "Back Office Title", name: "backOfficeTitle", widget: "string"}
+          - {label: "Back Office Description", name: "backOfficeDescription", widget: "text"}
+          - {label: "Review 2 Quote", name: "reviewQuote2", widget: "text"}
+          - {label: "Review 2 Author", name: "reviewAuthor2", widget: "text"}
 
   - name: "news"
     label: "News"
