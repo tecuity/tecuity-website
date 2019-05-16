@@ -59,8 +59,8 @@ const CTA = styled('div')({
   }
 }, ({theme}) => ({
   '& a': {
-    background: theme.primary.color,
-    color: theme.primary.textOn
+    background: theme.sos.color,
+    color: theme.sos.textOn
   },
   [theme.media.max.md]: {
     width: '100%'

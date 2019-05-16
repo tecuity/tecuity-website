@@ -1,8 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import styled from "@emotion/styled";
+import { withTheme } from 'emotion-theming'
 import { TimelineMax, Elastic, Power2, Power0 } from 'gsap/TweenMax'
 
-export default () => {
+const DNDAnimation = ({theme: {sos: {color}}}) => {
   const pointer = useRef()
   const nameInputs = useRef()
   const phoneInput = useRef()
@@ -38,7 +39,7 @@ export default () => {
       <defs>
         <style>
           {
-            ".prefix__cls-1{fill:none}.prefix__cls-1,.prefix__cls-4{stroke:#95c93d;stroke-miterlimit:10;stroke-width:2px}.prefix__cls-2{fill:#3d4543}.prefix__cls-4{fill:#fff}"
+            `.prefix__cls-1{fill:none}.prefix__cls-1,.prefix__cls-4{stroke:${color};stroke-miterlimit:10;stroke-width:2px}.prefix__cls-2{fill:#3d4543}.prefix__cls-4{fill:#fff}`
           }
         </style>
       </defs>
@@ -156,7 +157,7 @@ export default () => {
               height={72.83}
               rx={12.03}
               fill="#ffffff"
-              stroke="#95c93d"
+              stroke={color}
               strokeMiterlimit={10}
               strokeWidth={2}
             />
@@ -183,6 +184,8 @@ export default () => {
     </SVGWrapper>
   );
 };
+
+export default withTheme(DNDAnimation)
 
 const SVGWrapper = styled("svg")({
 

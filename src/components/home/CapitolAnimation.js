@@ -1,8 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import { TweenMax, Power1 } from 'gsap/TweenMax'
+import { withTheme } from 'emotion-theming'
 import styled from "@emotion/styled";
 
-export default () => {
+const CapitolAnimation = ({theme: {sos: {color}}}) => {
   const capitolRef = useRef();
   const square1 = useRef();
   const square2 = useRef();
@@ -33,26 +34,26 @@ export default () => {
           <path
             ref={square1}
             d="M174.07 299.71l35.54 17.77a7.05 7.05 0 0 0 6.3 0l35.57-17.78a1.34 1.34 0 0 0 0-2.39l-35.57-17.76a7.05 7.05 0 0 0-6.3 0l-35.54 17.77a1.33 1.33 0 0 0 0 2.39zM376.47 128.25L412 146a7.05 7.05 0 0 0 6.3 0l35.57-17.78a1.32 1.32 0 0 0 0-2.38l-35.57-17.77a7 7 0 0 0-6.3 0l-35.54 17.77a1.33 1.33 0 0 0 .01 2.41z"
-            fill="#95c93d"
+            fill={color}
           />
           <path
             ref={square2}
             d="M82 280.74l26 13a5.13 5.13 0 0 0 4.61 0l26-13a1 1 0 0 0 0-1.74l-26-13a5.17 5.17 0 0 0-4.6 0L82 279a1 1 0 0 0 0 1.74zM166.48 165.69l134.45 67.22a26.62 26.62 0 0 0 23.85 0l111.71-56.11a5 5 0 0 0 0-9l-134.56-67.22a26.63 26.63 0 0 0-23.84 0l-111.61 56.09a5 5 0 0 0 0 9.02z"
             fill="#fff"
-            stroke="#95c93d"
+            stroke={color}
             strokeMiterlimit={10}
             strokeWidth={2}
           />
           <path
             ref={square3}
             d="M45 140l96.92 48.45a19.19 19.19 0 0 0 17.19 0l97-48.48a3.63 3.63 0 0 0 0-6.5l-97-48.44a19.2 19.2 0 0 0-17.18 0L45 133.51a3.64 3.64 0 0 0 0 6.49z"
-            fill="#95c93d"
+            fill={color}
           />
           <path
             ref={square4}
             d="M143.75 221.45l107.53 53.76a21.33 21.33 0 0 0 19.07 0l87.07-43.58a4 4 0 0 0 0-7.21l-107.61-53.75a21.36 21.36 0 0 0-19.07 0l-87 43.55a4 4 0 0 0 .01 7.23z"
             fill="#fff"
-            stroke="#95c93d"
+            stroke={color}
             strokeMiterlimit={10}
             strokeWidth={2}
           />
@@ -60,14 +61,14 @@ export default () => {
             ref={square5}
             d="M4.25 200.28l156.6 78.3a31 31 0 0 0 27.78 0l110.71-56.12a5.88 5.88 0 0 0 0-10.51l-156.73-78.27a31.06 31.06 0 0 0-27.76 0l-110.6 56.1a5.87 5.87 0 0 0 0 10.5z"
             fill="#fff"
-            stroke="#95c93d"
+            stroke={color}
             strokeMiterlimit={10}
             strokeWidth={2}
           />
           <path
             ref={square6}
             d="M230.36 227.22l76 37.53a23.13 23.13 0 0 0 20.7 0l116.81-58.38a4.37 4.37 0 0 0 0-7.83L367.78 161a23.14 23.14 0 0 0-20.69 0l-116.73 58.4a4.37 4.37 0 0 0 0 7.82z"
-            fill="#95c93d"
+            fill={color}
           />
           <path fill="none" d="M238.76 3.25v2.56l2.55-.26-2.55-2.3z" />
           <g ref={capitolRef}>
@@ -225,6 +226,8 @@ export default () => {
     </SVGWrapper>
   );
 };
+
+export default withTheme(CapitolAnimation);
 
 const SVGWrapper = styled("svg")({
   width: "100%",
