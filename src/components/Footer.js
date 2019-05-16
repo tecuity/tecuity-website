@@ -33,7 +33,11 @@ const InnerWrapper = styled('div')({
   display: 'flex',
   width: '100%'
 }, ({theme}) => ({
-  maxWidth: theme.maxWidth
+  maxWidth: theme.maxWidth,
+  [theme.media.max.md]: {
+    flexDirection: 'column-reverse',
+    alignItems: 'center'
+  }
 }))
 
 const Navigation = styled('nav')({
@@ -50,6 +54,16 @@ const Navigation = styled('nav')({
     marginLeft: 30,
     '&:first-of-type': {
       marginLeft: 0
+    }
+  },
+  [theme.media.max.md]: {
+    flexDirection: 'column',
+    textAlign: 'center',
+    marginLeft: 0,
+    marginBottom: 30,
+    '& a': {
+      marginLeft: 0,
+      marginTop: 10
     }
   }
 }))

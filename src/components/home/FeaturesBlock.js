@@ -27,7 +27,7 @@ const Wrapper = styled('div')({
 
 const PageDivider = styled('img')({
   width: '100%',
-  marginTop: '-10vh',
+  marginTop: '-8vh',
   marginBottom: '-100%',
   position: 'absolute',
   top: 0,
