@@ -1,13 +1,20 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
+import logo from '../img/logo_white.svg'
 
 export default () => {
 
   return (
     <Footer>
       <InnerWrapper>
-        {/* Footer */}
+        <Logo src={logo} />
+        <Navigation>
+          <Link to='/'>SOS Enterprise</Link>
+          <Link to='/news'>News</Link>
+          <Link to='/careers'>Careers</Link>
+          <Link to='/request-demo' className='cta'>Request a Demo</Link>
+        </Navigation>
       </InnerWrapper>
     </Footer>
   )
@@ -15,13 +22,39 @@ export default () => {
 
 const Footer = styled('footer')({
   display: 'flex',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  padding: '30px 0px'
 }, ({theme}) => ({
-  background: theme.dark.color,
-  color: theme.dark.textOn
+  background: theme.mid.color,
+  color: theme.mid.textOn
 }))
 
 const InnerWrapper = styled('div')({
+  display: 'flex',
+  width: '100%'
+}, ({theme}) => ({
+  maxWidth: theme.maxWidth
+}))
+
+const Navigation = styled('nav')({
+  display: 'flex',
+  alignItems: 'center',
+  // marginLeft: 'auto'
+  marginLeft: 'auto'
+}, ({theme}) => ({
+  '& a': {
+    color: theme.mid.textOn,
+    textDecoration: 'none',
+    fontSize: 20,
+    fontWeight: 300,
+    marginLeft: 30,
+    '&:first-of-type': {
+      marginLeft: 0
+    }
+  }
+}))
+
+const Logo = styled('img')({
   width: '100%',
-  maxWidth: 1200
+  maxWidth: 140
 })
