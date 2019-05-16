@@ -47,8 +47,10 @@ const Column = styled('div')({
     width: '100vw',
     maxWidth: 'none',
     alignItems: 'center',
+    flexDirection: 'row',
     '& svg': {
-      maxWidth: '80%'
+      maxWidth: '80%',
+      width: '100%'
     }
   }
 })
