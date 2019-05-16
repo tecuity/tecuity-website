@@ -22,7 +22,10 @@ backOfficeDescription: >-
 reviewQuote2: >-
   "I wanted to let you know that the new SOS website is a dream website. Thank
   you for making the updates to the site. The multi-step form are perfectly
-  designed...\n\nI hope other government agencies follow your lead."
+  designed...
+
+
+  I hope other government agencies follow your lead."
 reviewAuthor2: Greg — Business Owner
 ---
 
