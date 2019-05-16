@@ -6,13 +6,13 @@ import SearchImg from '../../img/searching.svg'
 import ReportsImg from '../../img/automated-reports.svg'
 import ScanningImg from '../../img/scanning.svg'
 
-const BackOfficeBlock = () => {
+const BackOfficeBlock = ({title, description}) => {
 
   return (
     <Wrapper>
-      <Title>Smart Back Office</Title>
+      <Title>{title}</Title>
       <Description>
-        Our built-in document imaging and data management features provide the ability to simply review information and process documents as received.
+        {description}
       </Description>
       <Row>
         <ImgWrapper>
