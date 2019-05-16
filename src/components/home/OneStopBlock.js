@@ -45,11 +45,11 @@ const Column = styled('div')({
     maxWidth: 400
   }
 } : null,
-({theme}) => ({
+({theme, right}) => ({
   [theme.media.max.md]: {
     width: '100%',
     maxWidth: 'none',
-    alignItems: 'center',
+    alignItems: right ? 'center' : 'center',
     '& svg': {
       maxWidth: '80%'
     }
