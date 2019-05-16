@@ -37,19 +37,16 @@ const Column = styled('div')({
   flexDirection: 'column',
   flex: '1 1 auto',
   maxWidth: '50%',
-  justifyContent: 'center',
-  alignItems: 'center'
-}, ({right}) => right ? {
-  alignItems: 'flex-end',
+  justifyContent: 'center'
+}, ({theme, right}) => ({
+  alignItems: right ? 'flex-end' : 'center',
   '& svg': {
     maxWidth: 400
-  }
-} : null,
-({theme, right}) => ({
+  },
   [theme.media.max.md]: {
-    width: '100%',
+    width: '100vw',
     maxWidth: 'none',
-    alignItems: right ? 'center' : 'center',
+    alignItems: 'center',
     '& svg': {
       maxWidth: '80%'
     }
