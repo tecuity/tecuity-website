@@ -48,6 +48,7 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         smartTitle={frontmatter.smartTitle}
         smartDescription={frontmatter.smartDescription}
+        {...frontmatter}
       />
     </Layout>
   );
