@@ -5,6 +5,7 @@ export default {
   },
   sos: {
     color: '#f5771f',
+    rgbaFunction: opacity => `rgba(245, 119, 31, ${opacity})`,
     textOn: '#ffffff'
   },
   dark: {
@@ -13,6 +14,7 @@ export default {
   },
   mid: {
     color: '#767776',
+    rgbaFunction: opacity => `rgba(118, 119, 118, ${opacity})`,
     textOn: 'rgb(241, 241, 241)'
   },
   maxWidth: 1200,

@@ -7,13 +7,24 @@ import AboveFoldBlock from '../components/home/AboveFoldBlock'
 import SmartFormsBlock from '../components/home/SmartFormsBlock'
 import FeaturesBlock from '../components/home/FeaturesBlock'
 import OneStopBlock from '../components/home/OneStopBlock'
+import BackOfficeBlock from '../components/home/BackOfficeBlock'
+import ReviewBlock from '../components/home/ReviewBlock'
 
 export const IndexPageTemplate = ({smartTitle, smartDescription}) => (
   <PageWrapper>
     <AboveFoldBlock />
     <FeaturesBlock />
     <SmartFormsBlock title={smartTitle} description={smartDescription} />
+    <ReviewBlock
+      quote={`"I LOVE your new online filing system... The State does good work, congratulations!"`}
+      author="Pat — Business Owner"
+    />
     <OneStopBlock />
+    <BackOfficeBlock />
+    <ReviewBlock
+      quote={`"I wanted to let you know that the new SOS website is a dream website. Thank you for making the updates to the site. The multi-step form are perfectly designed...\n\nI hope other government agencies follow your lead."`}
+      author="Greg — Business Owner"
+    />
   </PageWrapper>
 )
 

@@ -17,14 +17,21 @@ export default ({title, description}) => {
 }
 
 const Wrapper = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
   width: '100%',
-  marginTop: '45vh',
-  marginBottom: '20vh',
+  marginTop: '30vh',
+  marginBottom: '15vh',
   fontWeight: 200
 }, ({theme}) => ({
   maxWidth: theme.maxWidth,
   color: theme.mid.color,
   [theme.media.max.md]: {
-    marginTop: '15vh'
+    marginTop: '15vh',
+    flexDirection: 'column',
+    alignItems: 'center',
+    '& svg': {
+      width: '90%'
+    }
   }
 }))

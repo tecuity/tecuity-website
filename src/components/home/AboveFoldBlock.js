@@ -36,7 +36,8 @@ const Wrapper = styled('div')({
   [theme.media.max.md]: {
     flexDirection: 'column-reverse',
     alignItems: 'center',
-    marginTop: '1vw'
+    marginTop: '1vw',
+    minHeight: '75vh'
   }
 }))
 

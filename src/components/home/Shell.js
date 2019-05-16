@@ -17,10 +17,13 @@ export const Description = styled('p')({
   fontSize: 24,
   textAlign: 'center',
   marginTop: 10,
-  fontWeight: 300
+  fontWeight: 300,
+  boxSizing: 'border-box'
 }, ({theme}) => ({
   color: theme.mid.color,
   [theme.media.max.md]: {
-    padding: '0px 30px'
+    fontSize: 21,
+    padding: '0px 20px',
+    textAlign: 'justify'
   }
 }))

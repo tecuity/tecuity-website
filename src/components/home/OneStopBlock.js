@@ -21,9 +21,15 @@ export default () => {
 const Wrapper = styled('article')({
   display: 'flex',
   flexDirection: 'row',
-  minHeight: '40vh'
+  minHeight: '30vh',
+  marginBottom: '20vh'
 }, ({theme}) => ({
-  maxWidth: theme.maxWidth
+  maxWidth: theme.maxWidth,
+  [theme.media.max.md]: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '100%'
+  }
 }))
 
 const Column = styled('div')({
@@ -38,4 +44,15 @@ const Column = styled('div')({
   '& svg': {
     maxWidth: 400
   }
-} : null)
+} : null,
+({theme}) => ({
+  [theme.media.max.md]: {
+    width: '100%',
+    maxWidth: 'none',
+    alignItems: 'center',
+    '& svg': {
+      maxWidth: '80%'
+    }
+  }
+})
+)

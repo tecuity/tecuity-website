@@ -1,6 +1,7 @@
 import React from "react";
+import { withTheme } from 'emotion-theming'
 
-export default () => {
+const OneStopAnimation = ({theme: {sos: {color}}}) => {
   return (
     <svg viewBox="0 0 274.44 227.22">
     <title>{'pub-sub-animation'}</title>
@@ -13,14 +14,14 @@ export default () => {
           height={41.29}
           rx={7.04}
           fill="#fff"
-          stroke="#95c93d"
+          stroke={color}
           strokeMiterlimit={10}
           strokeWidth={2}
         />
         <path
           d="M1 202.33v-75.65a7 7 0 0 1 7-7h101.92a7 7 0 0 1 7 7v75.65M157.48 202.33v-75.65a7 7 0 0 1 7-7h101.93a7 7 0 0 1 7 7v75.65"
           fill="none"
-          stroke="#95c93d"
+          stroke={color}
           strokeMiterlimit={10}
           strokeWidth={2}
         />
@@ -76,7 +77,7 @@ export default () => {
           width={31.92}
           height={31.92}
           rx={1.5}
-          fill="#95c93d"
+          fill={color}
           opacity={0.6}
         />
         <rect
@@ -85,7 +86,7 @@ export default () => {
           width={52.07}
           height={12.8}
           rx={1.5}
-          fill="#95c93d"
+          fill={color}
           opacity={0.6}
         />
         <rect
@@ -94,7 +95,7 @@ export default () => {
           width={52.07}
           height={12.8}
           rx={1.5}
-          fill="#95c93d"
+          fill={color}
           opacity={0.6}
         />
         <text
@@ -111,7 +112,7 @@ export default () => {
           width={31.92}
           height={31.92}
           rx={1.5}
-          fill="#95c93d"
+          fill={color}
           opacity={0.6}
         />
         <rect
@@ -120,7 +121,7 @@ export default () => {
           width={52.07}
           height={12.8}
           rx={1.5}
-          fill="#95c93d"
+          fill={color}
           opacity={0.6}
         />
         <rect
@@ -129,13 +130,13 @@ export default () => {
           width={52.07}
           height={12.8}
           rx={1.5}
-          fill="#95c93d"
+          fill={color}
           opacity={0.6}
         />
         <path
           d="M60.2 119.64h0A18.62 18.62 0 0 1 78.82 101h29.78a18.62 18.62 0 0 0 18.62-18.6V65.46M215.46 119.64h0A18.62 18.62 0 0 0 196.84 101h-29.77a18.63 18.63 0 0 1-18.63-18.6V65.46"
           fill="none"
-          stroke="#95c93d"
+          stroke={color}
           strokeMiterlimit={10}
           strokeWidth={2}
         />
@@ -144,3 +145,5 @@ export default () => {
   </svg>
   );
 };
+
+export default withTheme(OneStopAnimation)
