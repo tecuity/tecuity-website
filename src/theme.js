@@ -3,6 +3,10 @@ export default {
     color: '#95C93D',
     textOn: '#ffffff'
   },
+  sos: {
+    color: '#f5771f',
+    textOn: '#ffffff'
+  },
   dark: {
     color: '#3D4644',
     textOn: 'rgb(241, 241, 241)'
