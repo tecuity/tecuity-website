@@ -14,6 +14,7 @@ export const IndexPageTemplate = ({
   smartTitle,
   smartDescription,
   reviewQuote1,
+  reviewAuthor1,
   oneStopTitle,
   oneStopDescription,
   backOfficeTitle,
@@ -26,14 +27,14 @@ export const IndexPageTemplate = ({
     <FeaturesBlock />
     <SmartFormsBlock title={smartTitle} description={smartDescription} />
     <ReviewBlock
-      quote={`"I LOVE your new online filing system... The State does good work, congratulations!"`}
-      author="Pat — Business Owner"
+      quote={reviewQuote1}
+      author={reviewAuthor1}
     />
-    <OneStopBlock />
-    <BackOfficeBlock />
+    <OneStopBlock title={oneStopTitle} description={oneStopDescription} />
+    <BackOfficeBlock title={backOfficeTitle} description={backOfficeDescription} />
     <ReviewBlock
-      quote={`"I wanted to let you know that the new SOS website is a dream website. Thank you for making the updates to the site. The multi-step form are perfectly designed...\n\nI hope other government agencies follow your lead."`}
-      author="Greg — Business Owner"
+      quote={reviewQuote2}
+      author={reviewAuthor2}
     />
   </PageWrapper>
 );
