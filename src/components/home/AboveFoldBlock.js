@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import sosLogo from '../../img/sos_enterprise.svg'
+import sosLogo from '../../img/sos_enterprise_duo.svg'
 import { Link } from 'gatsby'
 import CapitolAnimation from './CapitolAnimation'
 
@@ -61,13 +61,20 @@ const CTA = styled('div')({
   }
 }, ({theme}) => ({
   '& a': {
-    background: theme.sos.color,
-    color: theme.sos.textOn
+    background: theme.primary.color,
+    color: theme.primary.textOn
   },
   [theme.media.max.md]: {
     width: '100%'
   }
 }))
+
+const InnerWrapper = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+})
 
 const Logo = styled('img')({
   width: '100%',

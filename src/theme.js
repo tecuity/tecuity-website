@@ -1,6 +1,7 @@
 export default {
   primary: {
     color: '#95C93D',
+    rgbaFunction: opacity => `rgba(149, 201, 61, ${opacity})`,
     textOn: '#ffffff'
   },
   sos: {

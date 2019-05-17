@@ -17,13 +17,13 @@ const Wrapper = styled('div')({
   padding: '30px 20px',
   marginBottom: '15vh'
 }, ({theme}) => ({
-  background: theme.sos.rgbaFunction(.04),
+  background: theme.primary.rgbaFunction(.06),
   color: theme.dark.color
 }))
 
 const Quote = styled('p')({
   width: '100%',
-  maxWidth: 600,
+  maxWidth: 650,
   fontSize: 28,
   display: 'block',
   margin: 0,

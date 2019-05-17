@@ -3,7 +3,7 @@ import { TweenMax, Power1 } from 'gsap/TweenMax'
 import { withTheme } from 'emotion-theming'
 import styled from "@emotion/styled";
 
-const CapitolAnimation = ({theme: {sos: {color}}}) => {
+const CapitolAnimation = ({theme: {primary: {color}, sos: {color: sosColor}}}) => {
   const capitolRef = useRef();
   const square1 = useRef();
   const square2 = useRef();

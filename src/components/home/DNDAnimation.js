@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { withTheme } from 'emotion-theming'
 import { TimelineMax, Elastic, Power2, Power0 } from 'gsap/TweenMax'
 
-const DNDAnimation = ({theme: {sos: {color}}}) => {
+const DNDAnimation = ({theme: {primary: {color}}}) => {
   const pointer = useRef()
   const nameInputs = useRef()
   const phoneInput = useRef()

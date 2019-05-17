@@ -1,7 +1,7 @@
 import React from "react";
 import { withTheme } from 'emotion-theming'
 
-const OneStopAnimation = ({theme: {sos: {color}}}) => {
+const OneStopAnimation = ({theme: {primary: {color}}}) => {
   return (
     <svg viewBox="0 0 274.44 227.22">
     <title>{'pub-sub-animation'}</title>
