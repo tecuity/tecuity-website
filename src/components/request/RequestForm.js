@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import styled from '@emotion/styled'
 import InfoBox from './InfoBox'
-import panels1 from '../../img/panels-1.svg'
-import panels2 from '../../img/panels-2.svg'
+import TopLeftAnimation from './TopLeftAnimation'
+import BottomRightAnimation from './BottomRightAnimation'
 import sosLogo from '../../img/sos-logo-green.svg'
 import chatIcon from '../../img/chat.svg'
 
@@ -117,8 +117,12 @@ export default () => {
               Send Request
             </SubmitButton>
           </ButtonWrapper>
-          <TopLeft src={panels1} />
-          <BottomRight src={panels2} />
+          <TopLeft>
+            <TopLeftAnimation />
+          </TopLeft>
+          <BottomRight>
+            <BottomRightAnimation />
+          </BottomRight>
         </FormWrapper>
         <Sidebar>
           <InfoBox
@@ -188,20 +192,26 @@ const FormWrapper = styled('form')({
   boxShadow: `0 50px 100px -20px rgba(50,50,93,.15), 0 30px 60px -30px rgba(0,0,0,.15), 0 -18px 60px -10px rgba(0,0,0,.015)`
 })
 
-const TopLeft = styled('img')({
+const TopLeft = styled('div')({
   position: 'absolute',
   top: '-7%',
   left: '-40%',
   width: '75%',
-  zIndex: -1
+  zIndex: -1,
+  '& svg': {
+    width: '100%'
+  }
 })
 
-const BottomRight = styled('img')({
+const BottomRight = styled('div')({
   position: 'absolute',
   bottom: '-15%',
   right: '-60%',
   width: '75%',
-  zIndex: -2
+  zIndex: -2,
+  '& svg': {
+    width: '100%'
+  }
 })
 
 const ButtonWrapper = styled('div')({
