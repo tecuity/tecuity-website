@@ -26,6 +26,12 @@ const Wrapper = styled('div')({
 }, ({theme}) => ({
   maxWidth: theme.maxWidth,
   color: theme.mid.color,
+  [theme.media.max.lg]: {
+    alignItems: 'center',
+    '& svg': {
+      width: '90%'
+    }
+  },
   [theme.media.max.md]: {
     marginTop: '15vh',
     flexDirection: 'column',
