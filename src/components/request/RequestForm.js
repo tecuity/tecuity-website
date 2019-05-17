@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { keyframes } from '@emotion/core'
 import styled from '@emotion/styled'
 import InfoBox from './InfoBox'
 import TopLeftAnimation from './TopLeftAnimation'
@@ -14,17 +15,12 @@ const encode = data => {
 
 export default () => {
   const [form, setForm] = useState({});
+  const [submitted, setSubmitted] = useState(false)
+  const [attemptedSubmit, setAttemptedSubmit] = useState(false)
   const formRef = useRef()
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(encode({
-      "form-name": 'demo-request',
-      ...Object.entries(form).reduce(
-        (obj, [key, x]) => ({ ...obj, [key]: x.value }),
-        {}
-      )
-    }));
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -37,7 +33,7 @@ export default () => {
       })
     })
       .then(() => {
-        console.log("Submitted the form");
+        setSubmitted(true)
       })
       .catch(error => alert(error));
   };
@@ -59,6 +55,13 @@ export default () => {
           onSubmit={handleSubmit}
           ref={formRef}
         >
+          {
+            submitted &&
+            <SuccessMessage>
+              Thanks! <br/>
+              <SuccessDescription>We've received your request and will be in touch shortly.</SuccessDescription>
+            </SuccessMessage>
+          }
           <input type="hidden" name="form-name" value="demo-request" />
           <div hidden>
             <label>
@@ -72,6 +75,7 @@ export default () => {
               name="firstname"
               onChange={handleChange}
               value={(form.firstname || {}).value}
+              attemptedSubmit={attemptedSubmit}
               required
             />
             <Field
@@ -79,6 +83,7 @@ export default () => {
               name="lastname"
               onChange={handleChange}
               value={(form.lastname || {}).value}
+              attemptedSubmit={attemptedSubmit}
               required
             />
           </Row>
@@ -87,6 +92,7 @@ export default () => {
             name="organization"
             onChange={handleChange}
             value={(form.organization || {}).value}
+            attemptedSubmit={attemptedSubmit}
             required
           />
           <Field
@@ -95,6 +101,7 @@ export default () => {
             type="email"
             onChange={handleChange}
             value={(form.email || {}).value}
+            attemptedSubmit={attemptedSubmit}
             required
           />
           <Field
@@ -102,6 +109,7 @@ export default () => {
             name="phone"
             onChange={handleChange}
             value={(form.phone || {}).value}
+            attemptedSubmit={attemptedSubmit}
             required
           />
           <Field
@@ -110,10 +118,11 @@ export default () => {
             type="textarea"
             onChange={handleChange}
             value={(form.interests || {}).value}
+            attemptedSubmit={attemptedSubmit}
             required
           />
           <ButtonWrapper className="field">
-            <SubmitButton type="submit">
+            <SubmitButton type="submit" disabled={submitted} onClick={() => setAttemptedSubmit(true)}>
               Send Request
             </SubmitButton>
           </ButtonWrapper>
@@ -156,7 +165,15 @@ const Wrapper = styled('div')({
 }, ({theme}) => ({
   maxWidth: theme.maxWidth,
   [theme.media.max.lg]: {
-    padding: '0px 15px'
+    padding: '0px 15px',
+    '& h3': {
+      marginTop: 0
+    }
+  },
+  [theme.media.max.md]: {
+    overflow: 'hidden',
+    marginBottom: 0,
+    paddingBottom: '15vh'
   }
 }))
 
@@ -166,7 +183,15 @@ const InnerWrapper = styled('div')({
   flexDirection: 'row',
   marginTop: '5vh',
   marginRight: '-10vw'
-})
+}, ({theme}) => ({
+  [theme.media.max.md]: {
+    flexDirection: 'column-reverse',
+    width: '100%',
+    alignItems: 'center',
+    marginRight: 0,
+    marginTop: 0
+  }
+}))
 
 const Sidebar = styled('div')({
   padding: 30,
@@ -177,7 +202,16 @@ const Sidebar = styled('div')({
   justifyContent: 'space-around',
   paddingBottom: '25%'
 }, ({theme}) => ({
-  // background: theme.primary.color
+  [theme.media.max.md]: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '100%',
+    paddingBottom: 30
+  },
+  [theme.media.max.sm]: {
+    flexDirection: 'column',
+    alignItems: 'center'
+  }
 }))
 
 const FormWrapper = styled('form')({
@@ -190,7 +224,11 @@ const FormWrapper = styled('form')({
   // borderBottomRightRadius: 0,
   background: '#ffffff',
   boxShadow: `0 50px 100px -20px rgba(50,50,93,.15), 0 30px 60px -30px rgba(0,0,0,.15), 0 -18px 60px -10px rgba(0,0,0,.015)`
-})
+}, ({theme}) => ({
+  [theme.media.max.lg]: {
+    maxWidth: 440
+  }
+}))
 
 const TopLeft = styled('div')({
   position: 'absolute',
@@ -236,7 +274,8 @@ const Field = ({
   name,
   value = "",
   required,
-  label
+  label,
+  attemptedSubmit
 }) => {
   const getInput = () => {
     switch (type) {
@@ -250,6 +289,7 @@ const Field = ({
             id={name}
             required={required}
             value={value}
+            attemptedSubmit={attemptedSubmit}
           />
         );
       default:
@@ -262,6 +302,7 @@ const Field = ({
             id={name}
             required={required}
             value={value}
+            attemptedSubmit={attemptedSubmit}
           />
         );
     }
@@ -269,7 +310,7 @@ const Field = ({
 
   return (
     <FieldWrapper className="field">
-      <Label className="label" htmlFor={name}>
+      <Label className="label" htmlFor={name} required={required}>
         {label}
       </Label>
       <div className="control">{getInput()}</div>
@@ -286,7 +327,17 @@ const Row = styled('div')({
       marginRight: 15
     }
   }
-})
+}, ({theme}) => ({
+  [theme.media.max.md]: {
+    flexDirection: 'column',
+    '& > div': {
+      flex: '1 0 auto',
+      '&:first-of-type': {
+        marginRight: 15
+      }
+    }
+  }
+}))
 
 const FieldWrapper = styled('div')({
   marginBottom: 20
@@ -295,25 +346,76 @@ const FieldWrapper = styled('div')({
 const Input = styled('input')({
   width: '100%',
   height: 50
-}, ({theme}) => ({
+}, ({theme, attemptedSubmit}) => ({
   border: `2px solid ${theme.mid.rgbaFunction(.4)}`,
   '&:focus': {
     border: `2px solid ${theme.primary.color}`,
     outline: 'none'
-  }
+  },
+  ...(attemptedSubmit ? ({
+    '&:invalid': {
+      borderColor: 'rgb(217, 55, 55)'
+    }
+  }) : {})
 }))
 
 const TextArea = styled('textarea')({
   width: '100%',
-  height: 150
-}, ({theme}) => ({
+  height: 150,
+  resize: 'vertical'
+}, ({theme, attemptedSubmit}) => ({
   border: `2px solid ${theme.mid.rgbaFunction(.4)}`,
   '&:focus': {
     border: `2px solid ${theme.primary.color}`,
     outline: 'none'
-  }
+  },
+  ...(attemptedSubmit ? ({
+    '&:invalid': {
+      borderColor: 'rgb(217, 55, 55)'
+    }
+  }) : {})
 }))
 
 const Label = styled('label')({
 
+}, ({required}) => required ? {
+  '&::after': {
+    content: '"*"',
+    marginLeft: 5,
+    color: 'rgb(235, 95, 50)'
+  }
+} : null)
+
+const fadeIn = keyframes`
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+`
+
+const SuccessMessage = styled('div')({
+  position: 'absolute',
+  left: 0,
+  top: 0,
+  width: '100%',
+  height: '100%',
+  background: '#fff',
+  borderRadius: 4,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  fontSize: 36,
+  textAlign: 'center',
+  padding: 50,
+  flexDirection: 'column',
+  animation: `${fadeIn} 200ms`,
+  animationFillMode: 'forwards'
+}, ({theme}) => ({
+  color: theme.primary.color
+}))
+
+const SuccessDescription = styled('p')({
+  fontSize: 24
 })

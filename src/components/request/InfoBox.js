@@ -14,8 +14,19 @@ export default ({iconSrc, title, description}) => (
 )
 
 const Wrapper = styled('div')({
-  maxWidth: 300
-})
+  maxWidth: 300,
+  width: '100%'
+}, ({theme}) => ({
+  [theme.media.max.lg]: {
+    maxWidth: 260
+  },
+  [theme.media.max.sm]: {
+    marginTop: 30,
+    '&:first-of-type': {
+      marginTop: 0
+    }
+  }
+}))
 
 const Header = styled('h3')({
   display: 'flex',

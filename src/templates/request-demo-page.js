@@ -25,7 +25,10 @@ const Title = styled('h1')({
   marginBottom: 10,
   marginTop: '5vh'
 }, ({theme}) => ({
-  color: theme.mid.color
+  color: theme.mid.color,
+  [theme.media.max.md]: {
+    marginBottom: 0
+  }
 }))
 
 const PageWrapper = styled('div')({
