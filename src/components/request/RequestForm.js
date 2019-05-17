@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { navigate } from "gatsby-link";
+import styled from '@emotion/styled'
 
 const encode = data => {
   return Object.keys(data)
@@ -13,11 +13,18 @@ export default () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    console.log(encode({
+      "form-name": 'demo-request',
+      ...Object.entries(form).reduce(
+        (obj, [key, x]) => ({ ...obj, [key]: x.value }),
+        {}
+      )
+    }));
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": formRef.current.getAttribute("name"),
+        "form-name": 'demo-request',
         ...Object.entries(form).reduce(
           (obj, [key, x]) => ({ ...obj, [key]: x.value }),
           {}
@@ -37,15 +44,15 @@ export default () => {
     }));
 
   return (
-    <form
-      name="contact"
+    <FormWrapper
+      name="demo-request"
       method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
       ref={formRef}
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="demo-request" />
       <div hidden>
         <label>
           Don’t fill this out:{" "}
@@ -54,16 +61,16 @@ export default () => {
       </div>
       <Field
         label="First Name"
-        name="firstName"
+        name="firstname"
         onChange={handleChange}
-        value={(form.firstName || {}).value}
+        value={(form.firstname || {}).value}
         required
       />
       <Field
         label="Last Name"
-        name="lastName"
+        name="lastname"
         onChange={handleChange}
-        value={(form.lastName || {}).value}
+        value={(form.lastname || {}).value}
         required
       />
       <Field
@@ -101,9 +108,13 @@ export default () => {
           Send
         </button>
       </div>
-    </form>
+    </FormWrapper>
   );
 };
+
+const FormWrapper = styled('form')({
+
+})
 
 const Field = ({
   onChange,
