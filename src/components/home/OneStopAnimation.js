@@ -1,7 +1,52 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { withTheme } from 'emotion-theming'
+import { TimelineMax, Power1, Linear } from 'gsap/TweenMax'
+import 'gsap/TextPlugin'
 
 const OneStopAnimation = ({theme: {primary: {color}}}) => {
+  const inputRef = useRef()
+  const leftRef = useRef()
+  const rightRef = useRef()
+
+  const animate = () => {
+    const timeline = new TimelineMax()
+    timeline.to(inputRef.current, 1, {text: '', ease:Linear.easeNone}, 1)
+    timeline.to(leftRef.current, 1, {text: '', ease:Linear.easeNone}, 1)
+    timeline.to(rightRef.current, 1, {text: '', ease:Linear.easeNone}, 1)
+    timeline.to(inputRef.current, 1, {text: 'Tony Stark', ease:Linear.easeNone}, 2)
+    timeline.to(leftRef.current, 1, {text: 'Tony Stark', ease:Linear.easeNone}, 2)
+    timeline.to(rightRef.current, 1, {text: 'Tony Stark', ease:Linear.easeNone}, 2)
+    timeline.to(inputRef.current, 1, {text: 'Tony ', ease:Linear.easeNone}, 4)
+    timeline.to(leftRef.current, 1, {text: 'Tony ', ease:Linear.easeNone}, 4)
+    timeline.to(rightRef.current, 1, {text: 'Tony ', ease:Linear.easeNone}, 4)
+    timeline.to(inputRef.current, 1, {text: 'Tony Hawk', ease:Linear.easeNone}, 5)
+    timeline.to(leftRef.current, 1, {text: 'Tony Hawk', ease:Linear.easeNone}, 5)
+    timeline.to(rightRef.current, 1, {text: 'Tony Hawk', ease:Linear.easeNone}, 5)
+    timeline.to(inputRef.current, 1, {text: '', ease:Linear.easeNone}, 7)
+    timeline.to(leftRef.current, 1, {text: '', ease:Linear.easeNone}, 7)
+    timeline.to(rightRef.current, 1, {text: '', ease:Linear.easeNone}, 7)
+    timeline.to(inputRef.current, 1, {text: 'Felicia Alexander', ease:Linear.easeNone}, 8)
+    timeline.to(leftRef.current, 1, {text: 'Felicia Alexander', ease:Linear.easeNone}, 8)
+    timeline.to(rightRef.current, 1, {text: 'Felicia Alexander', ease:Linear.easeNone}, 8)
+    timeline.to(inputRef.current, 1, {text: '', ease:Linear.easeNone}, 10)
+    timeline.to(leftRef.current, 1, {text: '', ease:Linear.easeNone}, 10)
+    timeline.to(rightRef.current, 1, {text: '', ease:Linear.easeNone}, 10)
+    timeline.to(inputRef.current, 1, {text: 'William Price', ease:Linear.easeNone}, 11)
+    timeline.to(leftRef.current, 1, {text: 'William Price', ease:Linear.easeNone}, 11)
+    timeline.to(rightRef.current, 1, {text: 'William Price', ease:Linear.easeNone}, 11)
+    timeline.to(inputRef.current, 1, {text: '', ease:Linear.easeNone}, 13)
+    timeline.to(leftRef.current, 1, {text: '', ease:Linear.easeNone}, 13)
+    timeline.to(rightRef.current, 1, {text: '', ease:Linear.easeNone}, 13)
+    timeline.to(inputRef.current, 1, {text: 'Ivan Carvallo', ease:Linear.easeNone}, 14)
+    timeline.to(leftRef.current, 1, {text: 'Ivan Carvallo', ease:Linear.easeNone}, 14)
+    timeline.to(rightRef.current, 1, {text: 'Ivan Carvallo', ease:Linear.easeNone}, 14)
+    timeline.repeat(-1).repeatDelay(1)
+  }
+
+  useEffect(() => {
+    animate()
+  }, [])
+
   return (
     <svg viewBox="0 0 274.44 227.22">
     <title>{'pub-sub-animation'}</title>
@@ -54,23 +99,26 @@ const OneStopAnimation = ({theme: {primary: {color}}}) => {
           fontSize={20.092}
           fill="#3d4543"
           fontFamily="Hind-Regular,Hind"
+          ref={inputRef}
         >
-          {'Tony Stark'}
+          {'Ivan Carvallo'}
         </text>
         <text
-          transform="translate(27.2 183.91)"
+          transform="translate(60 183.91)"
           fontSize={14}
           fill="#3d4543"
           fontFamily="Hind-Regular,Hind"
+          textAnchor="middle"
+          ref={leftRef}
         >
-          {'Tony Stark'}
+          {'Ivan Carvallo'}
         </text>
-        <path
+        {/* <path
           fill="none"
           stroke="#3d4543"
           strokeMiterlimit={10}
-          d="M108.75 31.74v25.77"
-        />
+          d="M127.75 31.74v25.77"
+        /> */}
         <rect
           x={13.23}
           y={135.16}
@@ -99,12 +147,14 @@ const OneStopAnimation = ({theme: {primary: {color}}}) => {
           opacity={0.6}
         />
         <text
-          transform="translate(184.07 144.72)"
+          transform="translate(215.5 144.72)"
           fontSize={14}
           fill="#3d4543"
           fontFamily="Hind-Regular,Hind"
+          textAnchor="middle"
+          ref={rightRef}
         >
-          {'Tony Stark'}
+          {'Ivan Carvallo'}
         </text>
         <rect
           x={170.1}
