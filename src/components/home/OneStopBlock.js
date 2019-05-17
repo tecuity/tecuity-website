@@ -35,22 +35,24 @@ const Wrapper = styled('article')({
 const Column = styled('div')({
   display: 'flex',
   flexDirection: 'column',
-  flex: '1 1 auto',
-  maxWidth: '50%',
+  width: '50%',
   justifyContent: 'center'
 }, ({theme, right}) => ({
   alignItems: right ? 'flex-end' : 'center',
   '& svg': {
+    width: '100%',
     maxWidth: 400
+  },
+  [theme.media.max.lg]: {
+    alignItems: 'center'
   },
   [theme.media.max.md]: {
     width: '100vw',
     maxWidth: 'none',
     alignItems: 'center',
-    flexDirection: 'row',
     '& svg': {
-      maxWidth: '80%',
-      width: '100%'
+      width: '80%',
+      maxWidth: 400
     }
   }
 })

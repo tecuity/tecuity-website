@@ -104,10 +104,14 @@ const Img = styled('img')({
   width: '80%'
 }, ({theme, automated, searching}) => ({
   [theme.media.max.md]: {
-    width: automated ? '35%' : searching ? '50%' : '60%'
+    width: automated ? '35%' : searching ? '50%' : '60%',
+    maxWidth: 300
   }
-}), ({automated}) => automated ? {
-  width: '40%'
+}), ({automated, theme}) => automated ? {
+  width: '40%',
+  [theme.media.max.lg]: {
+    maxWidth: 200
+  }
 } : null, ({searching}) => searching ? {
   width: '70%'
 } : null)
