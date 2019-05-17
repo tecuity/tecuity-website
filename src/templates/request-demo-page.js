@@ -2,14 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import RequestForm from '../components/request/RequestForm'
 
-export const RequestDemoPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+export const RequestDemoPageTemplate = ({ title }) => {
 
   return (
     <section>
-      RequestDemo Page
+      <RequestForm />
     </section>
   )
 }
@@ -26,7 +25,6 @@ const RequestDemoPage = ({ data }) => {
   return (
     <Layout>
       <RequestDemoPageTemplate
-        contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
       />
