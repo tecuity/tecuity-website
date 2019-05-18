@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { withTheme } from 'emotion-theming'
 import { TimelineMax, Linear } from 'gsap/TweenMax'
-import 'gsap/TextPlugin'
+import TextPlugin from 'gsap/TextPlugin'
+window.hasTextPluginInstalled = TextPlugin
 
 const OneStopAnimation = ({theme: {primary: {color}}}) => {
   const inputRef = useRef()
