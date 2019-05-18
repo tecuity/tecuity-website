@@ -32,13 +32,21 @@ const Wrapper = styled('div')({
   // },
   // [theme.media.max.md]: {
   //   minHeight: '55vh'
-  // }
+  // },
+  [theme.media.max.sm]: {
+    minHeight: '35vh'
+  }
 }))
 
 const Logo = styled('img')({
   width: '100%',
   maxWidth: '26vw'
-})
+}, ({theme}) => ({
+  [theme.media.max.sm]: {
+    width: '50%',
+    maxWidth: 200
+  }
+}))
 
 const Mission = styled('h1')({
   textAlign: 'center',
@@ -47,7 +55,10 @@ const Mission = styled('h1')({
   width: '100%',
   maxWidth: 700
 }, ({theme}) => ({
-  color: theme.mid.color
+  color: theme.mid.color,
+  [theme.media.max.sm]: {
+    fontSize: 24,
+  }
 }))
 
 const Tagline = styled('span')({
@@ -60,4 +71,9 @@ const BGImg = styled('img')({
   top: 0,
   width: '100%',
   zIndex: -1
-})
+}, ({theme}) => ({
+  [theme.media.max.sm]: {
+    width: 'calc(100% + 100px)',
+    left: -50
+  }
+}))

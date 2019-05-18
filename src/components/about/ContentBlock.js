@@ -18,7 +18,11 @@ const Wrapper = styled('div')({
 }, ({reversed}) => ({
   flexDirection: reversed ? 'row-reverse' : 'row'
 }), ({theme}) => ({
-  color: theme.mid.color
+  color: theme.mid.color,
+  [theme.media.max.sm]: {
+    flexDirection: 'column',
+    alignItems: 'center'
+  }
 }))
 
 const Column = styled('div')({
@@ -38,7 +42,10 @@ const Title = styled('h1')({
   fontWeight: 300,
   marginBottom: 10
 }, ({theme}) => ({
-  color: theme.mid.color
+  color: theme.mid.color,
+  [theme.media.max.sm]: {
+    textAlign: 'center'
+  }
 }), ({reversed}) => ({
   textAlign: reversed ? 'left' : 'right'
 }))
@@ -48,4 +55,9 @@ const Description = styled('p')({
   lineHeight: 1.5
 }, ({reversed}) => ({
   textAlign: reversed ? 'left' : 'right'
+}), ({theme}) => ({
+  [theme.media.max.sm]: {
+    textAlign: 'left',
+    padding: '0px 15px'
+  }
 }))
