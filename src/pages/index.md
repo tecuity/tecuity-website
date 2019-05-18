@@ -17,8 +17,8 @@ oneStopDescription: >-
   network.
 backOfficeTitle: Smart Back Office
 backOfficeDescription: >-
-  Our built-in document imaging and data management features make it easy to
-  review and process documents as received.
+  Built-in document imaging and data management features make it easy to review
+  and process documents as received.
 reviewQuote2: >-
   "I wanted to let you know that the new SOS website is a dream website. Thank
   you for making the updates to the site. The multi-step form are perfectly
