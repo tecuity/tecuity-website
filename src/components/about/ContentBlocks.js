@@ -5,28 +5,35 @@ import teamIcon from "../../img/team-icon.svg";
 import technologyIcon from "../../img/technology-icon.svg";
 import designIcon from "../../img/design-icon.svg";
 
-export default () => (
+export default ({
+  block1Title,
+  block1Description,
+  block2Title,
+  block2Description,
+  block3Title,
+  block3Description
+}) => (
   <Wrapper>
     <Row>
       <ContentBlock
         icon={teamIcon}
-        title="A Dedicated Team"
-        description="Tecuity boasts 16 years of experience working directly with Secretary of State offices. Our team provides our customers with direct access to experts who have in-depth business and technical knowledge, and our relentless focus on our customers' success has resulted in long-term business relationships."
+        title={block1Title}
+        description={block1Description}
       />
     </Row>
     <Row>
       <ContentBlock
         reversed
         icon={technologyIcon}
-        title="Smart Technology"
-        description="Our cutting-edge solutions employ the latest in web, mobile, and desktop technologies, all while maximizing compatibility with legacy systems. Optimized for performance and scalability, our software is always ready to adapt to your evolving needs and requirements."
+        title={block2Title}
+        description={block2Description}
       />
     </Row>
     <Row>
       <ContentBlock
         icon={designIcon}
-        title="Human by Design"
-        description="At Tecuity, we firmly believe that good software must be human-focused and accessible. Our development teams work closely with on-staff user-experience designers to craft software that is easy to use and intuitive."
+        title={block3Title}
+        description={block3Description}
       />
     </Row>
   </Wrapper>
