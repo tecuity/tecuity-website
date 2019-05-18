@@ -22,7 +22,6 @@ const Navbar = () => {
             Request a Demo
           </Link>
         </Nav>
-        }
       </InnerWrapper>
     </Header>
   );

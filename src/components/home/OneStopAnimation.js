@@ -52,7 +52,6 @@ const OneStopAnimation = ({theme: {primary: {color}}}) => {
 
   return (
     <svg viewBox="0 0 274.44 227.22">
-    <title>{'pub-sub-animation'}</title>
     <g data-name="Layer 2">
       <g data-name="Layer 1">
         <rect
