@@ -18,7 +18,7 @@ const Navbar = () => {
           <Link to="/">SOS Enterprise</Link>
           <Link to="/about">About</Link>
           <Link to="/news">News</Link>
-          <Link to="/careers">Careers</Link>
+          {/* <Link to="/careers">Careers</Link> */}
           <Link to="/request-demo" className="cta">
             Request a Demo
           </Link>

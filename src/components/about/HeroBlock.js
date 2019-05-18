@@ -18,15 +18,22 @@ export default () => {
 }
 
 const Wrapper = styled('div')({
-  minHeight: '60vh',
+  minHeight: '50vw',
   position: 'relative',
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  paddingBottom: 'calc(60vh - 45vw)'
-})
+  // paddingBottom: 'calc(60vh - 40vw)'
+}, ({theme}) => ({
+  // [theme.media.max.lg]: {
+  //   minHeight: '65vh'
+  // },
+  // [theme.media.max.md]: {
+  //   minHeight: '55vh'
+  // }
+}))
 
 const Logo = styled('img')({
   width: '100%',
@@ -37,8 +44,8 @@ const Mission = styled('h1')({
   textAlign: 'center',
   fontSize: '4vw',
   fontWeight: 500,
-  width: '55vh',
-  minWidth: 500
+  width: '100%',
+  maxWidth: 700
 }, ({theme}) => ({
   color: theme.mid.color
 }))

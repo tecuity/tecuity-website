@@ -11,7 +11,7 @@ export default () => (
       <ContentBlock
         icon={teamIcon}
         title="A Dedicated Team"
-        description="Tecuity boasts 16 years of experience working directly with Secretary of State offices. Our team provides our customers with direct access to experts who have in-depth business and technical knowledge, and our relentless focus on our customer’s success has resulted in long-term business relationships."
+        description="Tecuity boasts 16 years of experience working directly with Secretary of State offices. Our team provides our customers with direct access to experts who have in-depth business and technical knowledge, and our relentless focus on our customers' success has resulted in long-term business relationships."
       />
     </Row>
     <Row>
