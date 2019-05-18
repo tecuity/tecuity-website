@@ -9,6 +9,7 @@ import FeaturesBlock from "../components/home/FeaturesBlock";
 import OneStopBlock from "../components/home/OneStopBlock";
 import BackOfficeBlock from "../components/home/BackOfficeBlock";
 import ReviewBlock from "../components/home/ReviewBlock";
+import CTABlock from '../components/home/CTABlock'
 
 export const IndexPageTemplate = ({
   smartTitle,
@@ -36,6 +37,7 @@ export const IndexPageTemplate = ({
       quote={reviewQuote2}
       author={reviewAuthor2}
     />
+    <CTABlock />
   </PageWrapper>
 );
 
