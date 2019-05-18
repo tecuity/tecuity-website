@@ -13,8 +13,12 @@ export default () => {
         Empowering government<br/>
         <Tagline>since 2005</Tagline>
       </Mission>
-      <BGLeftImg src={aboutBGLeft} />
-      <BGRightImg src={aboutBGRightt} />
+      <BGLeftWrapper>
+        <BGLeftImg src={aboutBGLeft} />
+      </BGLeftWrapper>
+      <BGRightWrapper>
+        <BGRightImg src={aboutBGRightt} />
+      </BGRightWrapper>
     </Wrapper>
   )
 }
@@ -67,34 +71,46 @@ const Tagline = styled('span')({
   fontWeight: 300
 })
 
-const BGLeftImg = styled('img')({
+const BGLeftWrapper = styled('div')({
   position: 'absolute',
   left: 0,
   top: '5%',
   width: '21%',
-  zIndex: -1
+  zIndex: -1,
+  overflow: 'hidden'
 }, ({theme}) => ({
   [theme.media.max.sm]: {
-    // width: 'calc(100% + 100px)',
-    // left: -50
     top: '3%',
-    left: '-10%',
+    width: '35%'
+  }
+}))
+
+const BGLeftImg = styled('img')({
+  width: '100%'
+}, ({theme}) => ({
+  [theme.media.max.sm]: {
+    marginLeft: '-20%',
+  }
+}))
+
+const BGRightWrapper = styled('div')({
+  position: 'absolute',
+  right: 0,
+  top: '5%',
+  width: '21%',
+  zIndex: -1,
+  overflow: 'hidden'
+}, ({theme}) => ({
+  [theme.media.max.sm]: {
+    top: '10%',
     width: '35%'
   }
 }))
 
 const BGRightImg = styled('img')({
-  position: 'absolute',
-  right: 0,
-  top: '5%',
-  width: '21%',
-  zIndex: -1
+  width: '100%'
 }, ({theme}) => ({
   [theme.media.max.sm]: {
-    right: '-10%',
-    top: '10%',
-    width: '35%'
-    // width: 'calc(100% + 100px)',
-    // left: -50
+    marginLeft: '20%',
   }
 }))
