@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import aboutBGsrc from '../../img/about-bg.svg'
+import aboutBGLeft from '../../img/about-bg-left.svg'
+import aboutBGRightt from '../../img/about-bg-right.svg'
 import logoSrc from '../../img/logo.svg'
 
 export default () => {
@@ -12,7 +13,8 @@ export default () => {
         Empowering government<br/>
         <Tagline>since 2005</Tagline>
       </Mission>
-      <BGImg src={aboutBGsrc} />
+      <BGLeftImg src={aboutBGLeft} />
+      <BGRightImg src={aboutBGRightt} />
     </Wrapper>
   )
 }
@@ -57,7 +59,7 @@ const Mission = styled('h1')({
 }, ({theme}) => ({
   color: theme.mid.color,
   [theme.media.max.sm]: {
-    fontSize: 24,
+    fontSize: 20,
   }
 }))
 
@@ -65,15 +67,34 @@ const Tagline = styled('span')({
   fontWeight: 300
 })
 
-const BGImg = styled('img')({
+const BGLeftImg = styled('img')({
   position: 'absolute',
   left: 0,
-  top: 0,
-  width: '100%',
+  top: '5%',
+  width: '21%',
   zIndex: -1
 }, ({theme}) => ({
   [theme.media.max.sm]: {
-    width: 'calc(100% + 100px)',
-    left: -50
+    // width: 'calc(100% + 100px)',
+    // left: -50
+    top: '3%',
+    left: '-10%',
+    width: '35%'
+  }
+}))
+
+const BGRightImg = styled('img')({
+  position: 'absolute',
+  right: 0,
+  top: '5%',
+  width: '21%',
+  zIndex: -1
+}, ({theme}) => ({
+  [theme.media.max.sm]: {
+    right: '-10%',
+    top: '10%',
+    width: '35%'
+    // width: 'calc(100% + 100px)',
+    // left: -50
   }
 }))
