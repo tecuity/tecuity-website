@@ -13,6 +13,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
           title={data.title}
           smartTitle={data.smartTitle}
           smartDescription={data.smartDescription}
+          {...data}
         />
       </Environment>
     )
