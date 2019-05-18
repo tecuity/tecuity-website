@@ -22,7 +22,7 @@ const Wrapper = styled('article')({
   display: 'flex',
   flexDirection: 'row',
   minHeight: '30vh',
-  marginBottom: '20vh'
+  marginBottom: '15vh'
 }, ({theme}) => ({
   maxWidth: theme.maxWidth,
   [theme.media.max.md]: {

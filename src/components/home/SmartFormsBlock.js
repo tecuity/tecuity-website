@@ -21,7 +21,7 @@ const Wrapper = styled('div')({
   flexDirection: 'column',
   width: '100%',
   marginTop: '30vh',
-  marginBottom: '15vh',
+  marginBottom: '10vh',
   fontWeight: 200
 }, ({theme}) => ({
   maxWidth: theme.maxWidth,
