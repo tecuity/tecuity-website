@@ -26,6 +26,18 @@ collections:
           - {label: "Back Office Description", name: "backOfficeDescription", widget: "text"}
           - {label: "Review 2 Quote", name: "reviewQuote2", widget: "text"}
           - {label: "Review 2 Author", name: "reviewAuthor2", widget: "text"}
+      - file: "src/pages/about/index.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Block 1 Title", name: "block1Title", widget: "string"}
+          - {label: "Block 1 Description", name: "block1Description", widget: "text"}
+          - {label: "Block 2 Title", name: "block2Title", widget: "string"}
+          - {label: "Block 2 Description", name: "block2Description", widget: "text"}
+          - {label: "Block 3 Title", name: "block3Title", widget: "string"}
+          - {label: "Block 3 Description", name: "block3Description", widget: "text"}
 
   - name: "news"
     label: "News"

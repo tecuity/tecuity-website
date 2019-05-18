@@ -1,52 +1,62 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import styled from '@emotion/styled'
-import HeroBlock from '../components/about/HeroBlock'
-import ContentBlocks from '../components/about/ContentBlocks'
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import styled from "@emotion/styled";
+import HeroBlock from "../components/about/HeroBlock";
+import ContentBlocks from "../components/about/ContentBlocks";
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-
+export const AboutPageTemplate = ({
+  block1Title,
+  block1Description,
+  block2Title,
+  block2Description,
+  block3Title,
+  block3Description
+}) => {
   return (
     <PageWrapper>
-      <HeroBlock/>
-      <ContentBlocks/>
+      <HeroBlock />
+      <ContentBlocks
+        block1Title={block1Title}
+        block1Description={block1Description}
+        block2Title={block2Title}
+        block2Description={block2Description}
+        block3Title={block3Title}
+        block3Description={block3Description}
+      />
     </PageWrapper>
-  )
-}
+  );
+};
 
-const PageWrapper = styled('section')({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  width: '100%'
-})
+const PageWrapper = styled("section")({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  width: "100%"
+});
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
+  contentComponent: PropTypes.func
+};
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <AboutPageTemplate
-        title={post.frontmatter.title}
-        content={post.html}
-      />
+      <AboutPageTemplate {...post.frontmatter} />
     </Layout>
-  )
-}
+  );
+};
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
+  data: PropTypes.object.isRequired
+};
 
-export default AboutPage
+export default AboutPage;
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
@@ -54,7 +64,13 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        block1Title
+        block1Description
+        block2Title
+        block2Description
+        block3Title
+        block3Description
       }
     }
   }
-`
+`;
