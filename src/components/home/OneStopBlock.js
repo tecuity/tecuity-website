@@ -41,7 +41,7 @@ const Column = styled('div')({
   alignItems: right ? 'flex-end' : 'center',
   '& svg': {
     width: '100%',
-    maxWidth: 400
+    maxWidth: 350
   },
   [theme.media.max.lg]: {
     alignItems: 'center'

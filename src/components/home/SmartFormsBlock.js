@@ -22,7 +22,11 @@ const Wrapper = styled('div')({
   width: '100%',
   marginTop: '30vh',
   marginBottom: '10vh',
-  fontWeight: 200
+  fontWeight: 200,
+  alignItems: 'center',
+  '& svg': {
+    width: '90%'
+  }
 }, ({theme}) => ({
   maxWidth: theme.maxWidth,
   color: theme.mid.color,

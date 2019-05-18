@@ -14,11 +14,12 @@ export const Title = styled('h2')({
 }))
 
 export const Description = styled('p')({
-  fontSize: 24,
+  fontSize: 20,
   textAlign: 'center',
   marginTop: 10,
   fontWeight: 300,
-  boxSizing: 'border-box'
+  boxSizing: 'border-box',
+  maxWidth: 800
 }, ({theme}) => ({
   color: theme.mid.color,
   [theme.media.max.md]: {

@@ -49,7 +49,8 @@ const Wrapper = styled('div')({
   flexDirection: 'column',
   alignItems: 'center',
   minHeight: '30vh',
-  marginBottom: '15vh'
+  marginBottom: '15vh',
+  width: '100%'
 }, ({theme}) => ({
   maxWidth: theme.maxWidth
 }))
