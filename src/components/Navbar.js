@@ -10,7 +10,9 @@ const Navbar = () => {
   return (
     <Header>
       <InnerWrapper>
-        <Logo src={logo} />
+        <Link to='/'>
+          <Logo src={logo} />
+        </Link>
         {
           !isDesktop ?
           <AlignRight>
