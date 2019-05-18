@@ -26,7 +26,10 @@ const Footer = styled('footer')({
   padding: '30px 0px'
 }, ({theme}) => ({
   background: theme.mid.color,
-  color: theme.mid.textOn
+  color: theme.mid.textOn,
+  [theme.media.max.lg]: {
+    padding: '30px'
+  }
 }))
 
 const InnerWrapper = styled('div')({

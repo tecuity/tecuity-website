@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 261.56 205.37">
+  <title>team-icon</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <path d="M234.75,124.79,154.44,84.68a71.63,71.63,0,0,0-64,0L10.16,124.82a18.37,18.37,0,0,0,0,32.87l80.23,40.12a71.63,71.63,0,0,0,64.06,0l80.3-40.14A18.38,18.38,0,0,0,234.75,124.79Z" style="fill: #95c93d;opacity: 0.35000000000000003"/>
+        <g>
+          <circle cx="223.23" cy="74.04" r="21.68" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <path d="M223.23,106h0a35.83,35.83,0,0,1,35.83,35.83v7.26a16.23,16.23,0,0,1-16.23,16.23h-39.2a16.23,16.23,0,0,1-16.23-16.23v-7.26A35.83,35.83,0,0,1,223.23,106Z" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <circle cx="87.15" cy="74.04" r="21.68" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <path d="M87.15,106h0A35.83,35.83,0,0,1,123,141.83v7.26a16.23,16.23,0,0,1-16.23,16.23H67.55A16.23,16.23,0,0,1,51.32,149.1v-7.26A35.83,35.83,0,0,1,87.15,106Z" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <circle cx="154.96" cy="24.18" r="21.68" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <path d="M155,56.15h0A35.83,35.83,0,0,1,190.79,92v7.26a16.23,16.23,0,0,1-16.23,16.23h-39.2a16.23,16.23,0,0,1-16.23-16.23V92A35.83,35.83,0,0,1,155,56.15Z" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

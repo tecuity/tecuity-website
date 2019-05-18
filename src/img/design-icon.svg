@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 258.11 188.55">
+  <title>design-icon</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <path d="M245,104.46,161.18,62.6a74.73,74.73,0,0,0-66.83,0L10.6,104.49a19.18,19.18,0,0,0,0,34.3l83.74,41.87a74.78,74.78,0,0,0,66.85,0L245,138.77A19.18,19.18,0,0,0,245,104.46Z" style="fill: #95c93d;opacity: 0.35000000000000003"/>
+        <g>
+          <path d="M107.45,14.5s-33.63,14.94-35.34,42,43.38,3,51.94,17.45-15.31,12.69-20.55,28.89c-4.35,13.48,66.09,45.65,127.85,0,52.15-38.55,10.36-90.15-33.1-97.49C159.43-1.19,127.39,4.19,107.45,14.5Z" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <ellipse cx="163.83" cy="96.1" rx="13.55" ry="12.19" transform="translate(-15.75 34.25) rotate(-11.39)" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <ellipse cx="209.08" cy="85.16" rx="12.14" ry="10.94" transform="translate(-4.5 12) rotate(-3.25)" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <ellipse cx="216.06" cy="41.47" rx="10.57" ry="12.57" transform="translate(9.9 118.29) rotate(-31.3)" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <ellipse cx="167.46" cy="27.15" rx="10.91" ry="12.17" transform="translate(95.4 180.73) rotate(-74.07)" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <ellipse cx="118.13" cy="38.16" rx="12.23" ry="10.86" transform="translate(-4.65 56.54) rotate(-26.41)" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+        </g>
+        <g>
+          <path d="M53.18,72.85l-3.93-2.4a6.16,6.16,0,0,0-9.17,6.77l1.13,4.46a31.74,31.74,0,0,0,7.63,13.95l55.39,59-40-70.35A31.69,31.69,0,0,0,53.18,72.85Z" style="fill: none;stroke: #95c93d;stroke-linejoin: round;stroke-width: 5px"/>
+          <path d="M42,58.53c1.82-6.34-4.29-9.84-9.29-9.85S20.9,43,19.35,39.47c0,0-1.58,13.4,4.64,21.79S40.21,64.87,42,58.53Z" style="fill: none;stroke: #95c93d;stroke-linejoin: round;stroke-width: 5px"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228.87 209.97">
+  <title>technolog-icon</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <path d="M219.37,134.67,144.32,97.18a66.92,66.92,0,0,0-59.84,0l-75,37.49a17.18,17.18,0,0,0,0,30.72l75,37.49a66.93,66.93,0,0,0,59.86,0l75-37.51A17.17,17.17,0,0,0,219.37,134.67Z" style="fill: #95c93d;opacity: 0.35000000000000003"/>
+        <g>
+          <circle cx="96.89" cy="90.11" r="22.3" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <circle cx="96.89" cy="90.11" r="8.74" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <ellipse cx="96.89" cy="90.11" rx="38.69" ry="90.49" transform="translate(-15.17 160.46) rotate(-75.04)" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <ellipse cx="96.82" cy="90.1" rx="38.69" ry="90.49" transform="translate(-21.2 30.41) rotate(-16.11)" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <ellipse cx="96.89" cy="90.11" rx="90.49" ry="38.69" transform="translate(-35.33 95.01) rotate(-45.04)" style="fill: none;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <circle cx="95.87" cy="11.22" r="6.96" style="fill: #95c93d;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <circle cx="28.78" cy="126.86" r="6.96" style="fill: #95c93d;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+          <circle cx="128.21" cy="134.21" r="6.96" style="fill: #95c93d;stroke: #95c93d;stroke-miterlimit: 10;stroke-width: 5px"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
