@@ -5,12 +5,11 @@ import { Link, graphql, StaticQuery } from "gatsby";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 import PostBlock from "./PostBlock";
 
-const BlogRoll = ({ data}) => {
+const BlogRoll = ({ data }) => {
   const [maxPosts, setMaxPosts] = useState(6)
   const { edges: posts } = data.allMarkdownRemark;
 
   const incrementMaxPosts = () => setMaxPosts(max => max + 6)
-
   return (
     <Wrapper>
       {posts &&
