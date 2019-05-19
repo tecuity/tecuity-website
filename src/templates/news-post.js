@@ -27,17 +27,17 @@ export const BlogPostTemplate = ({
       </ContentWrapper>
       <PaginationWrapper noPrev={!prev}>
         {prev && (
-          <Link to={prev.slug}>
+          <Link to={prev.slug} className='prev'>
             <PrevIcon />
             <TitlePreview>
-              {`${prev.title.slice(0, 25)}${prev.title.length > 25 ? '...' : ''}`}
+              {`${prev.title.slice(0, 30)}${prev.title.length > 30 ? '...' : ''}`}
             </TitlePreview>
           </Link>
         )}
         {next && (
-          <Link to={next.slug}>
+          <Link to={next.slug} className='next'>
             <TitlePreview>
-              {`${next.title.slice(0, 25)}${next.title.length > 25 ? '...' : ''}`}
+              {`${next.title.slice(0, 30)}${next.title.length > 30 ? '...' : ''}`}
             </TitlePreview>
             <NextIcon />
           </Link>
@@ -52,7 +52,12 @@ const Wrapper = styled("div")({
   flexDirection: "column",
   alignItems: "center",
   paddingTop: "6vh"
-});
+}, ({theme}) => ({
+  [theme.media.max.sm]: {
+    paddingLeft: 20,
+    paddingRight: 20
+  }
+}));
 
 const Title = styled("h1")(
   {
@@ -89,6 +94,7 @@ const PaginationWrapper = styled("div")(
   ({ theme, noPrev }) => ({
     justifyContent: noPrev ? "flex-end" : "space-between",
     "& a": {
+      flex: '0 0 auto',
       display: 'flex',
       alignItems: 'center',
       color: theme.mid.color,
@@ -110,6 +116,20 @@ const PaginationWrapper = styled("div")(
       "& svg": {
         stroke: theme.mid.rgbaFunction(0.6),
         width: 30
+      }
+    },
+    [theme.media.max.sm]: {
+      flexDirection: 'column-reverse',
+      '& a.prev': {
+        alignSelf: 'flex-start'
+      },
+      '& a.next': {
+        alignSelf: 'flex-end',
+        marginBottom: 20
+      },
+      '& a span': {
+        opacity: 1,
+        color: theme.mid.color
       }
     }
   })

@@ -18,7 +18,9 @@ export default ({frontmatter: {title, date}, excerpt, index, fields: {slug}}) =>
       }
       {
         (index%4) - 1 === 0 &&
-        <Panels2 src={panels2} />
+        <Panels2Wrapper>
+          <Panels2 src={panels2} />
+        </Panels2Wrapper>
       }
     </InnerWrapper>
   </Wrapper>
@@ -43,6 +45,9 @@ const InnerWrapper = styled('div')({
       textDecoration: 'underline',
       textDecorationColor: theme.primary.color
     }
+  },
+  [theme.media.max.md]: {
+    boxShadow: `0 20px 50px -20px rgba(50,50,93,.05), 0 30px 40px -30px rgba(0,0,0,.07), 0 -18px 60px -10px rgba(0,0,0,.015)`
   }
 }))
 
@@ -73,12 +78,33 @@ const Panels1 = styled("img")({
   top: -50,
   width: "40%",
   zIndex: -1
-});
+}, ({theme}) => ({
+  [theme.media.max.md]: {
+    width: '60%',
+    transform: 'scaleX(-1)'
+  }
+}));
 
-const Panels2 = styled("img")({
+const Panels2Wrapper = styled('div')({
   position: "absolute",
-  right: "-15%",
-  bottom: -50,
+  right: 0,
+  bottom: -55,
   width: "40%",
   zIndex: -2
-});
+}, ({theme}) => ({
+  [theme.media.max.sm]: {
+    overflow: 'hidden',
+    width: '60%'
+  }
+}))
+
+const Panels2 = styled("img")({
+  marginLeft: "50%",
+  width: '100%'
+}, ({theme}) => ({
+  [theme.media.max.sm]: {
+    overflow: 'hidden',
+    width: '100%',
+    marginLeft: "25%"
+  }
+}));

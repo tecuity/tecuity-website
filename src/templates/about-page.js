@@ -33,7 +33,8 @@ const PageWrapper = styled("section")({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  width: "100%"
+  width: "100%",
+  paddingBottom: 50
 });
 
 AboutPageTemplate.propTypes = {

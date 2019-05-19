@@ -28,5 +28,8 @@ const Title = styled('h1')({
   fontWeight: 300,
   textAlign: 'center'
 }, ({theme}) => ({
-  color: theme.mid.color
+  color: theme.mid.color,
+  [theme.media.max.md]: {
+    marginBottom: 55
+  }
 }))
