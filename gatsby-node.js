@@ -2,6 +2,7 @@ const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+const orderBy = require('lodash/orderBy')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -29,9 +30,16 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const posts = result.data.allMarkdownRemark.edges
+    const blogPosts = posts
+      .filter(p => p.node.frontmatter.templateKey === 'news-post')
+      .map(p => ({...p, order: new Date(p.node.frontmatter.date).getTime()}))
+    const orderedBlogPosts = orderBy(blogPosts, ['order'], ['desc'])
 
     posts.forEach(edge => {
       const id = edge.node.id
+      const currentIndex = orderedBlogPosts.findIndex(p=>p.node.fields.slug === edge.node.fields.slug)
+      const prevId = orderedBlogPosts[currentIndex - 1] ? orderedBlogPosts[currentIndex - 1].node.id : ""
+      const nextId = orderedBlogPosts[currentIndex + 1] ? orderedBlogPosts[currentIndex + 1].node.id : ""
       createPage({
         path: edge.node.fields.slug,
         component: path.resolve(
@@ -40,6 +48,8 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
+          prevId,
+          nextId
         },
       })
     })
