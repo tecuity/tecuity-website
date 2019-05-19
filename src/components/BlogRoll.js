@@ -1,72 +1,62 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import styled from "@emotion/styled";
+import { Link, graphql, StaticQuery } from "gatsby";
+import PreviewCompatibleImage from "./PreviewCompatibleImage";
+import PostBlock from "./PostBlock";
 
-class BlogRoll extends React.Component {
-  render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+const BlogRoll = ({ data}) => {
+  const [maxPosts, setMaxPosts] = useState(6)
+  const { edges: posts } = data.allMarkdownRemark;
 
-    return (
-      <div className="columns is-multiline">
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${
-                            post.title
-                          }`,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
-            </div>
-          ))}
-      </div>
-    )
-  }
+  const incrementMaxPosts = () => setMaxPosts(max => max + 6)
+
+  return (
+    <Wrapper>
+      {posts &&
+        posts.slice(0, maxPosts).map(({ node: post }, i) => <PostBlock {...post} index={i} key={i} />)}
+      {
+        maxPosts < posts.length &&
+        <LoadMoreWrapper>
+          <LoadMoreButton onClick={incrementMaxPosts}>
+            Load More
+          </LoadMoreButton>
+        </LoadMoreWrapper>
+      }
+    </Wrapper>
+  );
 }
+
+const LoadMoreWrapper = styled('div')({
+  display: 'flex',
+  flexDirection: 'center',
+  padding: 30
+})
+
+const LoadMoreButton = styled('button')({
+  padding: 15,
+  borderRadius: 2,
+  border: 'none',
+  boxShadow: `0 10px 30px -5px rgba(50,50,93,.15), 0 10px 10px -10px rgba(0,0,0,.1), 0 -18px 20px -5px rgba(0,0,0,.015)`,
+  textTransform: 'uppercase'
+})
+
+const Wrapper = styled("div")({
+  position: "relative",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  width: "100%",
+  maxWidth: 650
+});
 
 BlogRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
+      edges: PropTypes.array
+    })
+  })
+};
 
 export default () => (
   <StaticQuery
@@ -74,7 +64,7 @@ export default () => (
       query BlogRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          filter: { frontmatter: { templateKey: { eq: "news-post" } } }
         ) {
           edges {
             node {
@@ -103,4 +93,4 @@ export default () => (
     `}
     render={(data, count) => <BlogRoll data={data} count={count} />}
   />
-)
+);
