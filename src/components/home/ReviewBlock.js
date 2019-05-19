@@ -24,7 +24,7 @@ const Wrapper = styled('div')({
 const Quote = styled('p')({
   width: '100%',
   maxWidth: 650,
-  fontSize: 28,
+  fontSize: 20,
   display: 'block',
   margin: 0,
   fontWeight: 500,

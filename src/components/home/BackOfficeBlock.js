@@ -81,7 +81,7 @@ const ImgTitle = styled('h2')({
   width: '100%',
   textAlign: 'center',
   fontWeight: 400,
-  fontSize: 28,
+  fontSize: 22,
   marginBottom: 50
 }, ({theme}) => ({
   color: theme.mid.color,
