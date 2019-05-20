@@ -34,7 +34,7 @@ const PageWrapper = styled("section")({
   flexDirection: "column",
   alignItems: "center",
   width: "100%",
-  paddingBottom: 50
+  paddingBottom: '13vh'
 });
 
 AboutPageTemplate.propTypes = {

@@ -43,12 +43,19 @@ const Wrapper = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  marginTop: '3vw'
-});
+  // marginTop: '3vw'
+}, ({theme}) => ({
+  [theme.media.max.sm]: {
+    marginTop: '8vh'
+  }
+}));
 
 const Row = styled("div")({
   display: "flex",
   flexDirection: "row",
   justifyContent: "center",
-  margin: '7.5vh 0vh'
+  margin: '7.5vh 0vh',
+  '&:first-of-type': {
+    marginTop: 0
+  }
 });
