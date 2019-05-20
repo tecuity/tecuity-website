@@ -9,7 +9,6 @@ import Content, { HTMLContent } from "../components/Content";
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  description,
   title,
   helmet,
   date,
@@ -155,7 +154,7 @@ const ContentWrapper = styled("article")(
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
+  excerpt: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object
 };
@@ -166,13 +165,12 @@ const BlogPost = ({ data: { prev, next, current } }) => {
       <BlogPostTemplate
         content={current.html}
         contentComponent={HTMLContent}
-        description={current.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${current.frontmatter.title}`}</title>
             <meta
-              name="description"
-              content={`${current.frontmatter.description}`}
+              name="excerpt"
+              content={`${current.excerpt}`}
             />
           </Helmet>
         }
@@ -214,10 +212,10 @@ export const pageQuery = graphql`
     current: markdownRemark(id: { eq: $id }) {
       id
       html
+      excerpt(pruneLength: 95)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
       }
     }
     next: markdownRemark(id: { eq: $nextId }) {
