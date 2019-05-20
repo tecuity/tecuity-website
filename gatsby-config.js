@@ -5,6 +5,7 @@ module.exports = {
     title: 'Tecuity',
     description:
       'Smart solutions for smart government.',
+    siteUrl: `https://www.tecuity.com`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -75,6 +76,12 @@ module.exports = {
         purgeOnly: ['/all.scss'], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: ["/admin/*"]
+      }
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
   // for avoiding CORS while developing Netlify Functions locally
