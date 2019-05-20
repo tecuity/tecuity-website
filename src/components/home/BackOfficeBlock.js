@@ -16,7 +16,7 @@ const BackOfficeBlock = ({title, description}) => {
       </Description>
       <Row>
         <ImgWrapper>
-          <Img src={SearchImg} searching/>
+          <Img src={SearchImg} searching aria-hidden/>
           <ImgTitle>
             <UnderlineWrapper>
               Comprehensive Search
@@ -24,7 +24,7 @@ const BackOfficeBlock = ({title, description}) => {
           </ImgTitle>
         </ImgWrapper>
         <ImgWrapper>
-          <Img src={ReportsImg} automated/>
+          <Img src={ReportsImg} automated aria-hidden/>
           <ImgTitle>
             <UnderlineWrapper>
               Automated Reports
@@ -32,7 +32,7 @@ const BackOfficeBlock = ({title, description}) => {
           </ImgTitle>
         </ImgWrapper>
         <ImgWrapper>
-          <Img src={ScanningImg} style={{marginTop: 10}} />
+          <Img src={ScanningImg} style={{marginTop: 10}} aria-hidden />
           <ImgTitle>
             <UnderlineWrapper>
               Simple Scanning

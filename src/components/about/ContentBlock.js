@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 
 export default ({title, description, icon, reversed}) => (
   <Wrapper reversed={reversed}>
-    <Icon reversed={reversed} src={icon} />
+    <Icon reversed={reversed} src={icon} aria-hidden />
     <Column>
       <Title reversed={reversed}>{title}</Title>
       <Description reversed={reversed}>{description}</Description>

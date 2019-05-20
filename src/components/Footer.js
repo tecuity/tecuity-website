@@ -8,7 +8,7 @@ export default () => {
   return (
     <Footer>
       <InnerWrapper>
-        <Logo src={logo} />
+        <Logo src={logo} alt="Tecuity logo" />
         <Navigation>
           <Link to='/'>SOS Enterprise</Link>
           <Link to='/about'>About</Link>

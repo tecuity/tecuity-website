@@ -9,7 +9,7 @@ const Navbar = () => {
     <Header>
       <InnerWrapper>
         <Link to="/">
-          <Logo src={logo} />
+          <Logo src={logo} alt="Tecuity Logo" />
         </Link>
         <AlignRight>
           <HamburgerMenu />

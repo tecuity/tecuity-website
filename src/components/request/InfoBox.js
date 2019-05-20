@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 export default ({iconSrc, title, description}) => (
   <Wrapper>
     <Header>
-      <Icon src={iconSrc} />
+      <Icon src={iconSrc} aria-hidden />
       <Title>{title}</Title>
     </Header>
     <Description>

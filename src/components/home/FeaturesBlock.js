@@ -7,7 +7,7 @@ export default () => {
 
   return (
     <Wrapper>
-      <PageDivider src={pageDivider} />
+      <PageDivider src={pageDivider} aria-hidden />
       {/* <FeatureBlocksWrapper>
         {
           features.map((f, i) => (

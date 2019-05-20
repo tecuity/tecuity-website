@@ -9,7 +9,7 @@ export default () => {
   return (
     <Wrapper>
       <CTA>
-        <Logo src={sosLogo} />
+        <Logo src={sosLogo} alt="SOS Enterprise" />
         {/* <Subtitle>
           Smart Solutions for Smart Government
         </Subtitle> */}

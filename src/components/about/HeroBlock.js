@@ -8,16 +8,16 @@ export default () => {
 
   return (
     <Wrapper>
-      <Logo src={logoSrc} />
+      <Logo src={logoSrc} alt="Tecuity" />
       <Mission>
         Empowering government<br/>
         <Tagline>since 2005</Tagline>
       </Mission>
       <BGLeftWrapper>
-        <BGLeftImg src={aboutBGLeft} />
+        <BGLeftImg src={aboutBGLeft} aria-hidden />
       </BGLeftWrapper>
       <BGRightWrapper>
-        <BGRightImg src={aboutBGRightt} />
+        <BGRightImg src={aboutBGRightt} aria-hidden />
       </BGRightWrapper>
     </Wrapper>
   )
