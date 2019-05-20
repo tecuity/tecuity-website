@@ -64,6 +64,10 @@ const Mission = styled('h1')({
   color: theme.mid.color,
   [theme.media.max.sm]: {
     fontSize: 20,
+  },
+  [theme.media.min.lg]: {
+    fontSize: '3.5vw',
+    maxWidth: 'none'
   }
 }))
 

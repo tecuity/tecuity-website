@@ -25,6 +25,12 @@ export default {
       sm: '@media(max-width: 736px)',
       md: '@media(max-width: 900px)',
       lg: '@media(max-width: 1280px)'
+    },
+    min: {
+      xs: '@media(min-width: 650px)',
+      sm: '@media(min-width: 736px)',
+      md: '@media(min-width: 900px)',
+      lg: '@media(min-width: 1280px)'
     }
   }
 }

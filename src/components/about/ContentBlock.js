@@ -22,6 +22,9 @@ const Wrapper = styled('div')({
   [theme.media.max.sm]: {
     flexDirection: 'column',
     alignItems: 'center'
+  },
+  [theme.media.min.lg]: {
+    maxWidth: 750
   }
 }))
 
@@ -33,9 +36,12 @@ const Column = styled('div')({
 const Icon = styled('img')({
   width: '100%',
   maxWidth: 100
-}, ({reversed}) => ({
+}, ({reversed, theme}) => ({
   marginRight: reversed ? 0 : 30,
-  marginLeft: reversed ? 30 : 0
+  marginLeft: reversed ? 30 : 0,
+  [theme.media.min.lg]: {
+    maxWidth: 150
+  }
 }))
 
 const Title = styled('h1')({
@@ -45,6 +51,9 @@ const Title = styled('h1')({
   color: theme.mid.color,
   [theme.media.max.sm]: {
     textAlign: 'center'
+  },
+  [theme.media.min.lg]: {
+    fontSize: 38
   }
 }), ({reversed}) => ({
   textAlign: reversed ? 'left' : 'right'
@@ -59,5 +68,8 @@ const Description = styled('p')({
   [theme.media.max.sm]: {
     textAlign: 'left',
     padding: '0px 15px'
+  },
+  [theme.media.min.lg]: {
+    fontSize: 22
   }
 }))
