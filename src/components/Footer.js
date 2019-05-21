@@ -14,6 +14,7 @@ export default () => {
           <Link to='/about'>About</Link>
           {/* <Link to='/news'>News</Link> */}
           <Link to='/request-demo' className='cta'>Request a Demo</Link>
+          <Link to='/privacy' className='cta'>Privacy Policy</Link>
         </Navigation>
       </InnerWrapper>
     </Footer>
@@ -52,7 +53,7 @@ const Navigation = styled('nav')({
   '& a': {
     color: theme.mid.textOn,
     textDecoration: 'none',
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: 300,
     marginLeft: 30,
     '&:first-of-type': {
