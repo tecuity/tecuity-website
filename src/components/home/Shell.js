@@ -26,5 +26,8 @@ export const Description = styled('p')({
     fontSize: 21,
     padding: '0px 20px',
     textAlign: 'justify'
+  },
+  [theme.media.max.sm]: {
+    textAlign: 'left'
   }
 }))
