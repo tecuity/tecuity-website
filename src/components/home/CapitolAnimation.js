@@ -232,4 +232,8 @@ export default withTheme(CapitolAnimation);
 const SVGWrapper = styled("svg")({
   width: "100%",
   maxWidth: 500
-});
+}, ({theme}) => ({
+  [theme.media.min.lg]: {
+    maxWidth: 600
+  }
+}));

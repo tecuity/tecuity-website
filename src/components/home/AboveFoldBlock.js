@@ -38,6 +38,9 @@ const Wrapper = styled('div')({
     alignItems: 'center',
     marginTop: '1vw',
     minHeight: '75vh'
+  },
+  [theme.media.min.lg]: {
+    maxWidth: theme.maxWidth + 300
   }
 }))
 
@@ -82,15 +85,18 @@ const Logo = styled('img')({
 }, ({theme}) => ({
   [theme.media.max.md]: {
     maxWidth: 240
+  },
+  [theme.media.min.lg]: {
+    maxWidth: 460
   }
 }))
-
-const Subtitle = styled('span')({
-  fontSize: 20,
-  marginTop: 15,
-  paddingLeft: 5,
-  textAlign: 'center'
-})
+//
+// const Subtitle = styled('span')({
+//   fontSize: 20,
+//   marginTop: 15,
+//   paddingLeft: 5,
+//   textAlign: 'center'
+// })
 
 const AnimationWrapper = styled('div')({
   flex: '1 0 auto',
