@@ -16,10 +16,12 @@ const encode = data => {
 export default () => {
   const [form, setForm] = useState({});
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
   const [attemptedSubmit, setAttemptedSubmit] = useState(false)
   const formRef = useRef()
 
   const handleSubmit = e => {
+    setSubmitting(true)
     e.preventDefault();
     fetch("/", {
       method: "POST",
@@ -33,9 +35,13 @@ export default () => {
       })
     })
       .then(() => {
+        setSubmitting(false)
         setSubmitted(true)
       })
-      .catch(error => alert(error));
+      .catch(error => {
+        console.error(error)
+        setSubmitting(false)
+      });
   };
 
   const handleChange = ({ target }) =>
@@ -122,8 +128,8 @@ export default () => {
             required
           />
           <ButtonWrapper className="field">
-            <SubmitButton type="submit" disabled={submitted} onClick={() => setAttemptedSubmit(true)}>
-              Send Request
+            <SubmitButton type="submit" disabled={submitted || submitting} onClick={() => setAttemptedSubmit(true)}>
+              {submitting ? 'Sending...' : 'Send Request'}
             </SubmitButton>
           </ButtonWrapper>
           <TopLeft>
