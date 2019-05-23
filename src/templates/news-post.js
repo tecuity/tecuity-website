@@ -26,17 +26,21 @@ export const BlogPostTemplate = ({
       </ContentWrapper>
       <PaginationWrapper noPrev={!prev}>
         {prev && (
-          <Link to={prev.slug} className='prev'>
+          <Link to={prev.slug} className="prev">
             <PrevIcon />
             <TitlePreview>
-              {`${prev.title.slice(0, 30)}${prev.title.length > 30 ? '...' : ''}`}
+              {`${prev.title.slice(0, 30)}${
+                prev.title.length > 30 ? "..." : ""
+              }`}
             </TitlePreview>
           </Link>
         )}
         {next && (
-          <Link to={next.slug} className='next'>
+          <Link to={next.slug} className="next">
             <TitlePreview>
-              {`${next.title.slice(0, 30)}${next.title.length > 30 ? '...' : ''}`}
+              {`${next.title.slice(0, 30)}${
+                next.title.length > 30 ? "..." : ""
+              }`}
             </TitlePreview>
             <NextIcon />
           </Link>
@@ -46,17 +50,20 @@ export const BlogPostTemplate = ({
   );
 };
 
-const Wrapper = styled("div")({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  paddingTop: "6vh"
-}, ({theme}) => ({
-  [theme.media.max.sm]: {
-    paddingLeft: 20,
-    paddingRight: 20
-  }
-}));
+const Wrapper = styled("div")(
+  {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    paddingTop: "6vh"
+  },
+  ({ theme }) => ({
+    [theme.media.max.sm]: {
+      paddingLeft: 20,
+      paddingRight: 20
+    }
+  })
+);
 
 const Title = styled("h1")(
   {
@@ -93,22 +100,22 @@ const PaginationWrapper = styled("div")(
   ({ theme, noPrev }) => ({
     justifyContent: noPrev ? "flex-end" : "space-between",
     "& a": {
-      flex: '0 0 auto',
-      display: 'flex',
-      alignItems: 'center',
+      flex: "0 0 auto",
+      display: "flex",
+      alignItems: "center",
       color: theme.mid.color,
-      textDecoration: 'none',
-      '& span': {
-        padding: '5px 10px',
+      textDecoration: "none",
+      "& span": {
+        padding: "5px 10px",
         opacity: 0,
         color: theme.primary.color,
-        transition: 'opacity 200ms'
+        transition: "opacity 200ms"
       },
       "&:hover": {
         "& svg": {
           stroke: theme.primary.color
         },
-        '& span': {
+        "& span": {
           opacity: 1
         }
       },
@@ -118,15 +125,15 @@ const PaginationWrapper = styled("div")(
       }
     },
     [theme.media.max.sm]: {
-      flexDirection: 'column-reverse',
-      '& a.prev': {
-        alignSelf: 'flex-start'
+      flexDirection: "column-reverse",
+      "& a.prev": {
+        alignSelf: "flex-start"
       },
-      '& a.next': {
-        alignSelf: 'flex-end',
+      "& a.next": {
+        alignSelf: "flex-end",
         marginBottom: 20
       },
-      '& a span': {
+      "& a span": {
         opacity: 1,
         color: theme.mid.color
       }
@@ -134,9 +141,7 @@ const PaginationWrapper = styled("div")(
   })
 );
 
-const TitlePreview = styled('span')({
-
-})
+const TitlePreview = styled("span")({});
 
 const ContentWrapper = styled("article")(
   {
@@ -167,11 +172,8 @@ const BlogPost = ({ data: { prev, next, current } }) => {
         contentComponent={HTMLContent}
         helmet={
           <Helmet titleTemplate="%s | Blog">
-            <title>{`${current.frontmatter.title}`}</title>
-            <meta
-              name="excerpt"
-              content={`${current.excerpt}`}
-            />
+            <title>{`Tecuity | ${current.frontmatter.title}`}</title>
+            <meta name="excerpt" content={`${current.excerpt}`} />
           </Helmet>
         }
         title={current.frontmatter.title}

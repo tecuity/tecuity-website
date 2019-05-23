@@ -34,7 +34,7 @@ const PageWrapper = styled("section")({
   flexDirection: "column",
   alignItems: "center",
   width: "100%",
-  paddingBottom: '13vh'
+  paddingBottom: "13vh"
 });
 
 AboutPageTemplate.propTypes = {
@@ -46,7 +46,7 @@ AboutPageTemplate.propTypes = {
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data;
   return (
-    <Layout>
+    <Layout pageTitle="About">
       <AboutPageTemplate {...post.frontmatter} />
     </Layout>
   );

@@ -26,16 +26,13 @@ export const IndexPageTemplate = ({
     <AboveFoldBlock />
     <FeaturesBlock />
     <SmartFormsBlock title={smartTitle} description={smartDescription} />
-    <ReviewBlock
-      quote={reviewQuote1}
-      author={reviewAuthor1}
-    />
+    <ReviewBlock quote={reviewQuote1} author={reviewAuthor1} />
     <OneStopBlock title={oneStopTitle} description={oneStopDescription} />
-    <BackOfficeBlock title={backOfficeTitle} description={backOfficeDescription} />
-    <ReviewBlock
-      quote={reviewQuote2}
-      author={reviewAuthor2}
+    <BackOfficeBlock
+      title={backOfficeTitle}
+      description={backOfficeDescription}
     />
+    <ReviewBlock quote={reviewQuote2} author={reviewAuthor2} />
   </PageWrapper>
 );
 
@@ -43,7 +40,7 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>
+    <Layout pageTitle="SOS Enterprise">
       <IndexPageTemplate
         title={frontmatter.title}
         smartTitle={frontmatter.smartTitle}

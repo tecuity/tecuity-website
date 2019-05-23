@@ -57,7 +57,7 @@ const ContentWrapper = styled("article")(
     fontWeight: 300,
     fontSize: 18,
     marginBottom: 100,
-    '& h1,h2,h3,h4,h5,h6': {
+    "& h1,h2,h3,h4,h5,h6": {
       fontWeight: 500
     }
   },
@@ -67,9 +67,9 @@ const ContentWrapper = styled("article")(
 );
 
 const GenericPage = ({ data }) => {
-  const { markdownRemark: post, html } = data;
+  const { markdownRemark: post } = data;
   return (
-    <Layout>
+    <Layout pageTitle={post.frontmatter.title}>
       <GenericPageTemplate
         content={post.html}
         contentComponent={HTMLContent}

@@ -1,20 +1,20 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import './all.scss'
-import useSiteMetadata from './SiteMetadata'
-import { ThemeProvider } from 'emotion-theming'
-import theme from '../theme'
-import styled from '@emotion/styled'
+import React from "react";
+import Helmet from "react-helmet";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import "./all.scss";
+import useSiteMetadata from "./SiteMetadata";
+import { ThemeProvider } from "emotion-theming";
+import theme from "../theme";
+import styled from "@emotion/styled";
 
-const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+const TemplateWrapper = ({ children, pageTitle }) => {
+  const { title, description } = useSiteMetadata();
   return (
     <PageWrapper>
       <Helmet>
         <html lang="en" />
-        <title>{title}</title>
+        <title>{`${title}${pageTitle ? ` | ${pageTitle}` : ""}`}</title>
         <meta name="description" content={description} />
 
         <link
@@ -49,25 +49,25 @@ const TemplateWrapper = ({ children }) => {
         <Footer />
       </ThemeProvider>
     </PageWrapper>
-  )
-}
+  );
+};
 
-export default TemplateWrapper
+export default TemplateWrapper;
 
-const PageWrapper = styled('div')({
-  display: 'flex',
-  flexDirection: 'column',
-  minHeight: '100vh'
-})
+const PageWrapper = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  minHeight: "100vh"
+});
 
-const CenterWrapper = styled('div')({
-  flex: '1 0 auto',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center'
-})
+const CenterWrapper = styled("div")({
+  flex: "1 0 auto",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center"
+});
 
-const ContentWrapper = styled('main')({
-  width: '100%',
+const ContentWrapper = styled("main")({
+  width: "100%"
   // maxWidth: 1200
-})
+});
