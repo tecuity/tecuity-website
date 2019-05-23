@@ -171,7 +171,7 @@ const BlogPost = ({ data: { prev, next, current } }) => {
         content={current.html}
         contentComponent={HTMLContent}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s">
             <title>{`Tecuity | ${current.frontmatter.title}`}</title>
             <meta name="excerpt" content={`${current.excerpt}`} />
           </Helmet>
