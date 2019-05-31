@@ -1,3 +1,3 @@
 User-Agent: *
-Disallow:
+Disallow: /admin/
 Sitemap: https://tecuity.com/sitemap.xml
