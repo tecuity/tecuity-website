@@ -1,15 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
+import { css } from "@emotion/core"
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import Image from 'gatsby-image';
 
 export const BlogPostTemplate = ({
   content,
   contentComponent,
   title,
+  coverPhoto = {},
   helmet,
   date,
   prev,
@@ -21,6 +24,10 @@ export const BlogPostTemplate = ({
       {helmet || ""}
       <Title>{title}</Title>
       <DateWrapper>{date}</DateWrapper>
+      {
+        coverPhoto && coverPhoto.childImageSharp &&
+        <Image css={coverPhotoStyles} fluid={coverPhoto.childImageSharp.fluid} alt="" />
+      }
       <ContentWrapper>
         <PostContent content={content} />
       </ContentWrapper>
@@ -50,6 +57,19 @@ export const BlogPostTemplate = ({
   );
 };
 
+const coverPhotoStyles = css`
+  max-width: 1200px;
+  max-height: 800px;
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  border-radius: 4px;
+  @media(max-width: 736px) {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+`
+
 const Wrapper = styled("div")(
   {
     display: "flex",
@@ -68,19 +88,25 @@ const Wrapper = styled("div")(
 const Title = styled("h1")(
   {
     width: "100%",
-    maxWidth: 800,
+    maxWidth: 1000,
     textAlign: "center",
     fontWeight: 300,
-    fontSize: 40
+    fontSize: 50,
+    marginBottom: 10
   },
   ({ theme }) => ({
-    color: theme.dark.color
+    color: theme.dark.color,
+    [theme.media.max.sm]: {
+      fontSize: 40
+    }
   })
 );
 
 const DateWrapper = styled("div")(
   {
-    fontStyle: "italic"
+    fontStyle: "italic",
+    fontSize: 20,
+    marginTop: 10
   },
   ({ theme }) => ({
     color: theme.mid.color
@@ -93,9 +119,11 @@ const PaginationWrapper = styled("div")(
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
-    maxWidth: 700,
+    maxWidth: 1000,
     padding: "20px 0px",
-    marginBottom: 50
+    marginBottom: 50,
+    paddingLeft: 10,
+    paddingRight: 10
   },
   ({ theme, noPrev }) => ({
     justifyContent: noPrev ? "flex-end" : "space-between",
@@ -125,6 +153,8 @@ const PaginationWrapper = styled("div")(
       }
     },
     [theme.media.max.sm]: {
+      paddingLeft: 0,
+      paddingRight: 0,
       flexDirection: "column-reverse",
       "& a.prev": {
         alignSelf: "flex-start"
@@ -146,13 +176,19 @@ const TitlePreview = styled("span")({});
 const ContentWrapper = styled("article")(
   {
     width: "100%",
-    maxWidth: 700,
-    lineHeight: 1.45,
+    maxWidth: 800,
+    lineHeight: 1.6,
     fontWeight: 300,
-    fontSize: 18
+    fontSize: 20,
+    paddingLeft: 10,
+    paddingRight: 10
   },
   ({ theme }) => ({
-    color: theme.dark.color
+    color: theme.dark.color,
+    [theme.media.max.sm]: {
+      paddingLeft: 0,
+      paddingRight: 0
+    }
   })
 );
 
@@ -177,6 +213,7 @@ const BlogPost = ({ data: { prev, next, current } }) => {
           </Helmet>
         }
         title={current.frontmatter.title}
+        coverPhoto={current.frontmatter.coverPhoto}
         date={current.frontmatter.date}
         prev={
           prev
@@ -218,6 +255,19 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        coverPhoto{
+          childImageSharp{
+            fluid(maxWidth: 1200) {
+              tracedSVG
+              src
+              srcSet
+              sizes
+              presentationWidth
+              presentationHeight
+              aspectRatio
+            }
+          }
+        }
       }
     }
     next: markdownRemark(id: { eq: $nextId }) {
