@@ -201,6 +201,7 @@ BlogPostTemplate.propTypes = {
 };
 
 const BlogPost = ({ data: { prev, next, current } }) => {
+  console.log(current);
   return (
     <Layout>
       <BlogPostTemplate
@@ -210,6 +211,12 @@ const BlogPost = ({ data: { prev, next, current } }) => {
           <Helmet titleTemplate="%s">
             <title>{`Tecuity | ${current.frontmatter.title}`}</title>
             <meta name="excerpt" content={`${current.excerpt}`} />
+            <meta property='og:title' content={current.frontmatter.title} />
+            <meta property="og:description" content={`${current.excerpt}`} />
+            {
+              current.frontmatter.coverPhoto &&
+              <meta property="og:image" content={current.frontmatter.coverPhoto.childImageSharp.fluid.src} />
+            }
           </Helmet>
         }
         title={current.frontmatter.title}
