@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: news-post
 title: North Dakota Secretary of State visits Tecuity HQ
 date: 2019-07-09T18:45:30.983Z
 coverPhoto: /img/image-from-ios-2-.jpg
