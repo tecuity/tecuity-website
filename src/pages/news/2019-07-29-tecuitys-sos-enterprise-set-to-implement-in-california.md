@@ -9,7 +9,9 @@ SOS Enterprise is a platform with many additional modules that can be configured
 
 If you would like more information on the SOS Enterprise Platform, additional modules, our professional services, or what else is going on at Tecuity, Inc. Please contact:
 
-Nick Eskelson\
-801-206-9788\
-sales@tecuity.com   \
+Nick Eskelson
+\
+801-206-9788
+\
+sales@tecuity.com\
 www.tecuity.com
