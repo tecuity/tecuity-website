@@ -16,6 +16,7 @@ const Navbar = () => {
         </AlignRight>
         <Nav>
           <Link to="/">SOS Enterprise</Link>
+          <Link to="/rules">Administrative Rules</Link>
           <Link to="/about">About</Link>
           <Link to="/news">News</Link>
           {/* <Link to="/careers">Careers</Link> */}

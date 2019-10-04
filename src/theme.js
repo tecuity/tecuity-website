@@ -9,6 +9,11 @@ export default {
     rgbaFunction: opacity => `rgba(245, 119, 31, ${opacity})`,
     textOn: '#ffffff'
   },
+  rules: {
+    color: '#2c58c4',
+    rgbaFunction: opacity => `rgba(44, 88, 196, ${opacity})`,
+    textOn: '#ffffff'
+  },
   dark: {
     color: '#3D4644',
     textOn: 'rgb(241, 241, 241)'

@@ -3,15 +3,15 @@ import styled from "@emotion/styled";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PropTypes from "prop-types";
-import AboveFoldBlock from "../components/home/AboveFoldBlock";
+import AboveFoldBlock from "../components/rules/AboveFoldBlock";
 import SmartFormsBlock from "../components/home/SmartFormsBlock";
-import FeaturesBlock from "../components/home/FeaturesBlock";
+import FeaturesBlock from "../components/rules/FeaturesBlock";
 import OneStopBlock from "../components/home/OneStopBlock";
 import BackOfficeBlock from "../components/home/BackOfficeBlock";
 import ReviewBlock from "../components/home/ReviewBlock";
 import CallToActionBlock from '../components/home/CallToActionBlock'
 
-export const RulesPageTemplate = ({
+export const IndexPageTemplate = ({
   smartTitle,
   smartDescription,
   reviewQuote1,
@@ -38,12 +38,12 @@ export const RulesPageTemplate = ({
   </PageWrapper>
 );
 
-const RulesPage = ({ data }) => {
+const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout pageTitle="SOS Enterprise">
-      <RulesPageTemplate
+      <IndexPageTemplate
         title={frontmatter.title}
         smartTitle={frontmatter.smartTitle}
         smartDescription={frontmatter.smartDescription}
@@ -53,10 +53,10 @@ const RulesPage = ({ data }) => {
   );
 };
 
-export default RulesPage;
+export default IndexPage;
 
 export const pageQuery = graphql`
-  query RulesPageTemplate {
+  query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
@@ -75,7 +75,7 @@ export const pageQuery = graphql`
   }
 `;
 
-RulesPageTemplate.propTypes = {
+IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   smartTitle: PropTypes.string,
   smartDescription: PropTypes.string
