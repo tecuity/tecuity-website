@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout pageTitle="SOS Enterprise">
+    <Layout pageTitle="Administrative Rules" themeColor="#2c58c4">
       <IndexPageTemplate
         title={frontmatter.title}
         smartTitle={frontmatter.smartTitle}
@@ -57,7 +57,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "rules-page" } }) {
       frontmatter {
         title
         smartTitle

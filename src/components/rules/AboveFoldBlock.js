@@ -84,7 +84,7 @@ const Logo = styled('img')({
   maxWidth: 370
 }, ({theme}) => ({
   [theme.media.max.md]: {
-    maxWidth: 240
+    maxWidth: 340
   },
   [theme.media.min.lg]: {
     maxWidth: 460
@@ -107,7 +107,9 @@ const AnimationWrapper = styled('div')({
 }, ({theme}) => ({
   [theme.media.max.md]: {
     width: '100%',
-    padding: '10vw',
+    padding: '5vw',
+    paddingLeft: '7vw',
+    paddingRight: '4vw',
     paddingTop: 0,
     justifyContent: 'center'
   }

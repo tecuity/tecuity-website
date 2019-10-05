@@ -5,6 +5,7 @@ import InfoBox from './InfoBox'
 import TopLeftAnimation from './TopLeftAnimation'
 import BottomRightAnimation from './BottomRightAnimation'
 import sosLogo from '../../img/sos-logo-green.svg'
+import rulesLogo from '../../img/rules_wordmark.svg'
 import chatIcon from '../../img/chat.svg'
 
 const encode = data => {
@@ -144,6 +145,11 @@ export default () => {
             iconSrc={sosLogo}
             title="See SOS Enterprise in Action"
             description="Drop us a note and we'll setup a time for a hands-on demonstration."
+          />
+          <InfoBox
+            iconSrc={rulesLogo}
+            title="Try out Administrative Rules"
+            description="Learn about the leading solution for managing administrative rules."
           />
           <InfoBox
             iconSrc={chatIcon}

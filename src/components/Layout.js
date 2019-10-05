@@ -8,13 +8,13 @@ import { ThemeProvider } from "emotion-theming";
 import theme from "../theme";
 import styled from "@emotion/styled";
 
-const TemplateWrapper = ({ children, pageTitle }) => {
+const TemplateWrapper = ({ children, pageTitle, themeColor }) => {
   const { title, description } = useSiteMetadata();
   return (
     <PageWrapper>
       <Helmet>
         <html lang="en" />
-        <title>{`${title}${pageTitle ? ` | ${pageTitle}` : ""}`}</title>
+        <title>{`${pageTitle ? `${pageTitle} | ` : ""}${title}`}</title>
         <meta name="description" content={description} />
 
         <link
@@ -34,7 +34,7 @@ const TemplateWrapper = ({ children, pageTitle }) => {
           href="/img/favicon-16x16.png"
           sizes="16x16"
         />
-        <meta name="theme-color" content="#95C93D" />
+        <meta name="theme-color" content={themeColor ? themeColor : "#95C93D"} />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />

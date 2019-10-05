@@ -1,11 +1,10 @@
 ---
 templateKey: rules-page
-title: SOS Enterprise
-smartTitle: Smart Forms
+title: Administrative Rules
+smartTitle: Every Rule. Every Agency. One Place.
 smartDescription: >-
-  With a simple drag-and-drop interface, you can quickly create and edit
-  unlimited custom forms. Defining complex custom business logic is always only
-  a few clicks away.
+  Provide the public with effortless access to all administrative rules. Rules
+  may be easily searched by content, agency, status, and more.
 reviewQuote1: >-
   "I LOVE your new online filing system... The State does good work,
   congratulations!"
