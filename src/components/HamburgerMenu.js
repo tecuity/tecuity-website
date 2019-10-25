@@ -53,6 +53,7 @@ const Menu = ({isOpen, onRequestClose}) => {
       </MenuHeader>
       <MenuBody>
         <Link to='/'>SOS Enterprise</Link>
+        <Link to='/rules'>Administrative Rules</Link>
         <Link to='/about'>About</Link>
         <Link to='/request-demo'>Request a Demo</Link>
         {/* <Link to='/news'>News</Link> */}
