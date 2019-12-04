@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-export default ({quote, author}) => (
-  <Wrapper>
+export default ({quote, author, colorKey}) => (
+  <Wrapper colorKey={colorKey}>
     <Quote>{quote}</Quote>
     <Author>{author}</Author>
   </Wrapper>
@@ -16,8 +16,8 @@ const Wrapper = styled('div')({
   alignItems: 'center',
   padding: '30px 20px',
   marginBottom: '15vh'
-}, ({theme}) => ({
-  background: theme.primary.rgbaFunction(.06),
+}, ({theme, colorKey}) => ({
+  background: theme[colorKey ? colorKey : 'primary'].rgbaFunction(.06),
   color: theme.dark.color
 }))
 

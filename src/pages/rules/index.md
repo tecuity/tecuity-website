@@ -6,9 +6,8 @@ smartDescription: >-
   Provide the public with effortless access to all administrative rules. Rules
   may be easily searched by content, agency, status, and more.
 reviewQuote1: >-
-  "I LOVE your new online filing system... The State does good work,
-  congratulations!"
-reviewAuthor1: Pat — Business Owner
+  "I could talk about the rule history management features. I could talk about the automation. But the two things that are the most important to us? The ability to use any modern browser with the system, and confidence in Tecuity's ability to develop, support, and maintain."
+reviewAuthor1: Mike Broschinsky - Utah Office of Administrative Rules
 oneStopTitle: Business One-Stop
 oneStopDescription: >-
   Our cloud-hosted Data Exchange Network provides integrated actors the ability

@@ -6,7 +6,8 @@ export const Title = styled("h2")(
     fontSize: 60,
     fontWeight: 200,
     textAlign: "center",
-    margin: 0
+    margin: 0,
+    whiteSpace: 'pre-wrap'
   },
   ({ theme }) => ({
     color: theme.mid.color,

@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PropTypes from "prop-types";
 import AboveFoldBlock from "../components/rules/AboveFoldBlock";
-import SmartFormsBlock from "../components/home/SmartFormsBlock";
+import AgenciesBlock from "../components/rules/AgenciesBlock";
 import FeaturesBlock from "../components/rules/FeaturesBlock";
 import OneStopBlock from "../components/home/OneStopBlock";
 import BackOfficeBlock from "../components/home/BackOfficeBlock";
@@ -26,15 +26,21 @@ export const IndexPageTemplate = ({
   <PageWrapper>
     <AboveFoldBlock />
     <FeaturesBlock />
-    <SmartFormsBlock title={smartTitle} description={smartDescription} />
-    <ReviewBlock quote={reviewQuote1} author={reviewAuthor1} />
-    <OneStopBlock title={oneStopTitle} description={oneStopDescription} />
+    <AgenciesBlock
+      title={smartTitle}
+      description={smartDescription}
+    />
+    <ReviewBlock quote={reviewQuote1} author={reviewAuthor1} colorKey="rules" />
+    <OneStopBlock
+      title={oneStopTitle}
+      description={oneStopDescription}
+    />
     <BackOfficeBlock
       title={backOfficeTitle}
       description={backOfficeDescription}
     />
     <ReviewBlock quote={reviewQuote2} author={reviewAuthor2} />
-    <CallToActionBlock />
+    <CallToActionBlock colorKey="rules"/>
   </PageWrapper>
 );
 
