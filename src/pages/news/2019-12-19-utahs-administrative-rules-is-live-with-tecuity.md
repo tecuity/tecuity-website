@@ -1,6 +1,6 @@
 ---
 templateKey: news-post
-title: Utah's Administrative Rules is Live with Tecuity
+title: Utah's Administrative Rules is Live With Tecuity
 date: 2019-12-19T18:51:47.938Z
 ---
 Hyde Park, UT -  Tecuity, Inc. is excited to announce that on November 4, 2019, the Utah Office of Administrative Rules launched our latest version of the Administrative Rules application.  The updated application will allow rule filings to be submitted online and become more readily accessible to the public.
