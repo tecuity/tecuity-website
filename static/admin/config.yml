@@ -38,6 +38,16 @@ collections:
           - {label: "Block 2 Description", name: "block2Description", widget: "text"}
           - {label: "Block 3 Title", name: "block3Title", widget: "string"}
           - {label: "Block 3 Description", name: "block3Description", widget: "text"}
+      - file: "src/pages/rules/index.md"
+        label: "Rules Page"
+        name: "rules"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "rules-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Agency Block Title", name: "smartTitle", widget: "string"}
+          - {label: "Agency Block Description", name: "smartDescription", widget: "text"}
+          - {label: "Review 1 Quote", name: "reviewQuote1", widget: "text"}
+          - {label: "Review 1 Author", name: "reviewAuthor1", widget: "text"}
       - file: "src/pages/privacy/index.md"
         label: "Privacy Policy"
         name: "privacy"
