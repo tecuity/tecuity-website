@@ -6,10 +6,10 @@ import PropTypes from "prop-types";
 import AboveFoldBlock from "../components/rules/AboveFoldBlock";
 import AgenciesBlock from "../components/rules/AgenciesBlock";
 import FeaturesBlock from "../components/rules/FeaturesBlock";
-import OneStopBlock from "../components/home/OneStopBlock";
-import BackOfficeBlock from "../components/home/BackOfficeBlock";
+// import OneStopBlock from "../components/home/OneStopBlock";
+// import BackOfficeBlock from "../components/home/BackOfficeBlock";
 import ReviewBlock from "../components/home/ReviewBlock";
-import CallToActionBlock from '../components/home/CallToActionBlock'
+import CallToActionBlock from '../components/rules/CallToActionBlock'
 
 export const IndexPageTemplate = ({
   smartTitle,
@@ -31,7 +31,7 @@ export const IndexPageTemplate = ({
       description={smartDescription}
     />
     <ReviewBlock quote={reviewQuote1} author={reviewAuthor1} colorKey="rules" />
-    <OneStopBlock
+    {/* <OneStopBlock
       title={oneStopTitle}
       description={oneStopDescription}
     />
@@ -39,7 +39,7 @@ export const IndexPageTemplate = ({
       title={backOfficeTitle}
       description={backOfficeDescription}
     />
-    <ReviewBlock quote={reviewQuote2} author={reviewAuthor2} />
+    <ReviewBlock quote={reviewQuote2} author={reviewAuthor2} /> */}
     <CallToActionBlock colorKey="rules"/>
   </PageWrapper>
 );
