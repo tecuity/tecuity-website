@@ -1,27 +1,44 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import styled from "@emotion/styled";
+import Layout from "../components/Layout";
+import Content, { HTMLContent } from "../components/Content";
+import ApplicationForm from "../components/application/ApplicationForm";
+import InfoContainer from "../components/application/InfoContainer";
 
 export const CareersPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+  const PageContent = contentComponent || Content;
 
   return (
-    <section>
-      Careers Page
-    </section>
-  )
-}
+    <OuterPadding>
+      <CenterContent>
+        <InfoContainer />
+        <ApplicationForm />
+      </CenterContent>
+    </OuterPadding>
+  );
+};
+
+const OuterPadding = styled.div({
+  padding: 20
+});
+
+const CenterContent = styled.div({
+  display: "flex",
+  justifyContent: "center",
+  margin: "10rem auto",
+  maxWidth: 1200
+});
 
 CareersPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
+  contentComponent: PropTypes.func
+};
 
 const CareersPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
@@ -31,14 +48,14 @@ const CareersPage = ({ data }) => {
         content={post.html}
       />
     </Layout>
-  )
-}
+  );
+};
 
 CareersPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
+  data: PropTypes.object.isRequired
+};
 
-export default CareersPage
+export default CareersPage;
 
 export const aboutPageQuery = graphql`
   query CareersPage($id: String!) {
@@ -49,4 +66,4 @@ export const aboutPageQuery = graphql`
       }
     }
   }
-`
+`;
