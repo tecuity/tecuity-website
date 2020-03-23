@@ -15,13 +15,20 @@ export default () => {
   );
 };
 
-const InfoContainer = styled.div({
-  alignItems: "center",
-  display: "flex",
-  flex: 1,
-  flexDirection: "column",
-  marginRight: "2rem"
-});
+const InfoContainer = styled.div(
+  {
+    alignItems: "center",
+    display: "flex",
+    flex: 1,
+    flexDirection: "column",
+    marginRight: "2rem"
+  },
+  ({ theme }) => ({
+    [theme.media.max.md]: {
+      marginRight: 0
+    }
+  })
+);
 
 const Title = styled.h1({
   color: "#666666",
@@ -40,8 +47,15 @@ const Text = styled.p({
   textAlign: "center"
 });
 
-const Graphic = styled.img({
-  display: "block",
-  padding: "1rem 3rem",
-  width: "100%"
-});
+const Graphic = styled.img(
+  {
+    display: "block",
+    padding: "1rem 3rem",
+    width: "100%"
+  },
+  ({ theme }) => ({
+    [theme.media.max.md]: {
+      order: -1
+    }
+  })
+);

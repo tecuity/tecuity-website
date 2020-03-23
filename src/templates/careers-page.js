@@ -24,12 +24,20 @@ const OuterPadding = styled.div({
   padding: 20
 });
 
-const CenterContent = styled.div({
-  display: "flex",
-  justifyContent: "center",
-  margin: "10rem auto",
-  maxWidth: 1200
-});
+const CenterContent = styled.div(
+  {
+    display: "flex",
+    justifyContent: "center",
+    margin: "10rem auto",
+    maxWidth: 1200
+  },
+  ({ theme }) => ({
+    [theme.media.max.md]: {
+      flexDirection: "column",
+      margin: "2rem auto"
+    }
+  })
+);
 
 CareersPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
