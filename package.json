@@ -39,6 +39,7 @@
     "react": "^16.8.4",
     "react-cache": "^2.0.0-alpha.1",
     "react-dom": "^16.8.4",
+    "react-dropzone": "^10.2.1",
     "react-helmet": "^5.2.0",
     "the-platform": "^0.10.1",
     "uuid": "^3.2.1"
