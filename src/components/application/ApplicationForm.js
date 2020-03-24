@@ -53,13 +53,14 @@ export default () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "job-application",
-        ...Object.entries(form).reduce(
-          (obj, [key, x]) => ({ ...obj, [key]: x.value }),
-          {}
-        )
-      })
+      // body: encode({
+      //   "form-name": "job-application",
+      //   ...Object.entries(form).reduce(
+      //     (obj, [key, x]) => ({ ...obj, [key]: x.value }),
+      //     {}
+      //   )
+      // })
+      body: new FormData(document.getElementById("application-form"))
     })
       .then(() => {
         setSubmitting(false);
@@ -80,6 +81,7 @@ export default () => {
   return (
     <FormContainer>
       <Form
+        id="application-form"
         name="job-application"
         method="post"
         data-netlify="true"
