@@ -193,7 +193,7 @@ function ResumeDropzone(handleChange, resumeFile) {
             Clear
           </FormButton>
           <DropText aria-hidden={true} role="presentation">
-            {resumeFile.name}
+            {resumeFile.value.name}
           </DropText>
         </>
       );
