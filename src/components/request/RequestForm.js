@@ -144,7 +144,7 @@ export default () => {
           <InfoBox
             iconSrc={sosLogo}
             title="See SOS Enterprise in Action"
-            description="Drop us a note and we'll setup a time for a hands-on demonstration."
+            description="Drop us a note, and we'll setup a time for a hands-on demonstration."
           />
           <InfoBox
             iconSrc={rulesLogo}
@@ -215,14 +215,9 @@ const Sidebar = styled('div')({
   paddingBottom: '25%'
 }, ({theme}) => ({
   [theme.media.max.md]: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    width: '100%',
-    paddingBottom: 30
-  },
-  [theme.media.max.sm]: {
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingBottom: 30
   }
 }))
 
@@ -334,7 +329,7 @@ const Row = styled('div')({
   display: 'flex',
   flexDirection: 'row',
   '& > div': {
-    flex: '1 0 auto',
+    flex: '1',
     '&:first-of-type': {
       marginRight: 15
     }
@@ -343,9 +338,9 @@ const Row = styled('div')({
   [theme.media.max.md]: {
     flexDirection: 'column',
     '& > div': {
-      flex: '1 0 auto',
+      flex: '1',
       '&:first-of-type': {
-        marginRight: 15
+        marginRight: 0
       }
     }
   }
@@ -357,7 +352,8 @@ const FieldWrapper = styled('div')({
 
 const Input = styled('input')({
   width: '100%',
-  height: 50
+  height: 50,
+  padding: "0 5px"
 }, ({theme, attemptedSubmit}) => ({
   border: `2px solid ${theme.mid.rgbaFunction(.4)}`,
   '&:focus': {

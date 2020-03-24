@@ -274,15 +274,13 @@ const Field = ({
             value={value}
             attemptedSubmit={attemptedSubmit}
           >
-            <option value="frontend-engineering">
-              Frontend Software Engineering
-            </option>
-            <option value="backend-engineering">
-              Backend Software Engineering
-            </option>
-            <option value="qa-testing">QA Testing</option>
-            <option value="marketing">Marketing</option>
-            <option value="management">Management</option>
+            <option value="junior-engineer">Junior Software Engineer</option>
+            <option value="senior-engineer">Senior Software Engineer</option>
+            <option value="database">Database Administrator</option>
+            <option value="qa-engineer">QA Engineer</option>
+            <option value="qa-manager">QA Manager</option>
+            <option value="project-manager">Project Manager</option>
+            <option value="other">Other</option>
           </SelectField>
         );
       default:
