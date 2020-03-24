@@ -10,12 +10,42 @@ const encode = data => {
     .join("&");
 };
 
+const interests = [
+  {
+    name: "Junior Software Engineer",
+    value: "junior-engineer"
+  },
+  {
+    name: "Senior Software Engineer",
+    value: "senior-engineer"
+  },
+  {
+    name: "Database Administrator",
+    value: "dba"
+  },
+  {
+    name: "QA Engineer",
+    value: "qa-engineer"
+  },
+  {
+    name: "QA Manager",
+    value: "qa-manager"
+  },
+  {
+    name: "Project Manager",
+    value: "project-manager"
+  },
+  {
+    name: "Other",
+    value: "other"
+  }
+];
+
 export default () => {
-  const [form, setForm] = useState({});
+  const [form, setForm] = useState({ interest: { value: interests[0].value } });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [attemptedSubmit, setAttemptedSubmit] = useState(false);
-  // const formRef = useRef();
 
   const handleSubmit = e => {
     setSubmitting(true);
@@ -55,7 +85,6 @@ export default () => {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
-        // ref={formRef}
       >
         <SuccessMessage show={submitted}>
           <SuccessDescription aria-live="polite">
@@ -251,6 +280,10 @@ const FlexRow = styled.div({
   }
 });
 
+const interestOptions = interests.map(interest => (
+  <option value={interest.value}>{interest.name}</option>
+));
+
 const Field = ({
   onChange,
   type = "text",
@@ -274,13 +307,7 @@ const Field = ({
             value={value}
             attemptedSubmit={attemptedSubmit}
           >
-            <option value="junior-engineer">Junior Software Engineer</option>
-            <option value="senior-engineer">Senior Software Engineer</option>
-            <option value="database">Database Administrator</option>
-            <option value="qa-engineer">QA Engineer</option>
-            <option value="qa-manager">QA Manager</option>
-            <option value="project-manager">Project Manager</option>
-            <option value="other">Other</option>
+            {interestOptions}
           </SelectField>
         );
       default:
