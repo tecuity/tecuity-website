@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback } from "react";
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/core";
 import { useDropzone } from "react-dropzone";
 import dropGraphic from "../../img/file_upload.svg";
 
@@ -56,6 +57,16 @@ export default () => {
         onSubmit={handleSubmit}
         // ref={formRef}
       >
+        <SuccessMessage show={submitted}>
+          <SuccessDescription aria-live="polite">
+            {submitted ? "Thank you for your application!" : null}
+          </SuccessDescription>
+          <SuccessDescription aria-live="polite">
+            {submitted
+              ? "If you're a good fit for our team, we'll be in touch."
+              : null}
+          </SuccessDescription>
+        </SuccessMessage>
         <FlexRow>
           <Field
             label="First Name"
@@ -75,6 +86,23 @@ export default () => {
           />
         </FlexRow>
         <Field
+          label="Phone Number"
+          name="phone"
+          type="tel"
+          onChange={handleChange}
+          value={(form.phone || {}).value}
+          attemptedSubmit={attemptedSubmit}
+          required
+        />
+        <Field
+          label="Email"
+          name="email"
+          onChange={handleChange}
+          value={(form.email || {}).value}
+          attemptedSubmit={attemptedSubmit}
+          required
+        />
+        <Field
           label="Interest"
           name="interest"
           onChange={handleChange}
@@ -83,14 +111,12 @@ export default () => {
           attemptedSubmit={attemptedSubmit}
           required
         />
-        {ResumeDropzone(
-          resumeFile =>
-            setForm(form => ({
-              ...form,
-              resumeFile: resumeFile
-            })),
-          form.resumeFile
-        )}
+        {ResumeDropzone(resumeFile => {
+          setForm(form => ({
+            ...form,
+            resumeFile: resumeFile
+          }));
+        }, form.resumeFile)}
         <FormButton
           type="submit"
           disabled={submitted || submitting}
@@ -111,7 +137,6 @@ function ResumeDropzone(handleChange, resumeFile) {
   ];
 
   const onDrop = useCallback(acceptedFiles => {
-    console.log(acceptedFiles);
     handleChange(acceptedFiles[0]);
   });
 
@@ -124,6 +149,8 @@ function ResumeDropzone(handleChange, resumeFile) {
   });
 
   const renderContent = resumeFile => {
+    // aria-hidden and role="presentation" so that users using accessibility
+    // features can use the HiddenInput without confusion.
     if (resumeFile) {
       return (
         <>
@@ -131,17 +158,26 @@ function ResumeDropzone(handleChange, resumeFile) {
             secondary
             type="button"
             onClick={() => handleChange(null)}
+            aria-hidden={true}
+            role="presentation"
           >
             Clear
           </FormButton>
-          <DropText>{resumeFile.name}</DropText>
+          <DropText aria-hidden={true} role="presentation">
+            {resumeFile.name}
+          </DropText>
         </>
       );
     } else {
       return (
         <>
-          <DropGraphic src={dropGraphic} />
-          <DropTextContainer>
+          <DropGraphic
+            alt="Drop documents here"
+            src={dropGraphic}
+            aria-hidden={true}
+            role="presentation"
+          />
+          <DropTextContainer aria-hidden={true} role="presentation">
             <DropText>
               Drag &amp; drop your resume here or, click to upload.
             </DropText>
@@ -154,22 +190,32 @@ function ResumeDropzone(handleChange, resumeFile) {
 
   return (
     <DropArea {...getRootProps({ resumeFile: resumeFile })}>
-      <input
-        {...getInputProps({
-          // This overrides the default `display: none` behavior and allows for
-          // better accessibility.
-          style: {
-            height: 0.1,
-            width: 0.1,
-            opacity: 0.001,
-            display: "block"
-          }
-        })}
+      <HiddenLabel htmlFor="resume-upload">
+        Upload your resume here.
+      </HiddenLabel>
+      {/* Set the default style to nothing so that my styles can override it for 
+       accessibility */}
+      <HiddenInput
+        aria-label="Resume upload"
+        id="resume-upload"
+        {...getInputProps({ style: {} })}
       />
       {renderContent(resumeFile)}
     </DropArea>
   );
 }
+
+// This overrides the default `display: none` behavior and allows for
+// better accessibility.
+const HiddenInput = styled.input({
+  height: 0.1,
+  width: 0.1,
+  opacity: 0.001,
+  display: "block",
+  position: "absolute"
+});
+
+const HiddenLabel = HiddenInput.withComponent("label");
 
 const FormContainer = styled.div(
   {
@@ -183,7 +229,8 @@ const FormContainer = styled.div(
   ({ theme }) => ({
     [theme.media.max.md]: {
       boxShadow: "unset",
-      margin: "2rem 0 0 0"
+      margin: "2rem 0 0 0",
+      padding: 0
     }
   })
 );
@@ -191,7 +238,8 @@ const FormContainer = styled.div(
 const Form = styled.form({
   display: "flex",
   flexDirection: "column",
-  height: "100%"
+  height: "100%",
+  position: "relative"
 });
 
 const FlexRow = styled.div({
@@ -292,6 +340,8 @@ const Input = styled("input")(
 
 const SelectField = styled.select(
   {
+    background: "white",
+    borderRadius: 0,
     width: "100%",
     height: 50,
     padding: "0 5px"
@@ -327,6 +377,7 @@ const Label = styled("label")({}, ({ required }) =>
 const DropArea = styled.div(props => ({
   alignItems: "center",
   border: "4px dashed #d0d0d0",
+  borderRadius: 18,
   cursor: props.resumeFile ? "normal" : "pointer",
   display: "flex",
   flex: 5,
@@ -376,3 +427,42 @@ const FormButton = styled.button(
     }
   })
 );
+
+const fadeIn = keyframes`
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+`;
+
+const SuccessMessage = styled.div(
+  props => ({
+    alignItems: "center",
+    animation: props.show ? `${fadeIn} 200ms` : "unset",
+    animationFillMode: "forwards",
+    background: "#fff",
+    borderRadius: 4,
+    display: "flex",
+    flexDirection: "column",
+    fontSize: 36,
+    height: "100%",
+    justifyContent: "center",
+    left: 0,
+    opacity: props.show ? 1 : 0,
+    padding: 50,
+    position: "absolute",
+    textAlign: "center",
+    top: 0,
+    width: "100%",
+    zIndex: props.show ? 1 : -1
+  }),
+  ({ theme }) => ({
+    color: theme.primary.color
+  })
+);
+
+const SuccessDescription = styled.p({
+  fontSize: 24
+});

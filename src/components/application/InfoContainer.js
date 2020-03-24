@@ -10,7 +10,7 @@ export default () => {
         Join our team of dedicated professionals making government services
         accessible, beautiful, and fun.
       </Text>
-      <Graphic src={rocket} />
+      <Graphic alt="rocket taking flight" src={rocket} />
     </InfoContainer>
   );
 };
