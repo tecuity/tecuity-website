@@ -143,7 +143,7 @@ export default () => {
         {ResumeDropzone(resumeFile => {
           setForm(form => ({
             ...form,
-            resumeFile: resumeFile
+            resumeFile: { value: resumeFile }
           }));
         }, form.resumeFile)}
         <FormButton
