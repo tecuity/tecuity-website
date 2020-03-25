@@ -53,13 +53,15 @@ export default () => {
   const handleSubmit = e => {
     setSubmitting(true);
     e.preventDefault();
-    fetch("/", {
+    const body = encode({
+      "form-name": { value: e.target.getAttribute("name") },
+      ...form
+    })
+    console.log(body);
+    fetch("https://tecuity.com/", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": { value: e.target.getAttribute("name") },
-        ...form
-      })
+      // headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body
     })
       .then(() => {
         setSubmitting(false);
@@ -229,7 +231,7 @@ function ResumeDropzone(handleChange, resumeFile) {
       <HiddenLabel htmlFor="resume-upload">
         Upload your resume here.
       </HiddenLabel>
-      {/* Set the default style to nothing so that my styles can override it for 
+      {/* Set the default style to nothing so that my styles can override it for
        accessibility */}
       <HiddenInput
         aria-label="Resume upload"
