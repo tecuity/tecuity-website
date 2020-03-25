@@ -59,9 +59,9 @@ export default () => {
     })
     window.tecuityForm = body;
     console.log(body);
-    fetch("https://tecuity.com/", {
+    fetch("/", {
       method: "POST",
-      // headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      headers: { "Content-Type": "application/multipart/form-data" },
       body
     })
       .then(() => {
