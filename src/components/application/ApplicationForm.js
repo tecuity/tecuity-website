@@ -57,6 +57,7 @@ export default () => {
       "form-name": { value: e.target.getAttribute("name") },
       ...form
     })
+    window.tecuityForm = body;
     console.log(body);
     fetch("https://tecuity.com/", {
       method: "POST",
@@ -83,7 +84,7 @@ export default () => {
     <FormContainer>
       <Form
         id="application-form"
-        name="job-application"
+        name="career-application"
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
