@@ -4,11 +4,14 @@ import { keyframes } from "@emotion/core";
 import { useDropzone } from "react-dropzone";
 import dropGraphic from "../../img/file_upload.svg";
 
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
+function encode(data) {
+  const formData = new FormData();
+
+  for (const key of Object.keys(data)) {
+    formData.append(key, data[key].value);
+  }
+  return formData;
+}
 
 const interests = [
   {
@@ -53,14 +56,10 @@ export default () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      // body: encode({
-      //   "form-name": "job-application",
-      //   ...Object.entries(form).reduce(
-      //     (obj, [key, x]) => ({ ...obj, [key]: x.value }),
-      //     {}
-      //   )
-      // })
-      body: new FormData(document.getElementById("application-form"))
+      body: encode({
+        "form-name": { value: e.target.getAttribute("name") },
+        ...form
+      })
     })
       .then(() => {
         setSubmitting(false);
@@ -98,6 +97,12 @@ export default () => {
               : null}
           </SuccessDescription>
         </SuccessMessage>
+        <div hidden>
+          <label>
+            Don’t fill this out:{" "}
+            <input name="bot-field" onChange={handleChange} />
+          </label>
+        </div>
         <FlexRow>
           <Field
             label="First Name"
