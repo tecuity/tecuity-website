@@ -20,7 +20,7 @@ const Wrapper = styled('div')({
   [theme.media.max.lg]: {
     maxWidth: 260
   },
-  [theme.media.max.sm]: {
+  [theme.media.max.md]: {
     marginTop: 30,
     '&:first-of-type': {
       marginTop: 0
