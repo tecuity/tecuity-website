@@ -241,6 +241,7 @@ function ResumeDropzone(handleChange, resumeFile) {
       <HiddenInput
         aria-label="Resume upload"
         id="resume-upload"
+        name="resume"
         {...getInputProps({ style: {} })}
       />
       {renderContent(resumeFile)}
