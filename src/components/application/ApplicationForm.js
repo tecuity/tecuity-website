@@ -4,15 +4,6 @@ import { keyframes } from "@emotion/core";
 import { useDropzone } from "react-dropzone";
 import dropGraphic from "../../img/file_upload.svg";
 
-function encode(data) {
-  const formData = new FormData();
-
-  for (const key of Object.keys(data)) {
-    formData.append(key, data[key].value);
-  }
-  return formData;
-}
-
 const interests = [
   {
     name: "Junior Software Engineer",
@@ -54,13 +45,7 @@ export default () => {
   const handleSubmit = e => {
     setSubmitting(true);
     e.preventDefault();
-    // const body = encode({
-    //   "form-name": { value: e.target.getAttribute("name") },
-    //   ...form
-    // })
-    // window.tecuityForm = body;
     const body = new FormData(formRef.current)
-    console.log(body);
     fetch("/", {
       method: "POST",
       body
