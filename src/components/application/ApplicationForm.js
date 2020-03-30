@@ -49,19 +49,20 @@ export default () => {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [attemptedSubmit, setAttemptedSubmit] = useState(false);
+  let formRef = React.createRef()
 
   const handleSubmit = e => {
     setSubmitting(true);
     e.preventDefault();
-    const body = encode({
-      "form-name": { value: e.target.getAttribute("name") },
-      ...form
-    })
-    window.tecuityForm = body;
+    // const body = encode({
+    //   "form-name": { value: e.target.getAttribute("name") },
+    //   ...form
+    // })
+    // window.tecuityForm = body;
+    const body = new FormData(formRef.current)
     console.log(body);
     fetch("/", {
       method: "POST",
-      headers: { "Content-Type": "application/multipart/form-data" },
       body
     })
       .then(() => {
@@ -88,7 +89,9 @@ export default () => {
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        encType="multipart/form-data"
         onSubmit={handleSubmit}
+        ref={formRef}
       >
         <SuccessMessage show={submitted}>
           <SuccessDescription aria-live="polite">
