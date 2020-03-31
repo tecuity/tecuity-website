@@ -251,7 +251,7 @@ const FlexRow = styled.div({
 });
 
 const mappedPositions = openPositions.map(position => (
-  <option value={position.value}>{position.name}</option>
+  <option key={position.value} value={position.value}>{position.name}</option>
 ));
 
 const Field = ({
