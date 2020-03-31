@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Junior Software Engineer",
+    "value": "junior-engineer"
+  },
+  {
+    "name": "Senior Software Engineer",
+    "value": "senior-engineer"
+  },
+  {
+    "name": "Database Administrator",
+    "value": "dba"
+  },
+  {
+    "name": "QA Engineer",
+    "value": "qa-engineer"
+  },
+  {
+    "name": "QA Manager",
+    "value": "qa-manager"
+  },
+  {
+    "name": "Project Manager",
+    "value": "project-manager"
+  },
+  {
+    "name": "Other",
+    "value": "other"
+  }
+]
