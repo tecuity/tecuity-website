@@ -67,3 +67,18 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Cover Photo", name: "coverPhoto", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "careers"
+    label: "Careers"
+    delete: false
+    files:
+      - file: "src/pages/careers/openPositions.yaml"
+        label: "Open Positions List"
+        name: "openPositionsList"
+        widget: "list"
+        fields:
+          - name: openPositions
+            label: Open Positions
+            widget: list
+            fields: 
+              - {label: Position Name, name: name, widget: string}
+              - {label: Value, name: value, widget: string}

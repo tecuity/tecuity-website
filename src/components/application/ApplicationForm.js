@@ -3,19 +3,21 @@ import styled from "@emotion/styled";
 import { keyframes } from "@emotion/core";
 import { useDropzone } from "react-dropzone";
 import dropGraphic from "../../img/file_upload.svg";
-import openPositions from "../../pages/careers/openPositions.json"
+import YamlData from "../../pages/careers/openPositions.yaml";
 
 export default () => {
-  const [form, setForm] = useState({ position: { value: openPositions[0].value } });
+  const [form, setForm] = useState({
+    position: { value: YamlData.openPositions[0].value }
+  });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [attemptedSubmit, setAttemptedSubmit] = useState(false);
-  let formRef = React.createRef()
+  let formRef = React.createRef();
 
   const handleSubmit = e => {
     setSubmitting(true);
     e.preventDefault();
-    const body = new FormData(formRef.current)
+    const body = new FormData(formRef.current);
     fetch("/", {
       method: "POST",
       body
@@ -64,7 +66,7 @@ export default () => {
             <input name="bot-field" onChange={handleChange} />
           </label>
         </div>
-        <input type="hidden" name="form-name" value="career-application"/>
+        <input type="hidden" name="form-name" value="career-application" />
         <FlexRow>
           <Field
             label="First Name"
@@ -250,8 +252,10 @@ const FlexRow = styled.div({
   }
 });
 
-const mappedPositions = openPositions.map(position => (
-  <option key={position.value} value={position.value}>{position.name}</option>
+const mappedPositions = YamlData.openPositions.map(position => (
+  <option key={position.value} value={position.value}>
+    {position.name}
+  </option>
 ));
 
 const Field = ({
