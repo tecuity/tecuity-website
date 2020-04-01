@@ -82,3 +82,10 @@ collections:
             fields: 
               - {label: Position Name, name: name, widget: string}
               - {label: Value, name: value, widget: string}
+      - file: "src/pages/careers/index.md"
+        label: "Careers Page Content"
+        name: "careersPage"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careers-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "text"}

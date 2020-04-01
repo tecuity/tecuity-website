@@ -2,14 +2,11 @@ import React, { useState, useRef } from "react";
 import styled from "@emotion/styled";
 import rocket from "../../img/rocket.svg";
 
-export default () => {
+export default ({title, subtitle}) => {
   return (
     <InfoContainer>
-      <Title>Help us build the future</Title>
-      <Text>
-        Join our team of dedicated professionals making government services
-        accessible, beautiful, and fun.
-      </Text>
+      <Title>{title}</Title>
+      <Text>{subtitle}</Text>
       <Graphic alt="rocket taking flight" src={rocket} />
     </InfoContainer>
   );
