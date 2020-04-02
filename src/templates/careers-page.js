@@ -7,13 +7,13 @@ import Content, { HTMLContent } from "../components/Content";
 import ApplicationForm from "../components/application/ApplicationForm";
 import InfoContainer from "../components/application/InfoContainer";
 
-export const CareersPageTemplate = ({ title, content, contentComponent }) => {
+export const CareersPageTemplate = ({ title, subtitle, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
     <OuterPadding>
       <CenterContent>
-        <InfoContainer />
+        <InfoContainer title={title} subtitle={subtitle} />
         <ApplicationForm />
       </CenterContent>
     </OuterPadding>
@@ -41,7 +41,7 @@ const CenterContent = styled.div(
 
 CareersPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string,
+  subtitle: PropTypes.string,
   contentComponent: PropTypes.func
 };
 
@@ -53,7 +53,7 @@ const CareersPage = ({ data }) => {
       <CareersPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
-        content={post.html}
+        subtitle={post.frontmatter.subtitle}
       />
     </Layout>
   );
@@ -65,12 +65,12 @@ CareersPage.propTypes = {
 
 export default CareersPage;
 
-export const aboutPageQuery = graphql`
-  query CareersPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
+export const pageQuery = graphql`
+  query CareersPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "careers-page" } }) {
       frontmatter {
         title
+        subtitle
       }
     }
   }

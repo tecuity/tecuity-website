@@ -3,49 +3,21 @@ import styled from "@emotion/styled";
 import { keyframes } from "@emotion/core";
 import { useDropzone } from "react-dropzone";
 import dropGraphic from "../../img/file_upload.svg";
-
-const interests = [
-  {
-    name: "Junior Software Engineer",
-    value: "junior-engineer"
-  },
-  {
-    name: "Senior Software Engineer",
-    value: "senior-engineer"
-  },
-  {
-    name: "Database Administrator",
-    value: "dba"
-  },
-  {
-    name: "QA Engineer",
-    value: "qa-engineer"
-  },
-  {
-    name: "QA Manager",
-    value: "qa-manager"
-  },
-  {
-    name: "Project Manager",
-    value: "project-manager"
-  },
-  {
-    name: "Other",
-    value: "other"
-  }
-];
+import YamlData from "../../pages/careers/openPositions.yaml";
 
 export default () => {
-  const [form, setForm] = useState({ interest: { value: interests[0].value } });
+  const [form, setForm] = useState({
+    position: { value: YamlData.openPositions[0].value }
+  });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [attemptedSubmit, setAttemptedSubmit] = useState(false);
-  let formRef = React.createRef()
+  let formRef = React.createRef();
 
   const handleSubmit = e => {
     setSubmitting(true);
     e.preventDefault();
-    const body = new FormData(formRef.current)
+    const body = new FormData(formRef.current);
     fetch("/", {
       method: "POST",
       body
@@ -94,7 +66,7 @@ export default () => {
             <input name="bot-field" onChange={handleChange} />
           </label>
         </div>
-        <input type="hidden" name="form-name" value="career-application"/>
+        <input type="hidden" name="form-name" value="career-application" />
         <FlexRow>
           <Field
             label="First Name"
@@ -131,10 +103,10 @@ export default () => {
           required
         />
         <Field
-          label="Interest"
-          name="interest"
+          label="Position"
+          name="position"
           onChange={handleChange}
-          value={(form.interest || {}).value}
+          value={(form.position || {}).value}
           type="select"
           attemptedSubmit={attemptedSubmit}
           required
@@ -280,8 +252,10 @@ const FlexRow = styled.div({
   }
 });
 
-const interestOptions = interests.map(interest => (
-  <option value={interest.value}>{interest.name}</option>
+const mappedPositions = YamlData.openPositions.map(position => (
+  <option key={position.value} value={position.value}>
+    {position.name}
+  </option>
 ));
 
 const Field = ({
@@ -307,7 +281,7 @@ const Field = ({
             value={value}
             attemptedSubmit={attemptedSubmit}
           >
-            {interestOptions}
+            {mappedPositions}
           </SelectField>
         );
       default:
