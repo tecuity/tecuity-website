@@ -1,10 +1,10 @@
 openPositions:
-  - name: Junior Software Engineer
+  - name: Software Engineer Level 1
     value: junior-engineer
-  - name: Senior Software Engineer
-    value: senior-engineer
-  - name: Database Administrator
-    value: dba
+  - name: Software Engineer Level 2
+    value: mid-level-engineer
+  - name: Software Engineer Level 3
+    value: senior software engineer
   - name: QA Engineer
     value: qa-engineer
   - name: QA Manager
