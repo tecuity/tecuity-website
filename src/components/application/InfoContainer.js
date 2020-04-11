@@ -1,13 +1,17 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
-import rocket from "../../img/rocket.svg";
+import rocket from "../../img/rocket-to-moon.svg";
+import rocketMobile from "../../img/rocket-to-moon-mobile.svg";
 
-export default ({title, subtitle}) => {
+export default ({ title, subtitle }) => {
   return (
     <InfoContainer>
-      <Title>{title}</Title>
-      <Text>{subtitle}</Text>
       <Graphic alt="rocket taking flight" src={rocket} />
+      <MobileGraphic alt="rocket taking flight" src={rocketMobile} />
+      <ScootUp>
+        <Title>{title}</Title>
+        <Text>{subtitle}</Text>
+      </ScootUp>
     </InfoContainer>
   );
 };
@@ -17,13 +21,10 @@ const InfoContainer = styled.div(
     alignItems: "center",
     display: "flex",
     flex: 1,
-    flexDirection: "column",
-    marginRight: "2rem"
+    flexDirection: "column"
   },
   ({ theme }) => ({
-    [theme.media.max.md]: {
-      marginRight: 0
-    }
+    [theme.media.max.md]: {}
   })
 );
 
@@ -32,7 +33,7 @@ const Title = styled.h1({
   display: "block",
   fontSize: "3rem",
   fontWeight: 300,
-  margin: "1rem 0",
+  margin: "1rem auto",
   textAlign: "center"
 });
 
@@ -40,19 +41,47 @@ const Text = styled.p({
   color: "#666666",
   display: "block",
   fontSize: "1.25rem",
-  margin: "1rem 0",
+  margin: "1rem auto",
+  maxWidth: "32rem",
   textAlign: "center"
 });
 
 const Graphic = styled.img(
   {
     display: "block",
-    padding: "1rem 3rem",
+    maxWidth: 1200,
     width: "100%"
   },
   ({ theme }) => ({
     [theme.media.max.md]: {
+      display: "none",
       order: -1
+    }
+  })
+);
+
+const MobileGraphic = styled.img(
+  {
+    display: "none",
+    maxWidth: 1200,
+    width: "100%"
+  },
+  ({ theme }) => ({
+    [theme.media.max.md]: {
+      display: "block",
+      order: -1
+    }
+  })
+);
+
+const ScootUp = styled.div(
+  {
+    marginTop: "-7rem",
+    width: "100%"
+  },
+  ({ theme }) => ({
+    [theme.media.max.md]: {
+      marginTop: 0
     }
   })
 );

@@ -12,8 +12,8 @@ export const CareersPageTemplate = ({ title, subtitle, contentComponent }) => {
 
   return (
     <OuterPadding>
+      <InfoContainer title={title} subtitle={subtitle} />
       <CenterContent>
-        <InfoContainer title={title} subtitle={subtitle} />
         <ApplicationForm />
       </CenterContent>
     </OuterPadding>
