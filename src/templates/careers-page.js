@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ApplicationForm from "../components/application/ApplicationForm";
 import InfoContainer from "../components/application/InfoContainer";
+import JobInfo from "../components/application/JobInfo";
 
 export const CareersPageTemplate = ({ title, subtitle, contentComponent }) => {
   const PageContent = contentComponent || Content;
@@ -14,6 +15,7 @@ export const CareersPageTemplate = ({ title, subtitle, contentComponent }) => {
     <OuterPadding>
       <InfoContainer title={title} subtitle={subtitle} />
       <CenterContent>
+        <JobInfo />
         <ApplicationForm />
       </CenterContent>
     </OuterPadding>
