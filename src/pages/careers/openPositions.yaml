@@ -5,11 +5,5 @@ openPositions:
     value: mid-level-engineer
   - name: Software Engineer Level 3
     value: senior-software-engineer
-  - name: QA Engineer
-    value: qa-engineer
-  - name: QA Manager
-    value: qa-manager
-  - name: Project Manager
-    value: project-manager
   - name: Other
     value: other
