@@ -6,15 +6,63 @@ import YamlData from "../../pages/careers/openPositions.yaml";
 
 import styles from "./JobInfo.module.scss";
 
-export default () => {
+export default function JobInfo(props) {
   return (
     <DetailsContainer>
-      <Collapsible classParentString={styles.collapsible} trigger="Start Here">
+      <Collapsible
+        classParentString={styles.collapsible}
+        // trigger="Position 2"
+        // triggerClassName={styles.trigger}
+        // triggerOpenedClassName={styles.trigger}
+        triggerTagName="div"
+        trigger={<Trigger name="Test 1" />}
+      >
         Testing
       </Collapsible>
     </DetailsContainer>
   );
-};
+}
+
+const CollapsibleTrigger = styled.div({
+  alignItems: "center",
+  color: "#666666",
+  cursor: "pointer",
+  display: "flex",
+  fontSize: "1.5rem",
+  height: "100%",
+  justifyContent: "space-between",
+  padding: "1rem",
+  width: "100%",
+});
+
+const TriangleContainer = styled.div({
+  float: "right",
+  height: 10,
+  position: "relative",
+  transform: "scaleX(0.75)",
+  width: 20,
+});
+
+const CSSTriangle = styled.div({
+  border: "10px solid transparent",
+  borderTopColor: "#ADADAD",
+  top: 0,
+  height: 0,
+  left: 0,
+  position: "absolute",
+  width: 0,
+});
+
+function Trigger(props) {
+  return (
+    <CollapsibleTrigger>
+      <span>{props.name}</span>
+      <TriangleContainer>
+        <CSSTriangle />
+      </TriangleContainer>
+    </CollapsibleTrigger>
+  );
+}
 
 const DetailsContainer = styled.div(
   {
