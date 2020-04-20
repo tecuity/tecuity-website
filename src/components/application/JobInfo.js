@@ -7,17 +7,20 @@ import YamlData from "../../pages/careers/openPositions.yaml";
 import styles from "./JobInfo.module.scss";
 
 export default function JobInfo(props) {
+  const [open, setOpen] = useState(false);
   return (
     <DetailsContainer>
       <Collapsible
         classParentString={styles.collapsible}
-        // trigger="Position 2"
-        // triggerClassName={styles.trigger}
-        // triggerOpenedClassName={styles.trigger}
+        contentInnerClassName={styles.collapsibleContent}
+        easing="ease"
+        onOpening={() => setOpen(true)}
+        onClosing={() => setOpen(false)}
+        transitionTime={300}
         triggerTagName="div"
-        trigger={<Trigger name="Test 1" />}
+        trigger={<Trigger name="Test 1" open={open} />}
       >
-        Testing
+        <p>Testing</p>
       </Collapsible>
     </DetailsContainer>
   );
@@ -35,14 +38,6 @@ const CollapsibleTrigger = styled.div({
   width: "100%",
 });
 
-const TriangleContainer = styled.div({
-  float: "right",
-  height: 10,
-  position: "relative",
-  transform: "scaleX(0.75)",
-  width: 20,
-});
-
 const CSSTriangle = styled.div({
   border: "10px solid transparent",
   borderTopColor: "#ADADAD",
@@ -57,21 +52,22 @@ function Trigger(props) {
   return (
     <CollapsibleTrigger>
       <span>{props.name}</span>
-      <TriangleContainer>
+      <div
+        className={`${styles.triangleContainer} ${
+          props.open ? styles.openIcon : ""
+        }`}
+      >
         <CSSTriangle />
-      </TriangleContainer>
+      </div>
     </CollapsibleTrigger>
   );
 }
 
 const DetailsContainer = styled.div(
   {
-    // boxShadow: `0 50px 100px -20px rgba(50,50,93,.15), 0 30px 60px -30px rgba(0,0,0,.15), 0 -18px 60px -10px rgba(0,0,0,.015)`,
-    // display: "flex",
     flex: 1,
     flexDirection: "column",
     margin: "2rem 2rem 0 0",
-    // padding: "2rem",
   },
   ({ theme }) => ({
     [theme.media.max.md]: {

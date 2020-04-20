@@ -1,14 +1,7 @@
 .collapsible {
-  // display: flex;
   display: block;
   background-color: white;
-  // box-shadow: 0px 32px 72px #0000001f;
-  box-shadow: 0px 32px 72px #000000;
-  // flex: 1;
-  // flex-direction: column;
-  // max-height: 2rem;
-  // margin: 2rem 2rem 0 0;
-  // padding: 2rem;
+  box-shadow: 0px 32px 72px #0000001f;
   min-height: 3rem;
 }
 
@@ -20,4 +13,21 @@
   height: 100%;
   padding: 1rem;
   width: 100%;
+}
+
+.triangleContainer {
+  transition: transform 0.25s ease;
+  height: 10px;
+  position: relative;
+  transform: rotate(0deg) scaleX(0.75);
+  width: 20px;
+}
+
+.openIcon {
+  transform: rotate(180deg) scaleX(0.75);
+}
+
+.collapsibleContent {
+  color: #666666;
+  margin: 1rem;
 }
