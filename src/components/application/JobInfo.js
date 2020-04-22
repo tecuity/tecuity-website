@@ -32,7 +32,7 @@ const CollapsibleTrigger = styled.div({
   color: "#666666",
   cursor: "pointer",
   display: "flex",
-  fontSize: "1.5rem",
+  fontSize: "1.25rem",
   height: "100%",
   justifyContent: "space-between",
   padding: "1rem",

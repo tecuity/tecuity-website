@@ -15,8 +15,12 @@ export const CareersPageTemplate = ({ title, subtitle, contentComponent }) => {
     <OuterPadding>
       <InfoContainer title={title} subtitle={subtitle} />
       <CenterContent>
-        <JobInfoList />
-        <ApplicationForm />
+        <LeftColumn>
+          <JobInfoList />
+        </LeftColumn>
+        <RightColumn>
+          <ApplicationForm />
+        </RightColumn>
       </CenterContent>
     </OuterPadding>
   );
@@ -28,15 +32,48 @@ const OuterPadding = styled.div({
 
 const CenterContent = styled.div(
   {
-    display: "flex",
-    justifyContent: "center",
-    margin: "10rem auto",
+    display: "block",
+    margin: "3rem auto",
     maxWidth: 1200,
+    "&:after": {
+      clear: "both",
+      content: '""',
+      display: "table",
+    },
   },
   ({ theme }) => ({
     [theme.media.max.md]: {
-      flexDirection: "column",
       margin: "2rem auto",
+    },
+  })
+);
+
+const LeftColumn = styled.div(
+  {
+    width: "50%",
+    float: "left",
+  },
+  ({ theme }) => ({
+    [theme.media.max.md]: {
+      float: "unset",
+      width: "100%",
+    },
+  })
+);
+
+const RightColumn = styled.div(
+  {
+    width: "50%",
+    float: "right",
+    position: "sticky",
+    top: "0.75rem",
+  },
+  ({ theme }) => ({
+    [theme.media.max.md]: {
+      float: "unset",
+      position: "unset",
+      top: "unset",
+      width: "100%",
     },
   })
 );

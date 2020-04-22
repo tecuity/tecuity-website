@@ -23,7 +23,9 @@
 .triangleContainer {
   transition: transform 0.25s ease;
   height: 10px;
+  margin-left: 0.25rem;
   position: relative;
+  right: 0.25rem;
   transform: rotate(0deg) scaleX(0.75);
   width: 20px;
 }
