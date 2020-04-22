@@ -6,7 +6,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ApplicationForm from "../components/application/ApplicationForm";
 import InfoContainer from "../components/application/InfoContainer";
-import JobInfo from "../components/application/JobInfo";
+import JobInfoList from "../components/application/JobInfoList";
 
 export const CareersPageTemplate = ({ title, subtitle, contentComponent }) => {
   const PageContent = contentComponent || Content;
@@ -15,7 +15,7 @@ export const CareersPageTemplate = ({ title, subtitle, contentComponent }) => {
     <OuterPadding>
       <InfoContainer title={title} subtitle={subtitle} />
       <CenterContent>
-        <JobInfo />
+        <JobInfoList />
         <ApplicationForm />
       </CenterContent>
     </OuterPadding>
@@ -23,7 +23,7 @@ export const CareersPageTemplate = ({ title, subtitle, contentComponent }) => {
 };
 
 const OuterPadding = styled.div({
-  padding: 20
+  padding: 20,
 });
 
 const CenterContent = styled.div(
@@ -31,20 +31,20 @@ const CenterContent = styled.div(
     display: "flex",
     justifyContent: "center",
     margin: "10rem auto",
-    maxWidth: 1200
+    maxWidth: 1200,
   },
   ({ theme }) => ({
     [theme.media.max.md]: {
       flexDirection: "column",
-      margin: "2rem auto"
-    }
+      margin: "2rem auto",
+    },
   })
 );
 
 CareersPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
-  contentComponent: PropTypes.func
+  contentComponent: PropTypes.func,
 };
 
 const CareersPage = ({ data }) => {
@@ -62,7 +62,7 @@ const CareersPage = ({ data }) => {
 };
 
 CareersPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 export default CareersPage;

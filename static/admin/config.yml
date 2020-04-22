@@ -14,47 +14,107 @@ collections:
         label: "SOS Enterprise Page"
         name: "index"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Smart Forms Title", name: "smartTitle", widget: "string"}
-          - {label: "Smart Forms Description", name: "smartDescription", widget: "text"}
-          - {label: "Review 1 Quote", name: "reviewQuote1", widget: "text"}
-          - {label: "Review 1 Author", name: "reviewAuthor1", widget: "text"}
-          - {label: "Business One-Stop Title", name: "oneStopTitle", widget: "string"}
-          - {label: "Business One-Stop Description", name: "oneStopDescription", widget: "text"}
-          - {label: "Back Office Title", name: "backOfficeTitle", widget: "string"}
-          - {label: "Back Office Description", name: "backOfficeDescription", widget: "text"}
-          - {label: "Review 2 Quote", name: "reviewQuote2", widget: "text"}
-          - {label: "Review 2 Author", name: "reviewAuthor2", widget: "text"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Smart Forms Title", name: "smartTitle", widget: "string" }
+          - {
+              label: "Smart Forms Description",
+              name: "smartDescription",
+              widget: "text",
+            }
+          - { label: "Review 1 Quote", name: "reviewQuote1", widget: "text" }
+          - { label: "Review 1 Author", name: "reviewAuthor1", widget: "text" }
+          - {
+              label: "Business One-Stop Title",
+              name: "oneStopTitle",
+              widget: "string",
+            }
+          - {
+              label: "Business One-Stop Description",
+              name: "oneStopDescription",
+              widget: "text",
+            }
+          - {
+              label: "Back Office Title",
+              name: "backOfficeTitle",
+              widget: "string",
+            }
+          - {
+              label: "Back Office Description",
+              name: "backOfficeDescription",
+              widget: "text",
+            }
+          - { label: "Review 2 Quote", name: "reviewQuote2", widget: "text" }
+          - { label: "Review 2 Author", name: "reviewAuthor2", widget: "text" }
       - file: "src/pages/about/index.md"
         label: "About Page"
         name: "about"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Block 1 Title", name: "block1Title", widget: "string"}
-          - {label: "Block 1 Description", name: "block1Description", widget: "text"}
-          - {label: "Block 2 Title", name: "block2Title", widget: "string"}
-          - {label: "Block 2 Description", name: "block2Description", widget: "text"}
-          - {label: "Block 3 Title", name: "block3Title", widget: "string"}
-          - {label: "Block 3 Description", name: "block3Description", widget: "text"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Block 1 Title", name: "block1Title", widget: "string" }
+          - {
+              label: "Block 1 Description",
+              name: "block1Description",
+              widget: "text",
+            }
+          - { label: "Block 2 Title", name: "block2Title", widget: "string" }
+          - {
+              label: "Block 2 Description",
+              name: "block2Description",
+              widget: "text",
+            }
+          - { label: "Block 3 Title", name: "block3Title", widget: "string" }
+          - {
+              label: "Block 3 Description",
+              name: "block3Description",
+              widget: "text",
+            }
       - file: "src/pages/rules/index.md"
         label: "Rules Page"
         name: "rules"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "rules-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Agency Block Title", name: "smartTitle", widget: "string"}
-          - {label: "Agency Block Description", name: "smartDescription", widget: "text"}
-          - {label: "Review 1 Quote", name: "reviewQuote1", widget: "text"}
-          - {label: "Review 1 Author", name: "reviewAuthor1", widget: "text"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "rules-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Agency Block Title",
+              name: "smartTitle",
+              widget: "string",
+            }
+          - {
+              label: "Agency Block Description",
+              name: "smartDescription",
+              widget: "text",
+            }
+          - { label: "Review 1 Quote", name: "reviewQuote1", widget: "text" }
+          - { label: "Review 1 Author", name: "reviewAuthor1", widget: "text" }
       - file: "src/pages/privacy/index.md"
         label: "Privacy Policy"
         name: "privacy"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "news"
     label: "News"
@@ -62,11 +122,21 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "news-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Cover Photo", name: "coverPhoto", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "news-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Cover Photo",
+          name: "coverPhoto",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "careers"
     label: "Careers"
     delete: false
@@ -79,13 +149,20 @@ collections:
           - name: openPositions
             label: Open Positions
             widget: list
-            fields: 
-              - {label: Position Name, name: name, widget: string}
-              - {label: Value, name: value, widget: string}
+            fields:
+              - { label: Position Name, name: name, widget: string }
+              - { label: Value, name: value, widget: string }
+              - { label: Description, name: description, widget: markdown }
+
       - file: "src/pages/careers/index.md"
         label: "Careers Page Content"
         name: "careersPage"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careers-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Subtitle", name: "subtitle", widget: "text"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "careers-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }

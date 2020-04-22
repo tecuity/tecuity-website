@@ -7,35 +7,35 @@ import YamlData from "../../pages/careers/openPositions.yaml";
 
 export default () => {
   const [form, setForm] = useState({
-    position: { value: YamlData.openPositions[0].value }
+    position: { value: YamlData.openPositions[0].value },
   });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [attemptedSubmit, setAttemptedSubmit] = useState(false);
   let formRef = React.createRef();
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     setSubmitting(true);
     e.preventDefault();
     const body = new FormData(formRef.current);
     fetch("/", {
       method: "POST",
-      body
+      body,
     })
       .then(() => {
         setSubmitting(false);
         setSubmitted(true);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
         setSubmitting(false);
       });
   };
 
   const handleChange = ({ target }) =>
-    setForm(f => ({
+    setForm((f) => ({
       ...f,
-      [target.name]: { ...(f[target.name] || {}), value: target.value }
+      [target.name]: { ...(f[target.name] || {}), value: target.value },
     }));
 
   return (
@@ -111,10 +111,10 @@ export default () => {
           attemptedSubmit={attemptedSubmit}
           required
         />
-        {ResumeDropzone(resumeFile => {
-          setForm(form => ({
+        {ResumeDropzone((resumeFile) => {
+          setForm((form) => ({
             ...form,
-            resumeFile: { value: resumeFile }
+            resumeFile: { value: resumeFile },
           }));
         }, form.resumeFile)}
         <FormButton
@@ -133,10 +133,10 @@ function ResumeDropzone(handleChange, resumeFile) {
   // Accept .pdf and .docx
   let acceptedFiles = [
     "application/pdf",
-    "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
   ];
 
-  const onDrop = useCallback(acceptedFiles => {
+  const onDrop = useCallback((acceptedFiles) => {
     handleChange(acceptedFiles[0]);
   });
 
@@ -145,10 +145,10 @@ function ResumeDropzone(handleChange, resumeFile) {
     disabled: resumeFile ? true : false,
     maxSize: 1000000, // 1MB
     multiple: false,
-    onDrop: onDrop
+    onDrop: onDrop,
   });
 
-  const renderContent = resumeFile => {
+  const renderContent = (resumeFile) => {
     // aria-hidden and role="presentation" so that users using accessibility
     // features can use the HiddenInput without confusion.
     if (resumeFile) {
@@ -213,7 +213,7 @@ const HiddenInput = styled.input({
   width: 0.1,
   opacity: 0.001,
   display: "block",
-  position: "absolute"
+  position: "absolute",
 });
 
 const HiddenLabel = HiddenInput.withComponent("label");
@@ -225,14 +225,15 @@ const FormContainer = styled.div(
     flex: 1,
     flexDirection: "column",
     margin: "2rem 0 0 2rem",
-    padding: "2rem"
+    maxHeight: "41rem",
+    padding: "2rem",
   },
   ({ theme }) => ({
     [theme.media.max.md]: {
       boxShadow: "unset",
       margin: "2rem 0 0 0",
-      padding: 0
-    }
+      padding: 0,
+    },
   })
 );
 
@@ -240,7 +241,7 @@ const Form = styled.form({
   display: "flex",
   flexDirection: "column",
   height: "100%",
-  position: "relative"
+  position: "relative",
 });
 
 const FlexRow = styled.div({
@@ -248,11 +249,11 @@ const FlexRow = styled.div({
   flexDirection: "row",
   flex: 1,
   "& > div:first-of-type": {
-    marginRight: 15
-  }
+    marginRight: 15,
+  },
 });
 
-const mappedPositions = YamlData.openPositions.map(position => (
+const mappedPositions = YamlData.openPositions.map((position) => (
   <option key={position.value} value={position.value}>
     {position.name}
   </option>
@@ -265,7 +266,7 @@ const Field = ({
   value = "",
   required,
   label,
-  attemptedSubmit
+  attemptedSubmit,
 }) => {
   const getInput = () => {
     switch (type) {
@@ -312,28 +313,28 @@ const Field = ({
 
 const FieldWrapper = styled("div")({
   flex: 1,
-  marginBottom: "1.25rem"
+  marginBottom: "1.25rem",
 });
 
 const Input = styled("input")(
   {
     width: "100%",
     height: 50,
-    padding: "0 5px"
+    padding: "0 5px",
   },
   ({ theme, attemptedSubmit }) => ({
     border: `2px solid ${theme.mid.rgbaFunction(0.4)}`,
     "&:focus": {
       border: `2px solid ${theme.primary.color}`,
-      outline: "none"
+      outline: "none",
     },
     ...(attemptedSubmit
       ? {
           "&:invalid": {
-            borderColor: "rgb(217, 55, 55)"
-          }
+            borderColor: "rgb(217, 55, 55)",
+          },
         }
-      : {})
+      : {}),
   })
 );
 
@@ -343,21 +344,21 @@ const SelectField = styled.select(
     borderRadius: 0,
     width: "100%",
     height: 50,
-    padding: "0 5px"
+    padding: "0 5px",
   },
   ({ theme, attemptedSubmit }) => ({
     border: `2px solid ${theme.mid.rgbaFunction(0.4)}`,
     "&:focus": {
       border: `2px solid ${theme.primary.color}`,
-      outline: "none"
+      outline: "none",
     },
     ...(attemptedSubmit
       ? {
           "&:invalid": {
-            borderColor: "rgb(217, 55, 55)"
-          }
+            borderColor: "rgb(217, 55, 55)",
+          },
         }
-      : {})
+      : {}),
   })
 );
 
@@ -367,13 +368,13 @@ const Label = styled("label")({}, ({ required }) =>
         "&::after": {
           content: '"*"',
           marginLeft: 5,
-          color: "rgb(235, 95, 50)"
-        }
+          color: "rgb(235, 95, 50)",
+        },
       }
     : null
 );
 
-const DropArea = styled.div(props => ({
+const DropArea = styled.div((props) => ({
   alignItems: "center",
   border: "4px dashed #d0d0d0",
   borderRadius: 18,
@@ -382,32 +383,32 @@ const DropArea = styled.div(props => ({
   flex: 5,
   justifyContent: "center",
   margin: "0.75rem 0 2rem 0",
-  minHeight: 150,
-  padding: "1rem"
+  maxHeight: 150,
+  padding: "1rem",
 }));
 
 const DropTextContainer = styled.div({
   display: "flex",
   flex: 3,
-  flexDirection: "column"
+  flexDirection: "column",
 });
 
-const DropText = styled.span(props => ({
+const DropText = styled.span((props) => ({
   color: "#767776",
   display: "block",
   margin: "0.5rem 1rem",
   fontSize: props.smaller ? "1rem" : "1.25rem",
   fontWeight: props.smaller ? "500" : "300",
   textAlign: "center",
-  userSelect: "none"
+  userSelect: "none",
 }));
 
 const DropGraphic = styled.img({
-  flex: 1
+  flex: 1,
 });
 
 const FormButton = styled.button(
-  props => ({
+  (props) => ({
     alignSelf: "center",
     cursor: "pointer",
     padding: props.secondary ? "5px 10px 3px 10px" : "9px 15px 6px 15px",
@@ -416,14 +417,14 @@ const FormButton = styled.button(
     fontWeight: 500,
     justifySelf: "flex-end",
     maxWidth: "50%",
-    textTransform: "uppercase"
+    textTransform: "uppercase",
   }),
   ({ theme }) => ({
     background: theme.primary.color,
     color: theme.primary.textOn,
     [theme.media.max.md]: {
-      maxWidth: "100%"
-    }
+      maxWidth: "100%",
+    },
   })
 );
 
@@ -437,7 +438,7 @@ const fadeIn = keyframes`
 `;
 
 const SuccessMessage = styled.div(
-  props => ({
+  (props) => ({
     alignItems: "center",
     animation: props.show ? `${fadeIn} 200ms` : "unset",
     animationFillMode: "forwards",
@@ -455,13 +456,13 @@ const SuccessMessage = styled.div(
     textAlign: "center",
     top: 0,
     width: "100%",
-    zIndex: props.show ? 1 : -1
+    zIndex: props.show ? 1 : -1,
   }),
   ({ theme }) => ({
-    color: theme.primary.color
+    color: theme.primary.color,
   })
 );
 
 const SuccessDescription = styled.p({
-  fontSize: 24
+  fontSize: 24,
 });

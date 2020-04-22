@@ -13,3 +13,10 @@ openPositions:
     value: project-manager
   - name: Other
     value: other
+    description: |
+      # OTHER!
+      I'm an other position and I'm special.
+
+      ## Look, header...
+
+      More paragraph stuff.... Blah blah blah
