@@ -43,8 +43,6 @@ export default function JobInfoList(props) {
 
 const DetailsContainer = styled.div(
   {
-    flex: 1,
-    flexDirection: "column",
     margin: "2rem 2rem 0 0",
   },
   ({ theme }) => ({

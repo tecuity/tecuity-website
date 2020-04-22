@@ -52,6 +52,7 @@ const LeftColumn = styled.div(
   {
     width: "50%",
     float: "left",
+    WebkitTapHighlightColor: "rgba(149, 201, 61, 0.4)",
   },
   ({ theme }) => ({
     [theme.media.max.md]: {
@@ -66,7 +67,7 @@ const RightColumn = styled.div(
     width: "50%",
     float: "right",
     position: "sticky",
-    top: "0.75rem",
+    top: "0",
   },
   ({ theme }) => ({
     [theme.media.max.md]: {

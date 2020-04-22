@@ -1,22 +1,52 @@
 openPositions:
   - name: Software Engineer Level 1
     value: junior-engineer
+    description: |
+      #### Minimum Requirements
+      * 1-2 years of software engineering experience.
+      * Bachelor's degree in Computer Science or related field.
+      * Experience in C# or other object oriented programming language.
   - name: Software Engineer Level 2
     value: mid-level-engineer
+    description: |
+      #### Minimum Requirements
+      * 3-5 years of software engineering experience.
+      * Bachelor's degree in Computer Science or related field.
+      * Experience in C# or other object oriented programming language.
   - name: Software Engineer Level 3
     value: senior-software-engineer
+    description: |
+      #### Minimum Requirements
+      * 6+ years of software engineering experience.
+      * Bachelor's degree in Computer Science or related field.
+      * Experience in C# or other object oriented programming language.
   - name: QA Engineer
     value: qa-engineer
+    description: |
+      #### Minimum Requirements
+      * 1-2 years of quality assurance experience.
+      * Experience testing complicated systems.
+      * Excellent written and spoken communication skills.
   - name: QA Manager
     value: qa-manager
+    description: |
+      #### Minimum Requirements
+      * 4-6 years of quality assurance experience.
+      * Bachelor's degree in Management or related field.
+      * Excellent leadership qualities.
+      * Excellent written and spoken communication skills.
   - name: Project Manager
     value: project-manager
+    description: |
+      #### Minimum Requirements
+      * 2-3 years of project management experience.
+      * Bachelor's degree in Management or related field.
+      * Excellent written and spoken communication skills.
+      * Significant experience working with and promoting Agile and Scrum methodologies.
+
+      #### Nice to have
+      * Certified Scrum Master
   - name: Other
     value: other
     description: |
-      # OTHER!
-      I'm an other position and I'm special.
-
-      ## Look, header...
-
-      More paragraph stuff.... Blah blah blah
+      If you're an individual who doesn't fit the mold, we'd love to hear from you!
