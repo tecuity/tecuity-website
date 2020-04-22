@@ -40,6 +40,7 @@ export default () => {
 
   return (
     <FormContainer>
+      <Title>Apply Today</Title>
       <Form
         id="application-form"
         name="career-application"
@@ -232,6 +233,7 @@ const FormContainer = styled.div(
     [theme.media.max.md]: {
       boxShadow: "unset",
       margin: "2rem 0 0 0",
+      maxHeight: "unset",
       padding: 0,
     },
   })
@@ -466,3 +468,19 @@ const SuccessMessage = styled.div(
 const SuccessDescription = styled.p({
   fontSize: 24,
 });
+
+const Title = styled.h2(
+  {
+    color: "#666666",
+    display: "none",
+    fontSize: "3rem",
+    fontWeight: 300,
+    margin: "2rem 0 3rem 0",
+    textAlign: "center",
+  },
+  ({ theme }) => ({
+    [theme.media.max.md]: {
+      display: "block",
+    },
+  })
+);

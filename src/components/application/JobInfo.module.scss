@@ -4,6 +4,10 @@
   box-shadow: 0px 32px 72px #0000001f;
   margin-bottom: 1rem;
   min-height: 3rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .trigger {
