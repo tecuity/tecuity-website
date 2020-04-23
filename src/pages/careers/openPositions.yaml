@@ -1,9 +1,26 @@
 openPositions:
   - name: Software Engineer Level 1
     value: junior-engineer
+    description: |
+      #### Minimum Requirements
+      * 1-2 years of software engineering experience.
+      * Bachelor's degree in Computer Science or related field.
+      * Experience in C# or other object oriented programming language.
   - name: Software Engineer Level 2
     value: mid-level-engineer
+    description: |
+      #### Minimum Requirements
+      * 3-5 years of software engineering experience.
+      * Bachelor's degree in Computer Science or related field.
+      * Experience in C# or other object oriented programming language.
   - name: Software Engineer Level 3
     value: senior-software-engineer
+    description: |
+      #### Minimum Requirements
+      * 6+ years of software engineering experience.
+      * Bachelor's degree in Computer Science or related field.
+      * Experience in C# or other object oriented programming language.
   - name: Other
     value: other
+    description: |
+      If you're an individual who doesn't fit the mold, we'd love to hear from you!

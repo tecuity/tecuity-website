@@ -6,43 +6,83 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ApplicationForm from "../components/application/ApplicationForm";
 import InfoContainer from "../components/application/InfoContainer";
+import JobInfoList from "../components/application/JobInfoList";
 
 export const CareersPageTemplate = ({ title, subtitle, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
     <OuterPadding>
+      <InfoContainer title={title} subtitle={subtitle} />
       <CenterContent>
-        <InfoContainer title={title} subtitle={subtitle} />
-        <ApplicationForm />
+        <LeftColumn>
+          <JobInfoList />
+        </LeftColumn>
+        <RightColumn>
+          <ApplicationForm />
+        </RightColumn>
       </CenterContent>
     </OuterPadding>
   );
 };
 
 const OuterPadding = styled.div({
-  padding: 20
+  padding: 20,
 });
 
 const CenterContent = styled.div(
   {
-    display: "flex",
-    justifyContent: "center",
-    margin: "10rem auto",
-    maxWidth: 1200
+    display: "block",
+    margin: "3rem auto",
+    maxWidth: 1200,
+    "&:after": {
+      clear: "both",
+      content: '""',
+      display: "table",
+    },
   },
   ({ theme }) => ({
     [theme.media.max.md]: {
-      flexDirection: "column",
-      margin: "2rem auto"
-    }
+      margin: "2rem auto",
+    },
+  })
+);
+
+const LeftColumn = styled.div(
+  {
+    width: "50%",
+    float: "left",
+    WebkitTapHighlightColor: "rgba(149, 201, 61, 0.4)",
+  },
+  ({ theme }) => ({
+    [theme.media.max.md]: {
+      float: "unset",
+      width: "100%",
+    },
+  })
+);
+
+const RightColumn = styled.div(
+  {
+    width: "50%",
+    float: "right",
+    position: "sticky",
+    top: "0",
+  },
+  ({ theme }) => ({
+    [theme.media.max.md]: {
+      float: "unset",
+      position: "unset",
+      top: "unset",
+      width: "100%",
+    },
   })
 );
 
 CareersPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
-  contentComponent: PropTypes.func
+  contentComponent: PropTypes.func,
 };
 
 const CareersPage = ({ data }) => {
@@ -60,7 +100,7 @@ const CareersPage = ({ data }) => {
 };
 
 CareersPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 export default CareersPage;

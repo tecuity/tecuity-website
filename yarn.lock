@@ -11371,6 +11371,11 @@ react-cache@^2.0.0-alpha.1:
   resolved "https://registry.yarnpkg.com/react-cache/-/react-cache-2.0.0-alpha.1.tgz#4c119188248bc988a61268458bc18bd845f2ec19"
   integrity sha512-dDJVVGvxAlZE/dMxDXaxU5ZfcE4fbaSmJVFrCTi6dYWXDp7YjCsnywkpEYG6IURVW+eJrCydAIDcW0FADw0/5w==
 
+react-collapsible@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/react-collapsible/-/react-collapsible-2.7.0.tgz#d95111bfbea3c01adc7898c5895b191360f71e94"
+  integrity sha512-uS6cFyJ2WR0F0xfCjmJ3TGwH+no/JOs8cDKNTPMWKWSJdosmHPCk8io4ZrDyz5dKJmSI5X2T5eJqnasawe6wew==
+
 react-datetime@^2.16.3:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/react-datetime/-/react-datetime-2.16.3.tgz#7f9ac7d4014a939c11c761d0c22d1fb506cb505e"
