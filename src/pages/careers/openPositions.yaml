@@ -158,11 +158,6 @@ openPositions:
       - Ability to translate business needs into functional products and solutions
     name: Software Engineer Level 3
     value: senior-software-engineer
-  - description: >
-      If you're an individual who doesn't fit the mold, we'd love to hear from
-      you!
-    name: Other
-    value: other
   - name: IT Project Manager
     value: IT_Project_Manager
     description: >-
@@ -358,3 +353,8 @@ openPositions:
 
 
       Our passion is to deliver innovative technology solutions and services to government and citizens through seamless collaboration with an unwavering dedication to the success of our partners.   We are proud to have over 15 years of experience working directly with Secretary of State offices.   Our team provides our customers with direct access to experts who have in-depth business and technical knowledge, and our relentless focus on our customers' success has resulted in long-term business relationships.
+  - description: >
+      If you're an individual who doesn't fit the mold, we'd love to hear from
+      you!
+    name: Other
+    value: other
