@@ -4,6 +4,7 @@ backend:
 
 media_folder: static/img
 public_folder: /img
+local_backend: true
 
 collections:
   - name: "pages"
@@ -166,3 +167,23 @@ collections:
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "text" }
+  - name: "slack-bot-data"
+    label: "Slack Bot"
+    delete: false
+    files:
+      - file: "src/pages/slack-bot/employee-roles.json"
+        label: "Employee Roles"
+        name: "employeeRolesList"
+        widget: "list"
+        fields:
+          - name: employeeRoles
+            label: Employee Roles
+            widget: "list"
+            fields:
+              - name: value
+                label: Role Value
+                widget: string
+              - name: label
+                label: Role Label
+                widget: string
+

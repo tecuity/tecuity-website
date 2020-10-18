@@ -1,0 +1,28 @@
+{
+  "employeeRoles": [
+    {
+      "value": "software_frontend",
+      "label": "Software Engineer (Frontend)"
+    },
+    {
+      "value": "software_backend",
+      "label": "Software Engineer (Backend)"
+    },
+    {
+      "value": "quality_assurance",
+      "label": "Quality Assurance"
+    },
+    {
+      "value": "project_management",
+      "label": "Project Management"
+    },
+    {
+      "value": "business_analyst",
+      "label": "Business Analyst"
+    },
+    {
+      "value": "human_resource",
+      "label": "Human Resources"
+    }
+  ]
+}
