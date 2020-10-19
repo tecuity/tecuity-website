@@ -1,0 +1,25 @@
+{
+  "roleValue": "test",
+  "reminders": [
+    {
+      "daysFromStart": 1,
+      "reminderText": "Hey {{supervisor}}, here's a test reminder that would be sent to a supervisor on behalf of a test employee: {{employee}}."
+    },
+    {
+      "reminderText": "Hey {{supervisor}}, here's a second test reminder that would be sent to a supervisor on behalf of a test employee: {{employee}}.",
+      "daysFromStart": 2
+    },
+    {
+      "reminderText": "Hey {{supervisor}}, here's a third test reminder that would be sent to a supervisor on behalf of a test employee: {{employee}}.",
+      "daysFromStart": 3
+    },
+    {
+      "reminderText": "Hey {{supervisor}}, here's a fourth test reminder that would be sent to a supervisor on behalf of a test employee: {{employee}}.",
+      "daysFromStart": 4
+    },
+    {
+      "reminderText": "Hey {{supervisor}}, here's a fifth test reminder that would be sent to a supervisor on behalf of a test employee: {{employee}}.",
+      "daysFromStart": 5
+    }
+  ]
+}

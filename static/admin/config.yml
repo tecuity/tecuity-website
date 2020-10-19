@@ -186,4 +186,30 @@ collections:
               - name: label
                 label: Role Label
                 widget: string
-
+  - name: "onboard-schedules"
+    label: "Onboarding Schedules"
+    folder: "src/pages/slack-bot/onboarding-schedules"
+    create: true
+    format: "json"
+    slug: "{{slug}}"
+    identifier_field: roleValue
+    label_singluar: Schedule
+    fields:
+      - name: roleValue
+        label: Role Value
+        widget: "string"
+      - name: reminders
+        label: Reminders
+        label_singular: Reminder
+        hint: These reminders will be sent by the Tecuity Slack bot to remind supervisors of follow-up points with new hires.
+        widget: "list"
+        fields:
+          - name: daysFromStart
+            label: Days from start date
+            value_type: int
+            min: 0
+            widget: number
+          - name: reminderText
+            label: Reminder Text
+            widget: markdown
+            hint: To use the supervisor's Slack name in your reminder, type "{{supervisor}}" without quotes. To use the employee's name type "{{employee}}" without quotes.

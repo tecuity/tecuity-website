@@ -1,0 +1,17 @@
+{
+  "roleValue": "default",
+  "reminders": [
+    {
+      "daysFromStart": 7,
+      "reminderText": "Hey {{supervisor}}! It looks like today marks one week since {{employee}} joined Tecuity. Today would be a good day to have a quick follow-up meeting to check in on how things are going. If you have any questions about how this meeting should go, send them to <@UTZ782GQ2> who will be more than happy to give you some suggestions."
+    },
+    {
+      "reminderText": "Hey {{supervisor}}! It looks like today marks about one month since {{employee}} joined Tecuity. Today would be a good day to have a quick follow-up meeting to check in on how things are going. If you have any questions about how this meeting should go, send them to <@UTZ782GQ2> who will be more than happy to give you some suggestions.",
+      "daysFromStart": 30
+    },
+    {
+      "reminderText": "Hey {{supervisor}}! It looks like today marks about 6 months since {{employee}} joined Tecuity. Today would be a good day to have a quick follow-up meeting to check in on how things are going. If you have any questions about how this meeting should go, send them to <@UTZ782GQ2> who will be more than happy to give you some suggestions.",
+      "daysFromStart": 180
+    }
+  ]
+}

@@ -23,6 +23,10 @@
     {
       "value": "human_resources",
       "label": "Human Resources"
+    },
+    {
+      "value": "test",
+      "label": "Test Role"
     }
   ]
 }
