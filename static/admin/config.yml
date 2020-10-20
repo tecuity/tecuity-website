@@ -198,11 +198,17 @@ collections:
       - name: roleValue
         label: Role Value
         widget: "string"
-      - name: reminders
-        label: Reminders
-        label_singular: Reminder
+      - name: immediateSupervisorMessage
+        label: Immediate Supervisor Message
+        widget: markdown
+        hint: This message will be sent to the employee's supervisor immediately.
+        required: false
+      - name: supervisorReminders
+        label: Supervisor Reminders
+        label_singular: Supervisor Reminder
         hint: These reminders will be sent by the Tecuity Slack bot to remind supervisors of follow-up points with new hires.
         widget: "list"
+        required: false
         fields:
           - name: daysFromStart
             label: Days from start date
@@ -212,4 +218,35 @@ collections:
           - name: reminderText
             label: Reminder Text
             widget: markdown
-            hint: To use the supervisor's Slack name in your reminder, type "{{supervisor}}" without quotes. To use the employee's name type "{{employee}}" without quotes.
+            hint: "Shortcodes: {{supervisor}} - Employee's supervisor | {{employee}} - Employee's name | {{mentor}} - Employee's mentor"
+          # - name: shouldSuggestInvite
+          #   label: Suggest a calendar invite
+          #   widget: boolean
+          #   default: true
+          #   required: false
+      - name: immediateMentorMessage
+        label: Immediate Mentor Message
+        widget: markdown
+        hint: This message will be sent to the employee's mentor immediately.
+        required: false
+      - name: mentorReminders
+        label: Mentor Reminders
+        label_singular: Mentor Reminder
+        hint: These reminders will be sent by the Tecuity Slack bot to remind mentors of follow-up points with new hires.
+        widget: "list"
+        required: false
+        fields:
+          - name: daysFromStart
+            label: Days from start date
+            value_type: int
+            min: 0
+            widget: number
+          - name: reminderText
+            label: Reminder Text
+            widget: markdown
+            hint: "Shortcodes: {{supervisor}} - Employee's supervisor | {{employee}} - Employee's name | {{mentor}} - Employee's mentor"
+          # - name: shouldSuggestInvite
+          #   label: Suggest a calendar invite
+          #   widget: boolean
+          #   default: true
+          #   required: false

@@ -1,17 +1,29 @@
 {
   "roleValue": "default",
-  "reminders": [
+  "supervisorReminders": [
     {
       "daysFromStart": 7,
-      "reminderText": "Hey {{supervisor}}! It looks like today marks one week since {{employee}} joined Tecuity. Today would be a good day to have a quick follow-up meeting to check in on how things are going. If you have any questions about how this meeting should go, send them to <@UTZ782GQ2> who will be more than happy to give you some suggestions."
+      "reminderText": "👋 Hey {{supervisor}}! It looks like today marks one week since {{employee}} joined Tecuity. Today would be a good day to have a quick follow-up meeting with their mentor, {{mentor}}, to check in and see how things are going.",
+      "shouldSuggestInvite": true
     },
     {
-      "reminderText": "Hey {{supervisor}}! It looks like today marks about one month since {{employee}} joined Tecuity. Today would be a good day to have a quick follow-up meeting to check in on how things are going. If you have any questions about how this meeting should go, send them to <@UTZ782GQ2> who will be more than happy to give you some suggestions.",
-      "daysFromStart": 30
+      "reminderText": "👋 Hey {{supervisor}}! It looks like today marks about one month since {{employee}} joined Tecuity. To help them continue to be successful, we recommend that you check in individually with {{employee}}, and their assigned mentor, {{mentor}} at least once a month for their first 6 months at the company. \n\n📅 I'll send you another reminder next month, and then leave it up to you to continue your follow-ups.",
+      "daysFromStart": 30,
+      "shouldSuggestInvite": true
     },
     {
-      "reminderText": "Hey {{supervisor}}! It looks like today marks about 6 months since {{employee}} joined Tecuity. Today would be a good day to have a quick follow-up meeting to check in on how things are going. If you have any questions about how this meeting should go, send them to <@UTZ782GQ2> who will be more than happy to give you some suggestions.",
-      "daysFromStart": 180
+      "reminderText": "👋 Hey {{supervisor}}! Tippy here, just checking in again.\n\nIt looks like today marks about one month since {{employee}} joined Tecuity. To help them continue to be successful, we recommend that you check in individually with {{employee}}, and their assigned mentor, {{mentor}} at least once a month for their first 6 months at the company. \n",
+      "daysFromStart": 60,
+      "shouldSuggestInvite": true
+    }
+  ],
+  "immediateSupervisorMessage": "👋 Hey {{supervisor}}! Tecuity has a new employee, {{employee}}, and you've been marked as their supervisor. We want to make sure that every employee can be successful, so I'll send you periodic reminders to check in with them. In the meantime, here's some steps to get started welcoming {{employee}} to Tecuity:\n\n👤 Introduce {{employee}} to their mentor, {{mentor}}\n\n👷‍♀️ Meet with {{employee}} and discuss their responsibilities, projects they'll be working on, and expectations for their employment.\n\n📅 Let them know you'll check in periodically to help support them in their job.",
+  "immediateMentorMessage": "👋 Hey {{mentor}}! Tippy here. We've got a new hire here at Tecuity, {{employee}}, and you've been marked as their mentor. If they haven't yet, someone from HR will talk to you about how you can use this opportunity help them be successful. I'll also be dropping by every now and then to give you some tips, but here's some to get you started!\n\n🎉 *First Day*\n\n- Work closely with {{employee}} to make sure they have all the equipment and software they need to get started.\n- Help make sure they feel welcome, and be available for any questions they might have.\n\n🌈 *First Week*\n\n- Check in periodically and help {{employee}} get settled in.\n- Be available to answer questions.\n- After their first week, meet with their supervisor, {{supervisor}}, to report on {{employee}}'s progress and identify any needs. \n\nAfter that just be available to help answer questions as needed! If you have any questions about how you can help fulfill this role, don't hesitate to talk to someone from HR. ",
+  "mentorReminders": [
+    {
+      "shouldSuggestInvite": false,
+      "daysFromStart": 3,
+      "reminderText": "👋 Hey {{mentor}}! Tippy here again, just checking in to send you a couple reminders of ways you can help {{employee}} settle in. \n\n- Check in occasionally, and be available to answer their questions. \n- Help make sure that {{employee}} is introduced to other members of your team.\n- Be available to meet with their supervisor, {{supervisor}}, in a few days to discuss their progress and identify any needs."
     }
   ]
 }
