@@ -198,15 +198,36 @@ collections:
       - name: roleValue
         label: Role Value
         widget: "string"
+      - name: immediateEmployeeMessage
+        label: Immediate Employee Message
+        widget: markdown
+        hint: This message will be sent to the employee on the employee's start date.
+        required: false
+      - name: employeeReminders
+        label: Employee Reminders
+        label_singular: Employee Reminder
+        hint: These reminders will be sent by the Tecuity Slack bot to the employee.
+        widget: "list"
+        required: false
+        fields:
+          - name: daysFromStart
+            label: Days from start date
+            value_type: int
+            min: 0
+            widget: number
+          - name: reminderText
+            label: Reminder Text
+            widget: markdown
+            hint: "Shortcodes: {{supervisor}} - Employee's supervisor | {{employee}} - Employee's name | {{mentor}} - Employee's mentor"
       - name: immediateSupervisorMessage
         label: Immediate Supervisor Message
         widget: markdown
-        hint: This message will be sent to the employee's supervisor immediately.
+        hint: This message will be sent to the employee's supervisor on the employee's start date.
         required: false
       - name: supervisorReminders
         label: Supervisor Reminders
         label_singular: Supervisor Reminder
-        hint: These reminders will be sent by the Tecuity Slack bot to remind supervisors of follow-up points with new hires.
+        hint: These reminders will be sent by the Tecuity Slack bot to the employee's supervisor.
         widget: "list"
         required: false
         fields:
@@ -227,12 +248,12 @@ collections:
       - name: immediateMentorMessage
         label: Immediate Mentor Message
         widget: markdown
-        hint: This message will be sent to the employee's mentor immediately.
+        hint: This message will be sent to the employee's mentor on the employee's start date.
         required: false
       - name: mentorReminders
         label: Mentor Reminders
         label_singular: Mentor Reminder
-        hint: These reminders will be sent by the Tecuity Slack bot to remind mentors of follow-up points with new hires.
+        hint: These reminders will be sent by the Tecuity Slack bot to the employee's mentor.
         widget: "list"
         required: false
         fields:
