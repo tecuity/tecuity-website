@@ -21,5 +21,16 @@
       "reminderText": "🚧 TEST MODE 🚧\n\nHere's a test reminder that would be sent to a mentor after 3 days:\n\n👋 Hey {{mentor}}! Tippy here again, just checking in to send you a couple reminders of ways you can help {{employee}} settle in. \n\n- Check in occasionally, and be available to answer their questions. \n- Help make sure that {{employee}} is introduced to other members of your team.\n- Be available to meet with their supervisor, {{supervisor}}, in a few days to discuss their progress and identify any needs.",
       "daysFromStart": 1
     }
+  ],
+  "immediateEmployeeMessage": "🚧 TEST MODE 🚧\n\n👋 Hey {{employee}}! This is a test message that would be sent to the employee immediately, or on their start date.",
+  "employeeReminders": [
+    {
+      "reminderText": "🚧 TEST MODE 🚧\n\nThis is a first follow up message sent the next day\n",
+      "daysFromStart": 1
+    },
+    {
+      "reminderText": "🚧 TEST MODE 🚧\n\nThis is a follow-up message test message sent the second day\n\n{{supervisor}} - {{mentor}}\n",
+      "daysFromStart": 4
+    }
   ]
 }
