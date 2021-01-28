@@ -7,7 +7,7 @@ export default () => {
 
   return (
     <Wrapper>
-      <Logo src={logo} />
+      <Logo src={logo} alt="Administrative Rules" />
       <Description>
         Ready to learn more about the leading solution for administrative rules management?
       </Description>

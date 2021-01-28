@@ -9,7 +9,7 @@ export default ({title, description}) => {
   return (
     <Wrapper>
       <Column left>
-        <Img src={AgenciesImage} />
+        <Img src={AgenciesImage} alt="Examples of state agencies all feeding into a single application." />
       </Column>
       <Column>
         <Title>{descapedTitle}</Title>

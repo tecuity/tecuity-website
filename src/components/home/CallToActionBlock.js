@@ -7,7 +7,7 @@ export default () => {
 
   return (
     <Wrapper>
-      <Logo src={logo} />
+      <Logo src={logo} alt="SOS Enterprise" />
       <Description>
         Ready to learn more about the leading solution for Secretary of State Offices?
       </Description>
