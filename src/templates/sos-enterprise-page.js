@@ -24,7 +24,17 @@ export const RulesPageTemplate = ({
   reviewAuthor2
 }) => (
   <PageWrapper>
-    Home page
+    <AboveFoldBlock />
+    <FeaturesBlock />
+    <SmartFormsBlock title={smartTitle} description={smartDescription} />
+    <ReviewBlock quote={reviewQuote1} author={reviewAuthor1} />
+    <OneStopBlock title={oneStopTitle} description={oneStopDescription} />
+    <BackOfficeBlock
+      title={backOfficeTitle}
+      description={backOfficeDescription}
+    />
+    <ReviewBlock quote={reviewQuote2} author={reviewAuthor2} />
+    <CallToActionBlock />
   </PageWrapper>
 );
 
@@ -46,7 +56,7 @@ const RulesPage = ({ data }) => {
 export default RulesPage;
 
 export const pageQuery = graphql`
-  query HomePageTemplate {
+  query RulesPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
