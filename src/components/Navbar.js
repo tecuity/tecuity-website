@@ -57,24 +57,33 @@ const Nav = styled("nav")(
   {
     display: "flex",
     alignItems: "center",
-    marginLeft: "auto",
+    flexGrow: 1,
+    paddingLeft: 24,
     "& > a, .nav-link": {
       margin: "0px 20px",
       textDecoration: "none",
       color: "inherit",
-      fontWeight: 600,
+      fontWeight: 500,
       fontSize: 18,
       "&:last-child": {
         marginRight: 0,
       },
     },
+    "& a": {
+      transition: "color 100ms",
+    }
   },
   ({ theme }) => ({
     "& a.cta": {
       background: theme.primary.color,
       color: theme.primary.textOn,
-      padding: "6px 10px 5px 10px",
+      padding: "8px 10px 5px 10px",
       fontWeight: 500,
+      marginLeft: 'auto',
+      borderRadius: 6
+    },
+    "& a:not(.cta):hover": {
+      color: theme.primaryDark.color
     },
     [theme.media.max.md]: {
       display: "none",
