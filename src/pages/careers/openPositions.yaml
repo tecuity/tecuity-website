@@ -264,89 +264,6 @@ openPositions:
 
 
       Our passion is to deliver innovative technology solutions and services to government and citizens through seamless collaboration with an unwavering dedication to the success of our partners. We are proud to have over 15 years of experience working directly with Secretary of State offices.Our team provides our customers with direct access to experts who have in-depth business and technical knowledge, and our relentless focus on our customers’ success has resulted in long-term business relationships.
-  - name: Business Analyst
-    value: business_analyst
-    description: >-
-      The Business Analyst is part of an Agile development team that delivers IT
-      solutions to support business objectives.   The Business Analyst evaluates
-      business processes, identifies needs, and develops strategies to maximize
-      opportunities.   The Business Analyst works with business, IT, and test
-      systems and interacts with Project managers, customers, developers,
-      stakeholders, and various subject experts.
-
-
-      Essential Job Functions
-
-
-      * Identify, collect, and analyze data for business opportunities or expansion.
-
-      * Work with business stakeholders to define the project boundaries that will determine the success of the solution.
-
-      * Communicate with clients to understand their needs and define the scope and objectives of the projects.
-
-      * Consolidate ideas and feedback from multiple business stakeholders and serve as an authoritative source for product direction for the development team.
-
-      * Work with stakeholders and project team to prioritize collected requirements and ensure the team is working toward the appropriate goals for the business at all times.
-
-      * Work within the development team to implement, test, and deliver the defined solutions.
-
-      * Manages and tracks the status of requirements throughout the project lifecycle; enforce and redefine as necessary.
-
-      * Develop and deliver progress reports, proposals, requirements documentation, and presentations.
-
-      * Oversee the quality control throughout the project life cycle.
-
-      * Document all aspects of the project and communicate results.
-
-      * Provide leadership, training, and guidance to junior staff.
-
-      * Other duties as assigned.
-
-
-      Requirements
-
-
-      * 4-year degree or equivalent experience
-
-      * 3+ years experience performing business analysis for web-based applications.
-
-      * Exceptional interpersonal and negotiation skills with the ability to communicate effectively with technical staff, non-technical staff, all levels of management, and clients.
-
-      * Logical, highly-organized, and efficient with keen attention to detail and excellent problem-solving skills.
-
-      * Ability to effectively prioritize and execute tasks while under pressure.
-
-      * Technically adept, high-energy, self-motivated, passion for innovation and driven by results.  Willing to work hard to ensure success of the team and project.
-
-      * Team player attitude with experience working in a collaborative environment.
-
-      * Experience with the Agile software development methodologies is a plus.
-
-
-
-
-      Why Tecuity?
-
-
-      Tecuity boasts an excellent work environment, with a results-driven team working together to build an exciting future.
-
-
-      Benefits include:
-
-
-      * Company paid Medical/Vision/Dental/Life Insurance
-
-      * Long-term Disability
-
-      * Paid Time Off (Holidays, Vacation, Sick)
-
-      * 401k with Company match
-
-
-      To Apply:
-
-
-      Apply directly online on our website or send a resume to hr@tecuity.com with "Business Analyst" in the subject line.
   - name: Quality Assurance Manager
     value: QA_Manager
     description: >-
@@ -435,126 +352,6 @@ openPositions:
 
 
       Apply with your resume here on our careers page or send your resume to hr@tecuity.com with "QA Manager" in the subject line.
-  - name: Build Manager
-    value: build_manager
-    description: >-
-      We have an exciting opportunity for a highly motivated Build Manager
-      responsible for the build and deployment of high-quality software for
-      multiple applications across development, test, and production
-      environments.   The Build Manager will own the deployment lifecycle,
-      working collaboratively with all participants in software development
-      projects to improve the software engineering processes and practices
-      associated with continuously building, deploying, and updating software
-      and environments. The Build Manager must ensure and administer a
-      repeatable, high-quality release process to meet our clients’ business
-      needs and objectives.
-
-
-      Essential Job Functions 
-
-
-      • Organize, perform, and manage the process of building and maintaining software releases into non-production and production environments.  
-
-
-      • Collaborate with developers, technical leads, and other team members to ensure the quality and consistency of internal and customer-facing releases. 
-
-
-      • Use technical expertise to identify and manage risks and make sound judgments about scope, schedule, and quality. 
-
-
-      •Be a driving force for constantly improving performance, load testing, optimization of software services and applications, maintenance, and support. 
-
-
-      •Build and manage multiple components of web infrastructure focusing on continuous integration, automated software releases, configuration management and system management in a high-availability cloud environment. 
-
-
-      •Develop scripts and automation tools used to build, integrate, and deploy software releases to various platforms.  
-
-
-      •Maintain release repositories, improve practices of branching and merging code, and establish process control points. 
-
-
-      •Document standard processes for the operation, maintenance, design, and function of deployment environments. 
-
-
-      •Perform deployment retrospectives to ensure preventative actions are captured and implemented. 
-
-
-      • Other duties as assigned 
-
-
-      Requirements 
-
-
-      • 4-year degree in related field or equivalent experience. 
-
-
-      • 4+ years of previous release management experience with hands-on experience automating all stages of the software development lifecycle. 
-
-
-      • Proven customer-facing management skills. 
-
-
-      • Technically adept, high-energy, self-motivated, passion for innovation and driven by results. 
-
-
-      • Skilled at evaluating existing processes and procedures and making recommendations for improvement. 
-
-
-      • Superior analytical and problem-solving skills, self-motivation, and the capacity to work under pressure and on tight deadlines. 
-
-
-      • Excellent oral and written communication skills. 
-
-
-      • Team player attitude with experience working in a collaborative environment. 
-
-
-      Technical Skills Requirements  
-
-
-      • Experience working as a member of an Agile team to enhance and improve software written in one or more of the following languages: C#, .NET, Java 
-
-
-      • Strong experience with a range of automation and configuration management tools. 
-
-
-      • Hands on experience with numerous tools/technologies (i.e. React, Javascript, .Net, C#, DevOps, Scrum/Agile, SQL, XML, YML, and VSO) 
-
-
-      • Fundamental experiences in MS stack, distributed systems, high availability and services for infrastructure.   
-
-
-      • Demonstrable ability to debug build issues in .Net, SQL, C# 
-
-
-      Why Tecuity? 
-
-
-      Tecuity boasts an excellent work environment, with a results-driven team building an exciting future.    
-
-
-      Benefits include: 
-
-
-      • Company paid Medical/Vision/Dental/Life Insurance 
-
-
-      • Long-term Disability 
-
-
-      • Paid Time Off (Holidays, Vacation, Sick) 
-
-
-      • 401K with Company Match 
-
-
-
-
-      About Tecuity 
-
-
-      Our passion is to deliver innovative technology solutions and services to government and citizens through seamless collaboration with an unwavering dedication to the success of our partners. We are proud to have over 15 years of experience working directly with Secretary of State offices.   Our team provides our customers with direct access to experts who have in-depth business and technical knowledge, and our relentless focus on our customers’ success has resulted in long-term business relationships.
   - name: Senior Frontend Software Engineer
     value: Senior_Frontend_Software_Engineer
     description: >-
@@ -727,3 +524,87 @@ openPositions:
 
 
       About Tecuity Our passion is to deliver innovative technology solutions and services to government and citizens through seamless collaboration with an unwavering dedication to the success of our partners. We are proud to have over 15 years of experience working directly with Secretary of State offices.   Our team provides our customers with direct access to experts who have in-depth business and technical knowledge, and our relentless focus on our customers’ success has resulted in long-term business  relationships.
+  - name: IT Project Manager
+    value: IT_Project_Manager
+    description: >-
+      The Project Manager is responsible for coordinating and managing all
+      aspects of the software implementation effort.  This includes working with
+      customers, coordinating requirements with the customer and the development
+      team, managing all aspects of the project including scope, calendar,
+      resources, and budget.  This includes the day-to-day execution,
+      management, and operations of the project.    The Project Manager leads
+      the project team, ensures project execution, and provides the consistency
+      needed to see software projects through from start to finish.   They are
+      accountable for delivering high-quality solutions within the budget and
+      project timelines to meet customer requirements and project objectives.
+
+
+      Essential Job Functions 
+
+
+      • 	Overall management of contract requirements, full-scale project plans, documentation, application implementation, deployment and delivery activities.
+
+      • 	Communicate with clients to understand their needs and define the scope and objectives of the project.
+
+      • 	Work with technology and operations counterparts to review and mitigate projects and other risks to deliver solutions as per agreed schedule.
+
+      • 	Manage project progress, development, and implementation of software as per the COTS architecture and design.
+
+      • 	Deliver stable, scalable technology solutions while driving effectiveness and efficiency.
+
+      • 	Interface with various technology teams to determine best in class technology solutions.
+
+      •	Recommends information technology strategies, policies, and procedures by evaluating organization outcomes, identifying problems, evaluating trends, anticipating requirements.
+
+      •	Maintains quality service by establishing and enforcing organization standards.
+
+      • 	Create and maintain project timelines for technical design, data modeling, system integration, testing and application delivery.  Proactively manage changes in project scope, resources, and timelines.
+
+      • 	Estimate and plan resources, coordinate the efforts of team members and third-party contractors or consultants.
+
+      • 	Effectively communicate project expectations, project progress to team members and all parties involved.
+
+      • 	Identify and prioritize potential risks to project delivery and resolve issues and conflicts.
+
+      • 	Track project milestones and deliverables and communicate with related parties on an ongoing basis.
+
+      • 	Develop and deliver progress reports, proposals, requirements documentation, and presentations.
+
+      • 	Coach, mentor, motivate, and supervise project team members and influence them to take positive action for their assigned work.
+
+      • 	Other duties as assigned.
+
+
+      Requirements 
+
+
+      • 	4-year degree or equivalent experience
+
+      •	PMP Certification is required
+
+      • 	5+ years of experience in successful software project management
+
+      • 	Evidence of ability to make key strategic decisions
+
+      • 	Strong people management and leadership experience 
+
+      • 	Experience with the Agile software development methodologies is a plus
+
+      • 	Technically adept, high-energy, self-motivated, passion for innovation and driven by results
+
+      • 	Excellent written and verbal communication skills
+
+      • 	Team player attitude willing to work hard to ensure success of the team and project
+
+      • 	Experience working in a collaborative environment
+
+      • 	Ability to translate business needs into functional products and solutions
+
+      • 	Prior software development experience is a plus.
+
+      • 	Experience in both project management and product management of software implementation efforts
+
+
+
+
+      About Tecuity Our mission is to empower our customers with future-proof technologies utilizing our Low-Code, No-Code platform to adapt faster and scale smarter with confidence today and tomorrow.
