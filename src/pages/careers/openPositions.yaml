@@ -4,113 +4,6 @@ openPositions:
       you!
     name: Other
     value: other
-  - name: Implementation Manager
-    value: Implementation_Manager
-    description: >-
-      Position Summary
-
-
-      The Implementation Manager is part of an Agile development team that delivers IT solutions to support business objectives.   The Implementation Manager evaluates business processes and products, identifies needs, and develops strategies to maximize opportunities. The Implementation Manager works closely with customers to fully understand requirements, identify solutions, and guide the customer through the entire implementation cycle. The Implementation Manager partners with Project Managers, the development team, and various subject experts to ensure accurate and timely execution of all implementation project tasks, oversee workflow, use test systems, and communicate progress to key stakeholders.
-
-
-      Essential Job Functions: 
-
-
-      •	Work with business stakeholders to define the project boundaries that will determine the success of the solution. 
-
-
-      •	Create strong relationships with clients and communicate to understand their needs and define the scope and objectives of the project. Serve as a customer advocate by communicating customer feedback internally to improve the customer experience.
-
-
-      •	Translate conceptual customer requirements into functional requirements in a clear manner that is comprehensible to developers/project team.
-
-
-      •	Consolidate ideas and feedback from multiple business stakeholders and serve as an authoritative source for product direction for the development team.
-
-
-      •	Work with stakeholders and project team to prioritize collected requirements and ensure the team is always working toward the appropriate goals for the business.
-
-
-      •	Partner with the project manager and the development team to implement complex systems and solutions in support of organizational objectives.  Test and deliver the defined solutions.
-
-
-      •	Troubleshoots and develops solutions to implementation problems or challenges.
-
-
-      •	Maintain a deep knowledge and understanding of company products and use this knowledge to configure smart forms (i.e., wizards) according to client requirements and product capabilities.
-
-
-      •	Manage and track the status, quality, and accuracy of the implementation throughout the project lifecycle, provide technical support, and ensure projects are completed on time; enforce and redefine as necessary.
-
-
-      •	Monitor systems past roll out, create reports detailing insights and potential improvements for future initiatives.
-
-
-      •	Develop and deliver proposals, requirements documentation, and presentations.
-
-
-      •	Document all aspects of the project and communicate results.
-
-
-      •	Provide leadership, training, and guidance to junior staff and customers.
-
-
-      •	Other duties as assigned.
-
-
-      Requirements
-
-       •	4-year degree or equivalent experience
-
-       •	3+years of experience managing software implementations or performing business analysis for web-based applications.
-
-      •	Excellent listening, interpersonal, written, and oral communication skills, having the ability to communicate effectively with technical and non-technical staff as well as all levels of management and clients.
-
-
-      •	Logical, highly organized, and efficient with keen attention to detail and excellent analytical and problem-solving skills.
-
-
-      •	Ability to effectively prioritize and execute tasks autonomously.
-
-
-      •	Technically adept and self-motivated.
-
-
-      •	Demonstrates a passion for innovation, is driven by results, and is willing to work hard to ensure the success of the team and project.
-
-
-      •	Team player attitude with experience working in a collaborative environment.
-
-
-      •	Able to pass background checks to work with state agencies.
-
-
-      •	Experience with Agile software development methodologies is a plus.
-
-
-      Why Tecuity? 
-
-
-      •	An excellent work environment, working with a results-driven team building an exciting future.
-
-       •	Compensation commensurate with experience 	
-
-      Benefits include:
-
-
-      •	Company-paid Medical/Vision/Dental/Life/Long & Short-Term Disability Insurance
-
-
-      •	Unlimited personal counseling with professional therapists
-
-
-      •	Paid Time Off (Holidays & Personal)
-
-
-      •	401K with Company Match
-
-
-      About Tecuity Our passion is to deliver innovative technology solutions and services to government and citizens through seamless collaboration with an unwavering dedication to the success of our partners. We are proud to have over 17 years of experience working directly with Secretary of State offices.   Our team provides our customers with direct access to experts who have in-depth business and technical knowledge, and our relentless focus on our customers’ success has resulted in long-term business relationships.
   - name: Software Engineer II
     value: Software_Engineer II
     description: >-
@@ -206,93 +99,59 @@ openPositions:
 
 
       Our passion is to deliver innovative technology solutions and services to government and citizens through seamless collaboration with an unwavering dedication to the success of our partners. We are proud to have over 17 years of experience working directly with Secretary of State offices. Our team provides our customers with direct access to experts who have in-depth business and technical knowledge, and our relentless focus on our customers’ success has resulted in long-term business relationships.
-  - name: Project Manager
-    value: Project_Manager
+  - name: Jr. Software Engineer Intern
+    value: Jr_Software_Engineer_Intern
     description: >-
-      Position Summary
+      The Junior Software Engineer Intern is responsible for contributing to
+      software design and software development.   The Junior Software Engineer
+      Intern works closely within a team, following industry best practices,
+      standards, and patterns to create innovative, high-quality solutions that
+      meet our clients’ business needs and objectives.
 
 
-      The Project Manager is responsible for coordinating and managing all aspects of the software implementation effort. This includes working with customers, coordinating requirements with the customer and the development team, and managing all aspects of the project including scope, calendar, resources, and budget. This includes the day-to-day execution, management, and operations of the project. The Project Manager leads the project team, ensures project execution, and provides the consistency needed to see software projects through from start to finish. They are accountable for delivering high-quality solutions within the budget and project timelines to meet customer requirements and project objectives.
+      Essential Job Functions 
 
 
-      Essential Job Functions
+      •	Participate in all phases of the application development process.
 
+      •	Code, test, debug, and document software components and applications.
 
-      * O﻿verall management of contract requirements, full-scale project plans, documentation, application implementation, deployment and delivery activities.
+      •	Contribute quality code and strive for excellence within the team.
 
-      * C﻿ommunicate with clients to understand their needs and define the scope and objectives of the project.
+      •	Research, investigate, and fix a wide range of technical issues.
 
-      * W﻿ork with technology and operations conterparts to review and mitigate projects and other risks to deliver solutions as per agreed schedule.
+      •	Collaborate with other software engineers.
 
-      * M﻿anage project progress, development, and implementation of software as per the COTS architecture and design.
+      •	Proactively learn new technologies.
 
-      * D﻿eliver stable, scalable solutions while driving effectiveness and efficiency.
+      •	Complete assigned work items and work with a team.
 
-      * R﻿ecommend strategies, policies, and procedures by evaluating organization outcomes, identifying problems, evaluating trends, and anticipating requirements.
-
-      * M﻿aintain quality service by establishing and enforcing organization standards.
-
-      * C﻿reate and maintain project timelines for technical design, data modeling, system integration, testing and application delivery.   Proactively manage change sin project scope, resources, and timelines.
-
-      * E﻿stimate and plan resources, coordinate the efforts of team members and third-party contractors or consultants.
-
-      * E﻿ffectively communicate project expectations, project progress to team members and all parties involved.
-
-      * I﻿dentify and prioritize potential risks top project delivery and resolve issues and conflicts.
-
-      * T﻿rack project milestones and deliverables and communicate with related parties on an ongoing basis.
-
-      * D﻿evelop and deliver progress reports, proposals, requirements documentation, and presentations.
-
-      * C﻿oach, mentor, motivate, and supervise project team members and influence them to take positive action for their assigned work.
-
-      * O﻿ther duties as assigned.
+      •	Other programming duties as assigned.
 
 
 
 
-      R﻿equirements
+      Requirements 
 
 
-      * 4﻿-year degree in Business or related field or equivalent experience.
+      •  Completed or currently enrolled in computer science, software engineering, or related field of education.
 
-      * 3﻿+ years of Project Management experience
+      •	Basic understanding of computer science concepts.
 
-      * E﻿xperience with software project management is a plus
+      •	Experience coding in C# in a .NET environment (.NET Core, ASP.NET, MVC 4/5, LINQ, WebAPI, etc.)
 
-      * E﻿vidence of ability to make key strategic decisions
+      •	Experience on MS SQL Server 2005/2008/2012. 
 
-      * S﻿trong people management and leadership experience
+      •	Experience with web technologies: ASP.NET, HTML5, JavaScript,  AJAX, CSS, JSON
 
-      * T﻿echnically adept, high-energy, self-motivated, passion for innovation and driven by results
+      •	Exposure to JavaScript libraries (React JS, AngularJS, Vue, etc) is a plus.
 
-      * A﻿bility to translate business needs into functional products and solutions
+      •	Experience with the agile software development methodologies is a plus.
 
-      * E﻿xcellent written and verbal communication skills
+      •	Technically adept, high-energy, self-motivated, passion for innovation and driven by results.
 
-      * T﻿eam player attitude, willing to work hard to ensure success of the team and project
+      •	Excellent written and verbal communication skills.
 
-      * E﻿xperience with the Agile software development methodologies is a plus
+      •	Team player attitude willing to work hard to ensure success of the team and project.
 
-      * C﻿SM Certification and/or PMP certification is preferred
-
-
-
-
-      Why Tecuity?
-
-
-      * A﻿n excellent work environment, working with a results-driven team building an exciting future.
-
-      * C﻿ompensation commensurate with experience.
-
-      * B﻿enefits include:
-
-        * C﻿ompany-paid Medical/Vision/Dental/Life/Short & Long-term Disability/EAP Insurance
-        * P﻿aid Time Off (Holidays & Personal)
-        * 4﻿01k with Company Match
-
-      T﻿o apply, visit us at Tecuity.com/careers
-
-
-      About Tecuity Our passion is to deliver innovative technology solutions and services to government and citizens through seamless collaboration with an unwavering dedication to the success of our partners. We are proud to have over 17 years of experience working directly with Secretary of State offices.   Our team provides our customers with direct access to experts who have in-depth business and technical knowledge, and our relentless focus on our customers’ success has resulted in long-term business  relationships.
+      •	Experience working in a collaborative environment
