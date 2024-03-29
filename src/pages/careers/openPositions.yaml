@@ -4,139 +4,37 @@ openPositions:
       you!
     name: Other
     value: other
-  - name: Junior Software Engineer
-    value: Junior_Software_Engineer
+  - name: QA Associate
+    value: QA_Associate
     description: >-
-      The Junior Software Engineer is responsible for designing, implementing,
-      and maintaining internet applications and related systems. They work
-      closely within a team, following industry best practices, standards, and
-      patterns to create innovative, high-quality solutions that meet our
-      clients’ business needs and objectives.
+      P﻿osition Summary
 
 
-      Essential Job Functions
+      T﻿he Quality Assurance (QA) associate is responsible for the creation and execution of tests to identify issues with software before the production launch.  The QA Associate monitors every phase of the development process to ensure that the design and software adhere to company and customer standards.  The QA Associate helps meet deadlines by breaking up the development process into attainable testing goals and relaying any issues back to the development and project team leaders.
 
 
-      * P﻿articipate in all phases of the application development process.
 
-      * C﻿ode, test, debug, and document software components and applications.
 
-      * C﻿ontribute to quality code and strive for excellence within the team and company culture.
+      E﻿ssential Job Functions:
 
-      * R﻿esearch, investigate, and fix a wide range of technical issues.
 
-      * T﻿ranslate business-specific requirements into software components and applications.
+      * P﻿erform manual and automated testing.
 
-      * P﻿rovide user-support for web software applications.
+      * R﻿ecord test progress and results.
 
-      * C﻿omplete assigned work items and work with a team.
+      * P﻿erform and document risk analysis.
 
-      * O﻿ther programming Duties as assigned.
+      * C﻿omply with standards and procedures to determine project quality and release readiness.
 
+      * D﻿rive innovation and streamline overall testing process.
 
-      Requirements
+      * I﻿dentify, isolate, and track bugs or errors found during the test phase and document findings for review.
 
+      * D﻿evelop and run new tests.
 
-      * 4﻿-year degree or equivalent experience
+      * C﻿ollaborate with software developers, business analysts, and project managers to fix issues.
 
-      * A﻿ comprehensive understanding of computer science concepts
-
-      * P﻿rofessional experience coding in a C# .NET environment
-
-      * E﻿xperience with MS SQL Server
-
-      * E﻿xperience with web technologies (ASP.NET, HTML5, JavaScript, AJAX, CSS, JSON)
-
-      * E﻿xposure to JavaScript libraries (React JS, Angular JS, VUE, etc) is a plus.
-
-      * E﻿xperience with web communication protocols, including REST and GraphQL.
-
-      * E﻿xperience developming cross-browser code and responsive CSS.
-
-      * E﻿xperience with the agile software development methodologies is a plus.
-
-      * T﻿echnically adept, high-energy, self-motivated, passion for innovation and driven by results.
-
-      * E﻿xcellent written and verbal communication skills.
-
-      * T﻿eam player attitude, willing to work hard to ensure success of the team and project.
-
-      * E﻿xperience working in a collaborative environment.
-
-      * A﻿bility to translate business needs into functional products and solutions.
-
-
-
-
-      Why Tecuity? Tecuity boasts an excellent work environment, with a results-driven team, building an exciting future.   
-
-
-      Benefits include: 
-
-
-      * C﻿ompany paid medical/vision/dental/life/disability insurance
-
-      * P﻿aid Time Off (Holidays and personal)
-
-      * 4﻿01k with Company Match
-
-
-      About Tecuity Our passion is to deliver innovative technology solutions and services to government and citizens through seamless collaboration with an unwavering dedication to the success of our partners. We are proud to have over 15 years of experience working directly with Secretary of State offices.   Our team provides our customers with direct access to experts who have in-depth business and technical knowledge, and our relentless focus on our customers’ success has resulted in long-term business relationships.
-  - name: IT Manager
-    value: IT_Manager
-    description: >-
-      W﻿e are seeking a skilled and experienced IT Manager to lead our
-      Information Technology department.  The IT Manager is responsible for
-      overseeing all aspects of our company's IT infrastructure, ensuring its
-      reliability, security, and efficiency.  The IT Manager will play a key
-      role in developing and implementing IT strategies to support and enhance
-      our business operations.
-
-
-      E﻿ssential Job Functions
-
-
-      * M﻿anage all aspects of the company's IT infrastructure, including hardware, software, networks, cloud infrastructure, and telecommunications systems.
-
-      * O﻿versee the installation, configuration, and maintenance of servers, workstations, routers, switches, and other network equipment.
-
-      * M﻿anage personnel and priorities for team of IT resources responsible for infrastructure, hosting, securing, CI/CD pipeline, and application architecture. 
-
-      * S﻿erve as liaison between IT and internal and external stakeholders.
-
-      * E﻿nsure the security of the IT infrastructure through the implementation of appropriate security measures, including firewalls, antivirus software, and intrusion detection systems.
-
-      * D﻿evelop and implement IT strategies and initiatives aligned with the company's overall business objectives.
-
-      * I﻿dentify opportunities for technological advancement and innovation and make recommendations for improvements to enhance efficiency and productivity.
-
-      * E﻿valuate and select vendors and service providers for IT products and services, ensuring that they meet the company's requirements and standards.
-
-      * N﻿egotiate contracts and service level agreements with vendors and manage ongoing vendor relationships to ensure the delivery of high-quality services and support.
-
-      * I﻿dentify potential risks and vulnerabilities in the company's IT infrastructure and develop and implement strategies to mitigate them.
-
-      * M﻿onitor and assess the performance and effectiveness of IT security measures and make recommendations for improvements as needed.
-
-      * C﻿ollaborate with IT staff to design and implement systems with a focus on reliability, scalability, and performance.
-
-      * C﻿ollaborate with senior management to develop long-term IT plans and budgets and provide regular updates on IT-related projects and initiatives.
-
-      * D﻿evelop and maintain automated tools for monitoring, deployment, and orchestration to streamline operational processes and ensure efficiency.
-
-      * R﻿espond promptly to system incidents, troubleshoot issues, and implement effective solutions to minimize downtime and optimize system performance.
-
-      * L﻿ead and manage a team of IT professionals, including software architects, site reliability engineers, release managers, and support staff.
-
-      * P﻿rovide guidance, support, and mentorship to team members, fostering a culture of collaboration, innovation, and continuous improvement.
-
-      * D﻿elegate tasks and responsibilities effectively, ensuring that projects are completed on time and within budget.
-
-      * P﻿romote a culture of reliability and resilience within the organization by advocating best practices, conducting training sessions, and participating in knowledge sharing.
-
-      * D﻿rive continuous improvement initiatives by analyzing system failures, monitoring trends, and implementing preventive measures to enhance system reliability.
-
-      * C﻿ollaborate with cross-function teams, including software developers, operations, and support, to ensure a seamless integration of reliability practices throughout the software development lifecycle.
+      * R﻿eview user interfaces for consistency and functionality.
 
       * O﻿ther duties as assigned.
 
@@ -146,343 +44,24 @@ openPositions:
       R﻿equirements:
 
 
-      * 4﻿-year degree in Computer Science, Information Technology, or a related field, or equivalent experience.
+      * 4﻿-year degree, or currently pursuing a 4-year degree, in a related field or equivalent experience.
 
-      * 5﻿+ years of experience in IT management, with a proven track record of success in leading and managing IT teams.
+      * 1+years experience in software development and testing
 
-      * S﻿trong technical knowledge and expertise in IT infrastructure, networking, security, and systems administration.
+      * E﻿xperience in computer technology and programming languages (C#, .NET, Java, React, SQL, Typescript)
 
-      * E﻿xcellent leadership, communication, and interpersonal skills, with the ability to collaborate effectively with cross-function teams and senior management.
+      * E﻿xceptional attention to detail.
 
-      * S﻿trong analytical and problem-solving skills, with the ability to make sound decisions and prioritize tasks in a fast-paced environment.
+      * E﻿xcellent analytical and problem-solving skills.
 
-      * R﻿elevant certifcations are a plus.
+      * E﻿xcellent oral and written communication skills.
 
-      * F﻿amiliarity with programming languages (C#.NET, Javascript)
-
-      * E﻿xperience with continuous integration and DevOps methodologies.
-
-      * S﻿trong understanding of Azure cloud platforms, virtualization, and enterprise software solutions.
-
-      * I﻿n-depth knowledge of system and application monitoring tools.
-
-      * U﻿nderstanding of networks and experience troubleshooting issues.
-
-      * T﻿horough knowledge of technology trends and willingness to champion new ideas and process improvements.
-
-      * P﻿roven ability to analyze complex technical issues, troubleshoot problems, and implement effective solutions.
-
-      * S﻿trong presentation and communication skills with the ability to convey technical concepts to both technical and non-technical stakeholders.
-
-      * A﻿bility to thrive in a fast-paced and dynamic environment, adapting to changes and evolving priorities.
-
-      * T﻿eam player attitude willing to work hard to ensure success of the team and project.
+      * T﻿eam player attitude with experience working in a collaborative environment.
 
 
-      W﻿hy Tecuity?
-
-
-      T﻿ecuity boasts an excellent work environment, with a results-driven team, building an exciting future.
-
-
-      B﻿enefits include:
-
-
-      * C﻿ompany-paid medical/vision/dental/life & disability insurance
-
-      * P﻿aid Time Off (Holidays, personal)
-
-      * 4﻿01k with company match
 
 
       A﻿bout Tecuity
 
 
-      O﻿ur passion is to deliver innovative technology solutions and services to government and citizens through seamless collaboration with an unwavering dedication to the success of our partners.  We are proud to have over 18 years of experience working directly with Secretary of State offices.   Our team provides our customers with direct access to experts who have in-depth business and technical knowledge, and our relentless focus on our customers' success has resulted in long-term business relationships.
-
-
-      T﻿ecuity is an Equal Opportunity employer.  All qualified applications will receive consideration for employment without regard to race, color, religion, sex including sexual orientation, gender identity, and gender expression, national origin, disability, protected Veteran Status, or any other characteristic protected by applicable federal, state, or local law.
-  - name: Site Reliability Engineer
-    value: Site_Reliability_Engineer
-    description: >-
-      T﻿he Site Reliability Engineer (SRE) plays a crucial role in ensuring the
-      reliability, scalability, and performance of our systems and
-      applications.  The SRE collaborates with cross-functional teams to design
-      and implement solutions to enhance the overall stability of our
-      infrastructure.  The SRE is instrumental in optimizing the software
-      development lifecycle, fostering a culture of reliability, and minimizing
-      downtime.
-
-
-      E﻿ssential Job Functions
-
-
-      * C﻿ollaborate with IT management, software architects, and software developers to design and implement systems with a focus on reliability, scalability, and performance.
-
-      * L﻿ead the architectural design and planning of new projects, conducting research and proof-of-concepts, and ensuring alignment with organization goals and technical standards.
-
-      * D﻿evelop and maintain automated tools for monitoring, deployment, and orchestration to streamline operational processes and ensure efficiency.
-
-      * R﻿espond promptly to system incidents, troubleshoot issues, and implement effective solutions to minimize downtime and optimize system performance.
-
-      * I﻿dentify bottlenecks and optimize system performance to ensure our applications meet and exceed performance expectations.
-
-      * C﻿ollaborate with teams to anticipate future system requirements and ensure that our infrastructure scales effectively to meet growing demands.
-
-      * P﻿romote a culture of reliability and resilience within the organization by overseeing the implementation of best practices and training across development teams.
-
-      * A﻿ct as a technical advisor to development teams, offering guidance on complex technical challenges and ensuring solutions are scalable, efficient, and maintainable.
-
-      * I﻿dentify technical debt within existing systems and work with development teams to prioritize and resolve them in a timely manner.
-
-      * D﻿rive continuous improvement initiatives by analyzing system failures, monitoring trends, and implementing preventive measures to enhance system reliability.
-
-      * C﻿ollaborate with cross-function teams, including software developers, operations, and support to ensure a seamless integration of reliability practices throughout the software development lifecycle.
-
-      * O﻿ther duties as assigned.
-
-
-      R﻿equirements:
-
-
-      * 4﻿-year degree in computer Science, Information Technology, or a related field, or equivalent experience.
-
-      * F﻿amiliarity with programming languages (C#.NET, JavaScript)
-
-      * S﻿trong web-development background.
-
-      * P﻿roven track record of implementing reliability solutions in a software development environment.
-
-      * E﻿xperience with continuous integration and DevOps methodologies.
-
-      * S﻿trong understanding of Azure cloud PaaS and laaS architecture, including availability, reliability, scalability, disaster recover, and security.  In-depth knowledge of Azure monitoring, alerting, and reporting tools.
-
-      * U﻿nderstanding of networks and experience troubleshooting issues.
-
-      * T﻿horough knowledge of technology trends and willingness to champion new ideas and process improvements.
-
-      * P﻿roven ability to analyze complex technical issues, troubleshoot problems, and implement effective solutions.
-
-      * S﻿trong presentation and communication skills with the ability to convey technical concepts to both technical and non-technical stakeholders.
-
-      * A﻿bility to thrive in a fast-paced and dynamic environment, adapting to changes and evolving priorities.
-
-      * T﻿eam player attitude willing to work hard to ensure success of the team and project.
-
-
-      W﻿hy Tecuity?
-
-
-      T﻿ecuity boasts an excellent work environment, with a results-driven team building an exciting future.
-
-
-
-
-      B﻿enefits include:
-
-
-      * C﻿ompany paid medical/vision/dental/life & disability insurance
-
-      * P﻿aid Time Off (Holidays, Personal)
-
-      * 4﻿01k with company match
-
-
-      A﻿bout Tecuity
-
-
-      O﻿ur passion is to deliver innovative technology solutions and services to government and citizens through seamless collaboration with an unwavering dedication to the success of our partners.  We are proud to have over 18 years of experience working directly with Secretary of State offices.  Our team provides our customers with direct access to experts who have in-depth business and technical knowledge, and our relentless focus on our customers' success has resulted in long-term business relationships.
-
-
-
-
-      T﻿ecuity is an Equal Opportunity employer.  All qualified applicants will receive consideration for employment without regard to race, color, religion, sex including sexual orientation, gender identity, and gender expression, national origin, disability, protected Veteran Status, or any other characteristic protected by applicable federal, state, or local law.
-  - name: Software Architect
-    value: Software_Architect
-    description: >-
-      The Software Architect plays a key role in designing and shaping the
-      architecture of our software solutions to meet the highest standards of
-      quality and innovation.   The Software Architect is crucial in guiding
-      development teams, making architectural decisions, and ensuring the
-      scalability, maintainability, and performance of our systems.  
-
-
-      E﻿ssential Job Functions
-
-
-      * D﻿efine and communicate the architectural vision and strategy in alignment with organization goals and industry best practices.
-
-      * L﻿ead the design and development of scalable, high-performance software architectures that meet current and future business needs.
-
-      * F﻿acilitate cross-functional discussions to resolve architectural dependencies and ensure alignment with overall product vision.
-
-      * D﻿rive the adoption of new technologies and architectural patterns to enhance product capabilities and maintain competitiveness.
-
-      * E﻿stablish and enforce architectural standards, guidelines, and best practices across development teams. 
-
-      * C﻿onduct architecture reviews and provide guidance to ensure compliance with established standards and principles.
-
-      * P﻿rovide technical leadership and mentorship to development teams, fostering a culture of technical excellence and continuous learning.
-
-      * D﻿rive innovation through research, experimentation, and prototyping of new technologies and architectural approaches.
-
-      * S﻿tay abreast of industry developments and emerging trends to anticipate future technological needs and opportunities.
-
-      * G﻿uide and influence the implementation of best practices in coding, testing, and deployment.
-
-      * P﻿romote a culture of reliability and resilience within the organization by overseeing the implementation of best practices and training across development teams.
-
-      * A﻿ct as a technical advisor to development teams, offering guidance on complex technical challenges and ensuring solutions are scalable, efficient, and maintainable.
-
-      * I﻿dentify technical debt within existing systems and work with development teams to prioritize and resolve them in a timely manner.
-
-      * O﻿ther duties as assigned.
-
-
-      R﻿equirements
-
-
-      * 4﻿-year degree in Computer Science, Information Technology, or a related field, or equivalent experience.
-
-      * P﻿roficiency in multiple programming languages (C#.NET, JavaScript, React) and hands-on experience with modern development technologies and tools.
-
-      * D﻿eep exeprience in creating and maintaining web applications spanning frontend, API, data layer, and SQL backend, with emphasis on clean architecture.
-
-      * S﻿trong understanding of Azure cloud PaaS and IaaS architecture, including availability, reliability, scalability, disaster recover, and security.
-
-      * E﻿xperience with continuous integration and DevOps methodologies.
-
-      * E﻿xcellent leadership, communication, and interpersonal skills, with the ability to collaborate effectively across teams and influence technical decisions.
-
-      * T﻿horough knowledge of technology trends and willingness to champion new ideas and process improvements.
-
-      * P﻿roven ability to analyze complex technical issues, troubleshoot problems, and implement effective solutions.
-
-      * S﻿trong presentation skills with the ability to convey technical concepts to both technical and non-technical stakeholders.
-
-      * A﻿bility to thrive in a fast-paced and dynamic environment, adapting to changes and evolving priorities.
-
-      * T﻿eam player attitude willing to work hard to ensure success of the team and project.
-
-
-      Why Tecuity? Tecuity boasts an excellent work environment, with a results-driven team, building an exciting future.   
-
-
-      Benefits include:  
-
-
-      * C﻿ompany paid Medical/Vision/Dental/Life & Disability Insurance
-
-      * P﻿aid Time Off (Holidays, Vacation, Sick)
-
-      * 4﻿01k with Company match
-
-
-      About Tecuity Our passion is to deliver innovative technology solutions and services to government and citizens through seamless collaboration with an unwavering dedication to the success of our partners. We are proud to have over 18 years of experience working directly with Secretary of State offices.   Our team provides our customers with direct access to experts who have in-depth business and technical knowledge, and our relentless focus on our customers’ success has resulted in long-term business relationships.
-  - name: PMO Director
-    value: PMO_Director
-    description: >-
-      The Project Management Office (PMO) Director at Tecuity, Inc. is a
-      strategic leadership role responsible for establishing and maintaining
-      effective project management practices across the organization. The
-      successful candidate will lead the PMO in ensuring the delivery of
-      high-quality software solutions within scope, budget, and schedule. This
-      position requires a seasoned professional with a strong background in
-      project management, software development processes, and organizational
-      leadership. 
-
-
-      E﻿ssential Job Functions
-
-
-      S﻿trategic Planning and Project Governance:
-
-
-      * D﻿evelop and implement the PMO strategy aligned with the company's overall business objectives.
-
-      * C﻿ollaborate with senior leadership to define project priorities and resource allocation.
-
-      * E﻿stablish and enforce project governance standards, methodologies, and best practices.
-
-
-      T﻿eam Leadership:
-
-
-      * L﻿ead and mentor a team of project managers, ensuring their professional development and performance.
-
-      * F﻿oster a collaborative and results-oriented culture within the PMO.
-
-      * C﻿hampion a culture of continuous improvement within the PMO.
-
-      * I﻿dentify and implement process enhancements to increase efficiency and effectiveness.
-
-
-      P﻿erformance Monitoring and Reporting/Resource Management
-
-
-      * P﻿rovide regular status reports to senior leadership, highlighting project achievements, challenges, and recommendations.
-
-      * O﻿ptimize resource utilization across projects and teams.
-
-      * W﻿ork closely with HR to ensure the availability of skilled resources and address resource gaps.
-
-      * C﻿ollaborate with project managers to develop risk mitigation strategies.
-
-
-      S﻿takeholder Communication:
-
-
-      * F﻿acilitate effective communication between project teams, stakeholders, and executive leadership.
-
-      * M﻿anage expectations and provide transparent updates on project status, risks, and changes.
-
-
-      P﻿roject Management:
-
-
-      * O﻿verall management of contract requirements, full-scale project plans, documentation, application implementation, deployment and delivery activities.
-
-      * C﻿ommunicate with clients to understand their needs and define the scope and objectives of the project.
-
-      * R﻿ecommend strategies, policies, and procedures by evaluating organization outcomes, identifying problems, evaluating trends, anticipating requirements.
-
-      * C﻿reate and maintain project timelines for technical desgn, data modeling, system integration, testing, and application delivery.   Proactively manage changes in project scope, resources, and timelines.
-
-      * E﻿ffectively communicate project expectations and project progress to team members and all parties involved.
-
-
-      O﻿ther duties as assigned.
-
-
-      Qualifications:
-
-
-      * B﻿achelor's or Master's degree in a relevant field (Business, Computer Science, Project Management, etc.)
-
-      * P﻿roven experience (8+years) in project management, with a focus on software development projects.
-
-      * P﻿MP (Project Management Professional) certification is highly desirable.
-
-      * S﻿trong leadership and team management skills.
-
-      * E﻿xcellent communication and interpersonal skills.
-
-      * S﻿trategic thinking and the ability to align project activities with business goals.
-
-      * E﻿xperience in Agile and/or other project management methodologies.
-
-
-      W﻿hy Tecuity?
-
-
-      * A﻿n excellent work environment, working with a results-driven team building an exciting future.
-
-      * C﻿ompensation commensurate with experience
-
-        B﻿enefits include:
-
-        * C﻿ompany-paid medical/vision/dental/life/disability insurance
-        * P﻿aid Time Off (Holidays and Personal)
-        * 4﻿01k with Company Match
-
-        T
+      O﻿ur passion is to deliver innovative technology solutions and services to government and citizens through seamless collaboration with an unwavering dedication to the success of our partners.  We are proud to have over 18 years of experience working directly with Secretary of State Offices.  Our team provides our customers with direct access to experts who have i-depth business and technical knowledge, and our relentless focus on our customers' success has resulted in long-term business relationships.
