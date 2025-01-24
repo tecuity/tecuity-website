@@ -2,7 +2,7 @@
 templateKey: about-page
 title: About
 block1Title: A Dedicated Team
-block1Description: Tecuity boasts 17 years of experience working directly with
+block1Description: Tecuity boasts 19 years of experience working directly with
   Secretary of State offices. Our team provides our customers with direct access
   to experts who have in-depth business and technical knowledge, and our
   relentless focus on our customers' success has resulted in long-term business
