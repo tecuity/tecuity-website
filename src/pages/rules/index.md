@@ -17,7 +17,7 @@ smartTitle: Every Rule. Every Agency. One Place.
 oneStopTitle: Business One-Stop
 smartDescription: Provide the public with effortless access to all
   administrative rules. Rules may be easily searched by content, agency, status,
-  and more. Right Here.
+  and more. Test
 oneStopDescription: Our cloud-hosted Data Exchange Network provides integrated
   actors the ability to both subscribe to, and publish, data changes to other
   members of the network.
